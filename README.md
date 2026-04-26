@@ -15,6 +15,21 @@ Replication package for:
 | `duckdb_results.csv` | Raw results — 1,200 runs (DuckDB Local) |
 | `motherduck_results.csv` | Raw results — 1,200 runs (MotherDuck) |
 
+## Repository Structure
+
+duckdb-motherduck-tpch-benchmark/
+├── benchmark_duckdb_v2.py          # Local benchmark script
+├── motherduck_benchmark_v4.py      # Cloud benchmark script
+├── duckdb_results.csv              # Raw results - DuckDB Local (1,200 runs)
+├── motherduck_results.csv          # Raw results - MotherDuck (1,200 runs)
+└── logs/
+├── log_DuckDB_Local_Benchmark_v1.log    # Full execution log with timestamps
+└── log_MotherDuck_Benchmark_v4.log      # Full execution log with timestamps
+
+Log files include per-run timestamps, platform info (OS, Python, DuckDB version),
+RAM availability, cooling intervals, cache flush status, and progress tracking
+per scale factor — enabling full audit trail for reproducibility review.
+
 ## Experimental Setup
 
 - **Engine:** DuckDB v1.2.2 (both platforms)
