@@ -1,0 +1,3413 @@
+09:43:10  
+09:43:10  ==============================================================
+09:43:10    MotherDuck Benchmark v4 — Stephen Edlin (PRADITA University)
+09:43:10  ==============================================================
+09:43:10    Token      : ***...JouE3E
+09:43:10    Data dir   : C:\benchmark_stephen\data
+09:43:10    Output CSV : C:\benchmark_stephen\results\motherduck_results.csv
+09:43:10    Log file   : C:\benchmark_stephen\results\logs\benchmark_sf1_5_10_20_20260425_094310.log
+09:43:10    Scale factors: [1, 5, 10, 20]
+09:43:10    Runs per query : 10
+09:43:10    Cooling interval : 5s between runs
+09:43:10    Drop DB after SF : YES
+09:43:10  
+09:43:10    Testing connection to MotherDuck...
+09:43:14    Connection OK.
+09:43:14  
+09:43:14  
+  ──────────────────────────────────────────────────────────
+09:43:14    PROGRESS
+09:43:14    ──────────────────────────────────────────────────────────
+09:43:14    SF 1  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+09:43:14    SF 5  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+09:43:14    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+09:43:14    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+09:43:14    ──────────────────────────────────────────────────────────
+09:43:14    Total: 0/60 queries complete
+
+09:43:14  
+09:43:14  --------------------------------------------------------------
+09:43:14    SCALE FACTOR 1  (~0 GB)
+09:43:14  --------------------------------------------------------------
+09:43:14    Network RTT to MotherDuck: 108.7 ms
+09:43:14    Phase 1: Check & upload data for SF1...
+09:43:15    Database 'tpch_sf1' ready.
+09:43:15    Estimated size SF1: ~500 MB — uploading missing tables...
+09:43:15  
+09:43:15      [UP]   lineitem        197.5 MB  uploading...
+09:43:34      [OK]   lineitem      done in 18.4s  (6,001,215 rows)
+09:43:34      [UP]   orders           53.8 MB  uploading...
+09:43:40      [OK]   orders        done in 5.2s  (1,500,000 rows)
+09:43:40      [UP]   customer         11.8 MB  uploading...
+09:43:43      [OK]   customer      done in 2.2s  (150,000 rows)
+09:43:43      [UP]   supplier          0.8 MB  uploading...
+09:43:44      [OK]   supplier      done in 0.7s  (10,000 rows)
+09:43:44      [UP]   part              6.1 MB  uploading...
+09:43:46      [OK]   part          done in 1.9s  (200,000 rows)
+09:43:47      [UP]   partsupp         40.7 MB  uploading...
+09:43:51      [OK]   partsupp      done in 4.5s  (800,000 rows)
+09:43:52      [UP]   nation            0.0 MB  uploading...
+09:43:53      [OK]   nation        done in 0.6s  (25 rows)
+09:43:53      [UP]   region            0.0 MB  uploading...
+09:43:54      [OK]   region        done in 0.6s  (5 rows)
+09:43:54  
+09:43:54    Phase 2: Verifying SF1 data...
+09:43:54    Verifying tables for SF1...
+09:43:54        [OK] lineitem         6,001,215 rows
+09:43:54        [OK] orders           1,500,000 rows
+09:43:54        [OK] customer           150,000 rows
+09:43:55        [OK] supplier            10,000 rows
+09:43:55        [OK] part               200,000 rows
+09:43:55        [OK] partsupp           800,000 rows
+09:43:55        [OK] nation                  25 rows
+09:43:55        [OK] region                   5 rows
+09:43:55  
+09:43:55    Phase 3: Benchmarking SF1...
+09:43:55    Setting up views for SF1...
+09:43:59    Views ready. Starting benchmark: 15 queries x 10 runs...
+
+09:43:59    [01/15] Q6_simple [simple_select] — Q6
+09:43:59        Warm-up...
+09:43:59        Warm-up done.
+09:43:59        Run 01/10: 0.2072s  (1 rows)
+09:44:04        Run 02/10: 0.2070s  (1 rows)
+09:44:10        Run 03/10: 0.2095s  (1 rows)
+09:44:15        Run 04/10: 0.2149s  (1 rows)
+09:44:20        Run 05/10: 0.2111s  (1 rows)
+09:44:25        Run 06/10: 0.2128s  (1 rows)
+09:44:30        Run 07/10: 0.2155s  (1 rows)
+09:44:36        Run 08/10: 0.2137s  (1 rows)
+09:44:41        Run 09/10: 0.2084s  (1 rows)
+09:44:46        Run 10/10: 0.2103s  (1 rows)
+09:44:46        DONE  MEAN=0.2110s  STD=0.0029s  MIN=0.2070s  MAX=0.2155s
+
+09:44:46    [02/15] Q14_simple [simple_select] — Q14
+09:44:46        Warm-up...
+09:44:46        Warm-up done.
+09:44:46        Run 01/10: 0.2256s  (1 rows)
+09:44:52        Run 02/10: 0.2346s  (1 rows)
+09:44:57        Run 03/10: 0.2316s  (1 rows)
+09:45:02        Run 04/10: 0.2293s  (1 rows)
+09:45:07        Run 05/10: 0.2298s  (1 rows)
+09:45:13        Run 06/10: 0.2304s  (1 rows)
+09:45:18        Run 07/10: 0.2309s  (1 rows)
+09:45:23        Run 08/10: 0.2299s  (1 rows)
+09:45:28        Run 09/10: 0.2287s  (1 rows)
+09:45:34        Run 10/10: 0.2330s  (1 rows)
+09:45:34        DONE  MEAN=0.2304s  STD=0.0023s  MIN=0.2256s  MAX=0.2346s
+
+09:45:34    [03/15] Q19_simple [simple_select] — Q19
+09:45:34        Warm-up...
+09:45:34        Warm-up done.
+09:45:34        Run 01/10: 0.2364s  (1 rows)
+09:45:39        Run 02/10: 0.2391s  (1 rows)
+09:45:45        Run 03/10: 0.2257s  (1 rows)
+09:45:50        Run 04/10: 0.2235s  (1 rows)
+09:45:55        Run 05/10: 0.2285s  (1 rows)
+09:46:00        Run 06/10: 0.2319s  (1 rows)
+09:46:05        Run 07/10: 0.2237s  (1 rows)
+09:46:11        Run 08/10: 0.2253s  (1 rows)
+09:46:16        Run 09/10: 0.2241s  (1 rows)
+09:46:21        Run 10/10: 0.2254s  (1 rows)
+09:46:21        DONE  MEAN=0.2284s  STD=0.0053s  MIN=0.2235s  MAX=0.2391s
+
+09:46:21    [04/15] Q3_join [join] — Q3
+09:46:21        Warm-up...
+09:46:21        Warm-up done.
+09:46:22        Run 01/10: 0.2146s  (10 rows)
+09:46:27        Run 02/10: 0.2159s  (10 rows)
+09:46:32        Run 03/10: 0.2149s  (10 rows)
+09:46:37        Run 04/10: 0.2220s  (10 rows)
+09:46:42        Run 05/10: 0.2171s  (10 rows)
+09:46:48        Run 06/10: 0.2160s  (10 rows)
+09:46:53        Run 07/10: 0.2132s  (10 rows)
+09:46:58        Run 08/10: 0.2190s  (10 rows)
+09:47:03        Run 09/10: 0.2268s  (10 rows)
+09:47:09        Run 10/10: 0.2137s  (10 rows)
+09:47:09        DONE  MEAN=0.2173s  STD=0.0040s  MIN=0.2132s  MAX=0.2268s
+
+09:47:09    [05/15] Q5_join [join] — Q5
+09:47:09        Warm-up...
+09:47:09        Warm-up done.
+09:47:09        Run 01/10: 0.2165s  (5 rows)
+09:47:14        Run 02/10: 0.2302s  (5 rows)
+09:47:19        Run 03/10: 0.2183s  (5 rows)
+09:47:25        Run 04/10: 0.2174s  (5 rows)
+09:47:30        Run 05/10: 0.2167s  (5 rows)
+09:47:35        Run 06/10: 0.2305s  (5 rows)
+09:47:40        Run 07/10: 0.2307s  (5 rows)
+09:47:46        Run 08/10: 0.2174s  (5 rows)
+09:47:51        Run 09/10: 0.2182s  (5 rows)
+09:47:56        Run 10/10: 0.2304s  (5 rows)
+09:47:56        DONE  MEAN=0.2226s  STD=0.0064s  MIN=0.2165s  MAX=0.2307s
+
+09:47:56    [06/15] Q10_join [join] — Q10
+09:47:56        Warm-up...
+09:47:56        Warm-up done.
+09:47:57        Run 01/10: 0.2655s  (20 rows)
+09:48:02        Run 02/10: 0.2756s  (20 rows)
+09:48:07        Run 03/10: 0.2842s  (20 rows)
+09:48:12        Run 04/10: 0.2702s  (20 rows)
+09:48:18        Run 05/10: 0.2719s  (20 rows)
+09:48:23        Run 06/10: 0.2754s  (20 rows)
+09:48:28        Run 07/10: 0.2747s  (20 rows)
+09:48:33        Run 08/10: 0.2723s  (20 rows)
+09:48:39        Run 09/10: 0.2740s  (20 rows)
+09:48:44        Run 10/10: 0.2710s  (20 rows)
+09:48:44        DONE  MEAN=0.2735s  STD=0.0046s  MIN=0.2655s  MAX=0.2842s
+
+09:48:44    [07/15] Q1_agg [aggregation] — Q1
+09:48:44        Warm-up...
+09:48:44        Warm-up done.
+09:48:44        Run 01/10: 0.2131s  (4 rows)
+09:48:50        Run 02/10: 0.2155s  (4 rows)
+09:48:55        Run 03/10: 0.2190s  (4 rows)
+09:49:00        Run 04/10: 0.2183s  (4 rows)
+09:49:05        Run 05/10: 0.2242s  (4 rows)
+09:49:11        Run 06/10: 0.2196s  (4 rows)
+09:49:16        Run 07/10: 0.2159s  (4 rows)
+09:49:21        Run 08/10: 0.2185s  (4 rows)
+09:49:26        Run 09/10: 0.2276s  (4 rows)
+09:49:31        Run 10/10: 0.2186s  (4 rows)
+09:49:31        DONE  MEAN=0.2190s  STD=0.0040s  MIN=0.2131s  MAX=0.2276s
+
+09:49:31    [08/15] Q4_agg [aggregation] — Q4
+09:49:31        Warm-up...
+09:49:32        Warm-up done.
+09:49:32        Run 01/10: 0.2163s  (5 rows)
+09:49:37        Run 02/10: 0.2187s  (5 rows)
+09:49:42        Run 03/10: 0.2163s  (5 rows)
+09:49:48        Run 04/10: 0.2145s  (5 rows)
+09:49:53        Run 05/10: 0.2151s  (5 rows)
+09:49:58        Run 06/10: 0.2140s  (5 rows)
+09:50:03        Run 07/10: 0.2257s  (5 rows)
+09:50:08        Run 08/10: 0.2201s  (5 rows)
+09:50:14        Run 09/10: 0.2138s  (5 rows)
+09:50:19        Run 10/10: 0.2156s  (5 rows)
+09:50:19        DONE  MEAN=0.2170s  STD=0.0035s  MIN=0.2138s  MAX=0.2257s
+
+09:50:19    [09/15] Q7_agg [aggregation] — Q7
+09:50:19        Warm-up...
+09:50:19        Warm-up done.
+09:50:19        Run 01/10: 0.2196s  (4 rows)
+09:50:25        Run 02/10: 0.2304s  (4 rows)
+09:50:30        Run 03/10: 0.2248s  (4 rows)
+09:50:35        Run 04/10: 0.2239s  (4 rows)
+09:50:40        Run 05/10: 0.2232s  (4 rows)
+09:50:45        Run 06/10: 0.2287s  (4 rows)
+09:50:51        Run 07/10: 0.2313s  (4 rows)
+09:50:56        Run 08/10: 0.2261s  (4 rows)
+09:51:01        Run 09/10: 0.2290s  (4 rows)
+09:51:06        Run 10/10: 0.2312s  (4 rows)
+09:51:06        DONE  MEAN=0.2268s  STD=0.0037s  MIN=0.2196s  MAX=0.2313s
+
+09:51:06    [10/15] Q17_subquery [subquery] — Q17
+09:51:06        Warm-up...
+09:51:07        Warm-up done.
+09:51:07        Run 01/10: 0.2151s  (1 rows)
+09:51:12        Run 02/10: 0.2144s  (1 rows)
+09:51:17        Run 03/10: 0.2169s  (1 rows)
+09:51:22        Run 04/10: 0.2185s  (1 rows)
+09:51:28        Run 05/10: 0.2154s  (1 rows)
+09:51:33        Run 06/10: 0.2157s  (1 rows)
+09:51:38        Run 07/10: 0.2186s  (1 rows)
+09:51:43        Run 08/10: 0.2179s  (1 rows)
+09:51:49        Run 09/10: 0.2226s  (1 rows)
+09:51:54        Run 10/10: 0.2175s  (1 rows)
+09:51:54        DONE  MEAN=0.2173s  STD=0.0023s  MIN=0.2144s  MAX=0.2226s
+
+09:51:54    [11/15] Q20_subquery [subquery] — Q20
+09:51:54        Warm-up...
+09:51:54        Warm-up done.
+09:51:54        Run 01/10: 0.2206s  (186 rows)
+09:51:59        Run 02/10: 0.2303s  (186 rows)
+09:52:05        Run 03/10: 0.2290s  (186 rows)
+09:52:10        Run 04/10: 0.2265s  (186 rows)
+09:52:15        Run 05/10: 0.2292s  (186 rows)
+09:52:20        Run 06/10: 0.2244s  (186 rows)
+09:52:26        Run 07/10: 0.2344s  (186 rows)
+09:52:31        Run 08/10: 0.2313s  (186 rows)
+09:52:36        Run 09/10: 0.2246s  (186 rows)
+09:52:41        Run 10/10: 0.2265s  (186 rows)
+09:52:41        DONE  MEAN=0.2277s  STD=0.0038s  MIN=0.2206s  MAX=0.2344s
+
+09:52:41    [12/15] Q22_subquery [subquery] — Q22
+09:52:41        Warm-up...
+09:52:42        Warm-up done.
+09:52:42        Run 01/10: 0.2334s  (7 rows)
+09:52:47        Run 02/10: 0.2365s  (7 rows)
+09:52:52        Run 03/10: 0.2325s  (7 rows)
+09:52:57        Run 04/10: 0.2294s  (7 rows)
+09:53:03        Run 05/10: 0.2354s  (7 rows)
+09:53:08        Run 06/10: 0.2337s  (7 rows)
+09:53:13        Run 07/10: 0.2363s  (7 rows)
+09:53:18        Run 08/10: 0.2329s  (7 rows)
+09:53:24        Run 09/10: 0.2349s  (7 rows)
+09:53:29        Run 10/10: 0.2336s  (7 rows)
+09:53:29        DONE  MEAN=0.2339s  STD=0.0020s  MIN=0.2294s  MAX=0.2365s
+
+09:53:29    [13/15] Q10_window [window_function] — Q10-W
+09:53:29        Warm-up...
+09:53:29        Warm-up done.
+09:53:29        Run 01/10: 0.2512s  (20 rows)
+09:53:35        Run 02/10: 0.2517s  (20 rows)
+09:53:40        Run 03/10: 0.2435s  (20 rows)
+09:53:45        Run 04/10: 0.2485s  (20 rows)
+09:53:50        Run 05/10: 0.2484s  (20 rows)
+09:53:56        Run 06/10: 0.2500s  (20 rows)
+09:54:01        Run 07/10: 0.2505s  (20 rows)
+09:54:06        Run 08/10: 0.2444s  (20 rows)
+09:54:11        Run 09/10: 0.2453s  (20 rows)
+09:54:17        Run 10/10: 0.2438s  (20 rows)
+09:54:17        DONE  MEAN=0.2477s  STD=0.0030s  MIN=0.2435s  MAX=0.2517s
+
+09:54:17    [14/15] Q1_window [window_function] — Q1-W
+09:54:17        Warm-up...
+09:54:17        Warm-up done.
+09:54:17        Run 01/10: 0.2116s  (4 rows)
+09:54:22        Run 02/10: 0.2113s  (4 rows)
+09:54:27        Run 03/10: 0.2086s  (4 rows)
+09:54:33        Run 04/10: 0.2037s  (4 rows)
+09:54:38        Run 05/10: 0.2035s  (4 rows)
+09:54:43        Run 06/10: 0.2024s  (4 rows)
+09:54:48        Run 07/10: 0.2040s  (4 rows)
+09:54:53        Run 08/10: 0.2035s  (4 rows)
+09:54:59        Run 09/10: 0.2044s  (4 rows)
+09:55:04        Run 10/10: 0.2063s  (4 rows)
+09:55:04        DONE  MEAN=0.2059s  STD=0.0032s  MIN=0.2024s  MAX=0.2116s
+
+09:55:04    [15/15] Q18_window [window_function] — Q18-W
+09:55:04        Warm-up...
+09:55:04        Warm-up done.
+09:55:05        Run 01/10: 0.3041s  (57 rows)
+09:55:10        Run 02/10: 0.3186s  (57 rows)
+09:55:15        Run 03/10: 0.3186s  (57 rows)
+09:55:20        Run 04/10: 0.3223s  (57 rows)
+09:55:26        Run 05/10: 0.3151s  (57 rows)
+09:55:31        Run 06/10: 0.3234s  (57 rows)
+09:55:36        Run 07/10: 0.3184s  (57 rows)
+09:55:42        Run 08/10: 0.3196s  (57 rows)
+09:55:47        Run 09/10: 0.3160s  (57 rows)
+09:55:52        Run 10/10: 0.3108s  (57 rows)
+09:55:52        DONE  MEAN=0.3167s  STD=0.0054s  MIN=0.3041s  MAX=0.3234s
+
+09:55:52  
+09:55:52    SF1: All 15 queries complete (10 runs each).
+09:55:52    Dropping database 'tpch_sf1' from MotherDuck (post-benchmark cleanup)...
+09:55:53    'tpch_sf1' dropped successfully.
+09:55:53  
+  ──────────────────────────────────────────────────────────
+09:55:53    PROGRESS
+09:55:53    ──────────────────────────────────────────────────────────
+09:55:53    SF 1  [████████████████████████]  DONE
+09:55:53    SF 5  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+09:55:53    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+09:55:53    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+09:55:53    ──────────────────────────────────────────────────────────
+09:55:53    Total: 15/60 queries complete
+
+09:55:53    Waiting 10 seconds before SF5...
+09:56:03  
+09:56:03  --------------------------------------------------------------
+09:56:03    SCALE FACTOR 5  (~2 GB)
+09:56:03  --------------------------------------------------------------
+09:56:03    Network RTT to MotherDuck: 95.5 ms
+09:56:03    Phase 1: Check & upload data for SF5...
+09:56:04    Database 'tpch_sf5' ready.
+09:56:04    Estimated size SF5: ~2500 MB — uploading missing tables...
+09:56:04  
+09:56:04      [UP]   lineitem       1051.5 MB  uploading...
+09:57:18      [OK]   lineitem      done in 73.7s  (29,999,795 rows)
+09:57:18      [UP]   orders          275.2 MB  uploading...
+09:57:39      [OK]   orders        done in 20.2s  (7,500,000 rows)
+09:57:39      [UP]   customer         59.0 MB  uploading...
+09:57:49      [OK]   customer      done in 9.7s  (750,000 rows)
+09:57:49      [UP]   supplier          3.8 MB  uploading...
+09:57:51      [OK]   supplier      done in 1.2s  (50,000 rows)
+09:57:51      [UP]   part             30.4 MB  uploading...
+09:57:56      [OK]   part          done in 4.3s  (1,000,000 rows)
+09:57:56      [UP]   partsupp        209.8 MB  uploading...
+09:58:12      [OK]   partsupp      done in 16.1s  (4,000,000 rows)
+09:58:13      [UP]   nation            0.0 MB  uploading...
+09:58:13      [OK]   nation        done in 0.6s  (25 rows)
+09:58:14      [UP]   region            0.0 MB  uploading...
+09:58:15      [OK]   region        done in 0.6s  (5 rows)
+09:58:15  
+09:58:15    Phase 2: Verifying SF5 data...
+09:58:15    Verifying tables for SF5...
+09:58:15        [OK] lineitem        29,999,795 rows
+09:58:15        [OK] orders           7,500,000 rows
+09:58:15        [OK] customer           750,000 rows
+09:58:15        [OK] supplier            50,000 rows
+09:58:16        [OK] part             1,000,000 rows
+09:58:16        [OK] partsupp         4,000,000 rows
+09:58:16        [OK] nation                  25 rows
+09:58:16        [OK] region                   5 rows
+09:58:16  
+09:58:16    Phase 3: Benchmarking SF5...
+09:58:16    Setting up views for SF5...
+09:58:19    Views ready. Starting benchmark: 15 queries x 10 runs...
+
+09:58:19    [01/15] Q6_simple [simple_select] — Q6
+09:58:19        Warm-up...
+09:58:19        Warm-up done.
+09:58:20        Run 01/10: 0.2147s  (1 rows)
+09:58:25        Run 02/10: 0.2116s  (1 rows)
+09:58:30        Run 03/10: 0.2126s  (1 rows)
+09:58:35        Run 04/10: 0.2209s  (1 rows)
+09:58:40        Run 05/10: 0.2106s  (1 rows)
+09:58:46        Run 06/10: 0.2120s  (1 rows)
+09:58:51        Run 07/10: 0.2109s  (1 rows)
+09:58:56        Run 08/10: 0.2146s  (1 rows)
+09:59:01        Run 09/10: 0.2160s  (1 rows)
+09:59:07        Run 10/10: 0.2124s  (1 rows)
+09:59:07        DONE  MEAN=0.2136s  STD=0.0029s  MIN=0.2106s  MAX=0.2209s
+
+09:59:07    [02/15] Q14_simple [simple_select] — Q14
+09:59:07        Warm-up...
+09:59:07        Warm-up done.
+09:59:07        Run 01/10: 0.2662s  (1 rows)
+09:59:12        Run 02/10: 0.2661s  (1 rows)
+09:59:18        Run 03/10: 0.2619s  (1 rows)
+09:59:23        Run 04/10: 0.2621s  (1 rows)
+09:59:28        Run 05/10: 0.2669s  (1 rows)
+09:59:33        Run 06/10: 0.2727s  (1 rows)
+09:59:39        Run 07/10: 0.2647s  (1 rows)
+09:59:44        Run 08/10: 0.2664s  (1 rows)
+09:59:49        Run 09/10: 0.2660s  (1 rows)
+09:59:54        Run 10/10: 0.2626s  (1 rows)
+09:59:54        DONE  MEAN=0.2656s  STD=0.0030s  MIN=0.2619s  MAX=0.2727s
+
+09:59:54    [03/15] Q19_simple [simple_select] — Q19
+09:59:54        Warm-up...
+09:59:55        Warm-up done.
+09:59:55        Run 01/10: 0.2932s  (1 rows)
+10:00:00        Run 02/10: 0.3030s  (1 rows)
+10:00:06        Run 03/10: 0.2978s  (1 rows)
+10:00:11        Run 04/10: 0.3000s  (1 rows)
+10:00:16        Run 05/10: 0.2952s  (1 rows)
+10:00:22        Run 06/10: 0.2928s  (1 rows)
+10:00:27        Run 07/10: 0.3117s  (1 rows)
+10:00:32        Run 08/10: 0.3032s  (1 rows)
+10:00:37        Run 09/10: 0.2970s  (1 rows)
+10:00:43        Run 10/10: 0.2980s  (1 rows)
+10:00:43        DONE  MEAN=0.2992s  STD=0.0054s  MIN=0.2928s  MAX=0.3117s
+
+10:00:43    [04/15] Q3_join [join] — Q3
+10:00:43        Warm-up...
+10:00:43        Warm-up done.
+10:00:43        Run 01/10: 0.2791s  (10 rows)
+10:00:49        Run 02/10: 0.2835s  (10 rows)
+10:00:54        Run 03/10: 0.2823s  (10 rows)
+10:00:59        Run 04/10: 0.2861s  (10 rows)
+10:01:04        Run 05/10: 0.2752s  (10 rows)
+10:01:10        Run 06/10: 0.2840s  (10 rows)
+10:01:15        Run 07/10: 0.2867s  (10 rows)
+10:01:20        Run 08/10: 0.2950s  (10 rows)
+10:01:26        Run 09/10: 0.2859s  (10 rows)
+10:01:31        Run 10/10: 0.2853s  (10 rows)
+10:01:31        DONE  MEAN=0.2843s  STD=0.0049s  MIN=0.2752s  MAX=0.2950s
+
+10:01:31    [05/15] Q5_join [join] — Q5
+10:01:31        Warm-up...
+10:01:31        Warm-up done.
+10:01:31        Run 01/10: 0.2681s  (5 rows)
+10:01:37        Run 02/10: 0.2641s  (5 rows)
+10:01:42        Run 03/10: 0.2780s  (5 rows)
+10:01:47        Run 04/10: 0.2687s  (5 rows)
+10:01:53        Run 05/10: 0.2742s  (5 rows)
+10:01:58        Run 06/10: 0.2663s  (5 rows)
+10:02:03        Run 07/10: 0.2736s  (5 rows)
+10:02:08        Run 08/10: 0.2746s  (5 rows)
+10:02:14        Run 09/10: 0.2707s  (5 rows)
+10:02:19        Run 10/10: 0.2632s  (5 rows)
+10:02:19        DONE  MEAN=0.2701s  STD=0.0046s  MIN=0.2632s  MAX=0.2780s
+
+10:02:19    [06/15] Q10_join [join] — Q10
+10:02:19        Warm-up...
+10:02:19        Warm-up done.
+10:02:20        Run 01/10: 0.3392s  (20 rows)
+10:02:25        Run 02/10: 0.3426s  (20 rows)
+10:02:30        Run 03/10: 0.3465s  (20 rows)
+10:02:36        Run 04/10: 0.3403s  (20 rows)
+10:02:41        Run 05/10: 0.3478s  (20 rows)
+10:02:46        Run 06/10: 0.3391s  (20 rows)
+10:02:52        Run 07/10: 0.3382s  (20 rows)
+10:02:57        Run 08/10: 0.3414s  (20 rows)
+10:03:02        Run 09/10: 0.3419s  (20 rows)
+10:03:08        Run 10/10: 0.3392s  (20 rows)
+10:03:08        DONE  MEAN=0.3416s  STD=0.0031s  MIN=0.3382s  MAX=0.3478s
+
+10:03:08    [07/15] Q1_agg [aggregation] — Q1
+10:03:08        Warm-up...
+10:03:08        Warm-up done.
+10:03:08        Run 01/10: 0.2776s  (4 rows)
+10:03:13        Run 02/10: 0.2775s  (4 rows)
+10:03:19        Run 03/10: 0.2804s  (4 rows)
+10:03:24        Run 04/10: 0.2857s  (4 rows)
+10:03:29        Run 05/10: 0.2814s  (4 rows)
+10:03:35        Run 06/10: 0.2780s  (4 rows)
+10:03:40        Run 07/10: 0.2814s  (4 rows)
+10:03:45        Run 08/10: 0.2812s  (4 rows)
+10:03:50        Run 09/10: 0.2804s  (4 rows)
+10:03:56        Run 10/10: 0.2777s  (4 rows)
+10:03:56        DONE  MEAN=0.2801s  STD=0.0024s  MIN=0.2775s  MAX=0.2857s
+
+10:03:56    [08/15] Q4_agg [aggregation] — Q4
+10:03:56        Warm-up...
+10:03:56        Warm-up done.
+10:03:56        Run 01/10: 0.2663s  (5 rows)
+10:04:02        Run 02/10: 0.2672s  (5 rows)
+10:04:07        Run 03/10: 0.2717s  (5 rows)
+10:04:12        Run 04/10: 0.2756s  (5 rows)
+10:04:17        Run 05/10: 0.2735s  (5 rows)
+10:04:23        Run 06/10: 0.2887s  (5 rows)
+10:04:28        Run 07/10: 0.2763s  (5 rows)
+10:04:33        Run 08/10: 0.2748s  (5 rows)
+10:04:38        Run 09/10: 0.2632s  (5 rows)
+10:04:44        Run 10/10: 0.2745s  (5 rows)
+10:04:44        DONE  MEAN=0.2732s  STD=0.0067s  MIN=0.2632s  MAX=0.2887s
+
+10:04:44    [09/15] Q7_agg [aggregation] — Q7
+10:04:44        Warm-up...
+10:04:44        Warm-up done.
+10:04:44        Run 01/10: 0.2944s  (4 rows)
+10:04:50        Run 02/10: 0.2969s  (4 rows)
+10:04:55        Run 03/10: 0.2883s  (4 rows)
+10:05:00        Run 04/10: 0.3007s  (4 rows)
+10:05:06        Run 05/10: 0.3076s  (4 rows)
+10:05:11        Run 06/10: 0.2910s  (4 rows)
+10:05:16        Run 07/10: 0.2998s  (4 rows)
+10:05:21        Run 08/10: 0.3092s  (4 rows)
+10:05:27        Run 09/10: 0.2913s  (4 rows)
+10:05:32        Run 10/10: 0.2907s  (4 rows)
+10:05:32        DONE  MEAN=0.2970s  STD=0.0069s  MIN=0.2883s  MAX=0.3092s
+
+10:05:32    [10/15] Q17_subquery [subquery] — Q17
+10:05:32        Warm-up...
+10:05:32        Warm-up done.
+10:05:33        Run 01/10: 0.2312s  (1 rows)
+10:05:38        Run 02/10: 0.2319s  (1 rows)
+10:05:43        Run 03/10: 0.2506s  (1 rows)
+10:05:48        Run 04/10: 0.2586s  (1 rows)
+10:05:54        Run 05/10: 0.2464s  (1 rows)
+10:05:59        Run 06/10: 0.2457s  (1 rows)
+10:06:04        Run 07/10: 0.2492s  (1 rows)
+10:06:09        Run 08/10: 0.2536s  (1 rows)
+10:06:15        Run 09/10: 0.2441s  (1 rows)
+10:06:20        Run 10/10: 0.2440s  (1 rows)
+10:06:20        DONE  MEAN=0.2455s  STD=0.0082s  MIN=0.2312s  MAX=0.2586s
+
+10:06:20    [11/15] Q20_subquery [subquery] — Q20
+10:06:20        Warm-up...
+10:06:20        Warm-up done.
+10:06:20        Run 01/10: 0.2560s  (901 rows)
+10:06:26        Run 02/10: 0.4558s  (901 rows)
+10:06:31        Run 03/10: 0.4548s  (901 rows)
+10:06:37        Run 04/10: 0.4529s  (901 rows)
+10:06:42        Run 05/10: 0.4518s  (901 rows)
+10:06:48        Run 06/10: 0.4492s  (901 rows)
+10:06:53        Run 07/10: 0.4557s  (901 rows)
+10:06:59        Run 08/10: 0.4527s  (901 rows)
+10:07:04        Run 09/10: 0.4562s  (901 rows)
+10:07:10        Run 10/10: 0.4590s  (901 rows)
+10:07:10        DONE  MEAN=0.4344s  STD=0.0595s  MIN=0.2560s  MAX=0.4590s
+
+10:07:10    [12/15] Q22_subquery [subquery] — Q22
+10:07:10        Warm-up...
+10:07:10        Warm-up done.
+10:07:10        Run 01/10: 0.2549s  (7 rows)
+10:07:15        Run 02/10: 0.2587s  (7 rows)
+10:07:21        Run 03/10: 0.2530s  (7 rows)
+10:07:26        Run 04/10: 0.2597s  (7 rows)
+10:07:31        Run 05/10: 0.2609s  (7 rows)
+10:07:36        Run 06/10: 0.2707s  (7 rows)
+10:07:42        Run 07/10: 0.2675s  (7 rows)
+10:07:47        Run 08/10: 0.2729s  (7 rows)
+10:07:52        Run 09/10: 0.2732s  (7 rows)
+10:07:57        Run 10/10: 0.2703s  (7 rows)
+10:07:57        DONE  MEAN=0.2642s  STD=0.0072s  MIN=0.2530s  MAX=0.2732s
+
+10:07:57    [13/15] Q10_window [window_function] — Q10-W
+10:07:57        Warm-up...
+10:07:58        Warm-up done.
+10:07:58        Run 01/10: 0.3532s  (20 rows)
+10:08:04        Run 02/10: 0.3489s  (20 rows)
+10:08:09        Run 03/10: 0.3472s  (20 rows)
+10:08:14        Run 04/10: 0.3508s  (20 rows)
+10:08:20        Run 05/10: 0.3501s  (20 rows)
+10:08:25        Run 06/10: 0.3516s  (20 rows)
+10:08:30        Run 07/10: 0.3485s  (20 rows)
+10:08:36        Run 08/10: 0.3538s  (20 rows)
+10:08:41        Run 09/10: 0.3541s  (20 rows)
+10:08:46        Run 10/10: 0.3594s  (20 rows)
+10:08:46        DONE  MEAN=0.3518s  STD=0.0034s  MIN=0.3472s  MAX=0.3594s
+
+10:08:46    [14/15] Q1_window [window_function] — Q1-W
+10:08:46        Warm-up...
+10:08:47        Warm-up done.
+10:08:47        Run 01/10: 0.2626s  (4 rows)
+10:08:52        Run 02/10: 0.2677s  (4 rows)
+10:08:57        Run 03/10: 0.2657s  (4 rows)
+10:09:03        Run 04/10: 0.2677s  (4 rows)
+10:09:08        Run 05/10: 0.2627s  (4 rows)
+10:09:13        Run 06/10: 0.2656s  (4 rows)
+10:09:18        Run 07/10: 0.2651s  (4 rows)
+10:09:24        Run 08/10: 0.2636s  (4 rows)
+10:09:29        Run 09/10: 0.2666s  (4 rows)
+10:09:34        Run 10/10: 0.2685s  (4 rows)
+10:09:34        DONE  MEAN=0.2656s  STD=0.0020s  MIN=0.2626s  MAX=0.2685s
+
+10:09:34    [15/15] Q18_window [window_function] — Q18-W
+10:09:34        Warm-up...
+10:09:35        Warm-up done.
+10:09:36        Run 01/10: 0.6302s  (100 rows)
+10:09:41        Run 02/10: 0.6609s  (100 rows)
+10:09:47        Run 03/10: 0.6672s  (100 rows)
+10:09:53        Run 04/10: 0.6616s  (100 rows)
+10:09:58        Run 05/10: 0.6639s  (100 rows)
+10:10:04        Run 06/10: 0.6778s  (100 rows)
+10:10:10        Run 07/10: 0.6726s  (100 rows)
+10:10:15        Run 08/10: 0.6780s  (100 rows)
+10:10:21        Run 09/10: 0.6658s  (100 rows)
+10:10:27        Run 10/10: 0.6645s  (100 rows)
+10:10:27        DONE  MEAN=0.6643s  STD=0.0128s  MIN=0.6302s  MAX=0.6780s
+
+10:10:27  
+10:10:27    SF5: All 15 queries complete (10 runs each).
+10:10:27    Dropping database 'tpch_sf5' from MotherDuck (post-benchmark cleanup)...
+10:10:27    'tpch_sf5' dropped successfully.
+10:10:27  
+  ──────────────────────────────────────────────────────────
+10:10:27    PROGRESS
+10:10:27    ──────────────────────────────────────────────────────────
+10:10:27    SF 1  [████████████████████████]  DONE
+10:10:27    SF 5  [████████████████████████]  DONE
+10:10:27    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+10:10:27    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+10:10:27    ──────────────────────────────────────────────────────────
+10:10:27    Total: 30/60 queries complete
+
+10:10:27    Waiting 10 seconds before SF10...
+10:10:37  
+10:10:37  --------------------------------------------------------------
+10:10:37    SCALE FACTOR 10  (~4 GB)
+10:10:37  --------------------------------------------------------------
+10:10:37    Network RTT to MotherDuck: 115.0 ms
+10:10:37    Phase 1: Check & upload data for SF10...
+10:10:38    Database 'tpch_sf10' ready.
+10:10:38    Estimated size SF10: ~5000 MB — uploading missing tables...
+10:10:38  
+10:10:38      [UP]   lineitem       2120.3 MB  uploading...
+10:13:13      [OK]   lineitem      done in 154.6s  (59,986,052 rows)
+10:13:14      [UP]   orders          557.1 MB  uploading...
+10:13:55      [OK]   orders        done in 41.0s  (15,000,000 rows)
+10:13:55      [UP]   customer        118.0 MB  uploading...
+10:14:04      [OK]   customer      done in 9.2s  (1,500,000 rows)
+10:14:05      [UP]   supplier          7.5 MB  uploading...
+10:14:07      [OK]   supplier      done in 1.6s  (100,000 rows)
+10:14:07      [UP]   part             60.8 MB  uploading...
+10:14:15      [OK]   part          done in 7.8s  (2,000,000 rows)
+10:14:15      [UP]   partsupp        419.5 MB  uploading...
+10:14:38      [OK]   partsupp      done in 22.8s  (8,000,000 rows)
+10:14:39      [UP]   nation            0.0 MB  uploading...
+10:14:40      [OK]   nation        done in 0.6s  (25 rows)
+10:14:40      [UP]   region            0.0 MB  uploading...
+10:14:41      [OK]   region        done in 0.6s  (5 rows)
+10:14:41  
+10:14:41    Phase 2: Verifying SF10 data...
+10:14:41    Verifying tables for SF10...
+10:14:41        [OK] lineitem        59,986,052 rows
+10:14:41        [OK] orders          15,000,000 rows
+10:14:41        [OK] customer         1,500,000 rows
+10:14:42        [OK] supplier           100,000 rows
+10:14:42        [OK] part             2,000,000 rows
+10:14:42        [OK] partsupp         8,000,000 rows
+10:14:42        [OK] nation                  25 rows
+10:14:42        [OK] region                   5 rows
+10:14:42  
+10:14:42    Phase 3: Benchmarking SF10...
+10:14:42    Setting up views for SF10...
+10:14:46    Views ready. Starting benchmark: 15 queries x 10 runs...
+
+10:14:46    [01/15] Q6_simple [simple_select] — Q6
+10:14:46        Warm-up...
+10:14:46        Warm-up done.
+10:14:46        Run 01/10: 0.2303s  (1 rows)
+10:14:51        Run 02/10: 0.2374s  (1 rows)
+10:14:56        Run 03/10: 0.2299s  (1 rows)
+10:15:02        Run 04/10: 0.2309s  (1 rows)
+10:15:07        Run 05/10: 0.2316s  (1 rows)
+10:15:12        Run 06/10: 0.2378s  (1 rows)
+10:15:17        Run 07/10: 0.2337s  (1 rows)
+10:15:23        Run 08/10: 0.2333s  (1 rows)
+10:15:28        Run 09/10: 0.2297s  (1 rows)
+10:15:33        Run 10/10: 0.2347s  (1 rows)
+10:15:33        DONE  MEAN=0.2329s  STD=0.0028s  MIN=0.2297s  MAX=0.2378s
+
+10:15:33    [02/15] Q14_simple [simple_select] — Q14
+10:15:33        Warm-up...
+10:15:33        Warm-up done.
+10:15:34        Run 01/10: 0.2685s  (1 rows)
+10:15:39        Run 02/10: 0.2745s  (1 rows)
+10:15:44        Run 03/10: 0.2770s  (1 rows)
+10:15:50        Run 04/10: 0.2835s  (1 rows)
+10:15:55        Run 05/10: 0.2733s  (1 rows)
+10:16:00        Run 06/10: 0.2783s  (1 rows)
+10:16:05        Run 07/10: 0.2808s  (1 rows)
+10:16:11        Run 08/10: 0.2798s  (1 rows)
+10:16:16        Run 09/10: 0.2720s  (1 rows)
+10:16:21        Run 10/10: 0.2746s  (1 rows)
+10:16:21        DONE  MEAN=0.2762s  STD=0.0043s  MIN=0.2685s  MAX=0.2835s
+
+10:16:21    [03/15] Q19_simple [simple_select] — Q19
+10:16:21        Warm-up...
+10:16:22        Warm-up done.
+10:16:22        Run 01/10: 0.3299s  (1 rows)
+10:16:27        Run 02/10: 0.3442s  (1 rows)
+10:16:33        Run 03/10: 0.3401s  (1 rows)
+10:16:38        Run 04/10: 0.3289s  (1 rows)
+10:16:43        Run 05/10: 0.3336s  (1 rows)
+10:16:49        Run 06/10: 0.3407s  (1 rows)
+10:16:54        Run 07/10: 0.3417s  (1 rows)
+10:16:59        Run 08/10: 0.3285s  (1 rows)
+10:17:05        Run 09/10: 0.3321s  (1 rows)
+10:17:10        Run 10/10: 0.3296s  (1 rows)
+10:17:10        DONE  MEAN=0.3349s  STD=0.0058s  MIN=0.3285s  MAX=0.3442s
+
+10:17:10    [04/15] Q3_join [join] — Q3
+10:17:10        Warm-up...
+10:17:10        Warm-up done.
+10:17:11        Run 01/10: 0.3137s  (10 rows)
+10:17:16        Run 02/10: 0.3326s  (10 rows)
+10:17:21        Run 03/10: 0.3384s  (10 rows)
+10:17:27        Run 04/10: 0.3382s  (10 rows)
+10:17:32        Run 05/10: 0.3064s  (10 rows)
+10:17:37        Run 06/10: 0.3086s  (10 rows)
+10:17:42        Run 07/10: 0.3234s  (10 rows)
+10:17:48        Run 08/10: 0.3239s  (10 rows)
+10:17:53        Run 09/10: 0.3167s  (10 rows)
+10:17:58        Run 10/10: 0.3111s  (10 rows)
+10:17:58        DONE  MEAN=0.3213s  STD=0.0113s  MIN=0.3064s  MAX=0.3384s
+
+10:17:58    [05/15] Q5_join [join] — Q5
+10:17:58        Warm-up...
+10:17:59        Warm-up done.
+10:17:59        Run 01/10: 0.3297s  (5 rows)
+10:18:04        Run 02/10: 0.3323s  (5 rows)
+10:18:10        Run 03/10: 0.3278s  (5 rows)
+10:18:15        Run 04/10: 0.3295s  (5 rows)
+10:18:20        Run 05/10: 0.3355s  (5 rows)
+10:18:26        Run 06/10: 0.3505s  (5 rows)
+10:18:31        Run 07/10: 0.3319s  (5 rows)
+10:18:36        Run 08/10: 0.3330s  (5 rows)
+10:18:42        Run 09/10: 0.3456s  (5 rows)
+10:18:47        Run 10/10: 0.3277s  (5 rows)
+10:18:47        DONE  MEAN=0.3343s  STD=0.0073s  MIN=0.3277s  MAX=0.3505s
+
+10:18:47    [06/15] Q10_join [join] — Q10
+10:18:47        Warm-up...
+10:18:48        Warm-up done.
+10:18:48        Run 01/10: 0.4267s  (20 rows)
+10:18:53        Run 02/10: 0.4593s  (20 rows)
+10:18:59        Run 03/10: 0.4480s  (20 rows)
+10:19:04        Run 04/10: 0.4513s  (20 rows)
+10:19:10        Run 05/10: 0.4452s  (20 rows)
+10:19:15        Run 06/10: 0.4816s  (20 rows)
+10:19:21        Run 07/10: 0.4502s  (20 rows)
+10:19:26        Run 08/10: 0.4342s  (20 rows)
+10:19:32        Run 09/10: 0.4569s  (20 rows)
+10:19:37        Run 10/10: 0.4566s  (20 rows)
+10:19:37        DONE  MEAN=0.4510s  STD=0.0141s  MIN=0.4267s  MAX=0.4816s
+
+10:19:37    [07/15] Q1_agg [aggregation] — Q1
+10:19:37        Warm-up...
+10:19:37        Warm-up done.
+10:19:38        Run 01/10: 0.3665s  (4 rows)
+10:19:43        Run 02/10: 0.3649s  (4 rows)
+10:19:49        Run 03/10: 0.3670s  (4 rows)
+10:19:54        Run 04/10: 0.3738s  (4 rows)
+10:19:59        Run 05/10: 0.3567s  (4 rows)
+10:20:05        Run 06/10: 0.3667s  (4 rows)
+10:20:10        Run 07/10: 0.3594s  (4 rows)
+10:20:15        Run 08/10: 0.3703s  (4 rows)
+10:20:21        Run 09/10: 0.3584s  (4 rows)
+10:20:26        Run 10/10: 0.3559s  (4 rows)
+10:20:26        DONE  MEAN=0.3640s  STD=0.0058s  MIN=0.3559s  MAX=0.3738s
+
+10:20:26    [08/15] Q4_agg [aggregation] — Q4
+10:20:26        Warm-up...
+10:20:26        Warm-up done.
+10:20:27        Run 01/10: 0.2930s  (5 rows)
+10:20:32        Run 02/10: 0.3003s  (5 rows)
+10:20:37        Run 03/10: 0.3165s  (5 rows)
+10:20:43        Run 04/10: 0.3290s  (5 rows)
+10:20:48        Run 05/10: 0.3248s  (5 rows)
+10:20:53        Run 06/10: 0.3254s  (5 rows)
+10:20:59        Run 07/10: 0.3249s  (5 rows)
+10:21:04        Run 08/10: 0.3235s  (5 rows)
+10:21:09        Run 09/10: 0.3191s  (5 rows)
+10:21:15        Run 10/10: 0.3257s  (5 rows)
+10:21:15        DONE  MEAN=0.3182s  STD=0.0114s  MIN=0.2930s  MAX=0.3290s
+
+10:21:15    [09/15] Q7_agg [aggregation] — Q7
+10:21:15        Warm-up...
+10:21:15        Warm-up done.
+10:21:15        Run 01/10: 0.3055s  (4 rows)
+10:21:20        Run 02/10: 0.3032s  (4 rows)
+10:21:26        Run 03/10: 0.3092s  (4 rows)
+10:21:31        Run 04/10: 0.3133s  (4 rows)
+10:21:36        Run 05/10: 0.3093s  (4 rows)
+10:21:42        Run 06/10: 0.3146s  (4 rows)
+10:21:47        Run 07/10: 0.3053s  (4 rows)
+10:21:52        Run 08/10: 0.3140s  (4 rows)
+10:21:58        Run 09/10: 0.3043s  (4 rows)
+10:22:03        Run 10/10: 0.3131s  (4 rows)
+10:22:03        DONE  MEAN=0.3092s  STD=0.0042s  MIN=0.3032s  MAX=0.3146s
+
+10:22:03    [10/15] Q17_subquery [subquery] — Q17
+10:22:03        Warm-up...
+10:22:03        Warm-up done.
+10:22:04        Run 01/10: 0.2972s  (1 rows)
+10:22:09        Run 02/10: 0.3063s  (1 rows)
+10:22:14        Run 03/10: 0.3047s  (1 rows)
+10:22:20        Run 04/10: 0.3051s  (1 rows)
+10:22:25        Run 05/10: 0.3008s  (1 rows)
+10:22:30        Run 06/10: 0.3094s  (1 rows)
+10:22:35        Run 07/10: 0.3115s  (1 rows)
+10:22:41        Run 08/10: 0.2990s  (1 rows)
+10:22:46        Run 09/10: 0.3087s  (1 rows)
+10:22:51        Run 10/10: 0.3034s  (1 rows)
+10:22:51        DONE  MEAN=0.3046s  STD=0.0044s  MIN=0.2972s  MAX=0.3115s
+
+10:22:51    [11/15] Q20_subquery [subquery] — Q20
+10:22:51        Warm-up...
+10:22:52        Warm-up done.
+10:22:53        Run 01/10: 0.5012s  (1804 rows)
+10:22:58        Run 02/10: 0.7130s  (1804 rows)
+10:23:04        Run 03/10: 0.6970s  (1804 rows)
+10:23:10        Run 04/10: 0.6996s  (1804 rows)
+10:23:15        Run 05/10: 0.6982s  (1804 rows)
+10:23:21        Run 06/10: 0.7094s  (1804 rows)
+10:23:27        Run 07/10: 0.7051s  (1804 rows)
+10:23:32        Run 08/10: 0.6986s  (1804 rows)
+10:23:38        Run 09/10: 0.7074s  (1804 rows)
+10:23:44        Run 10/10: 0.7046s  (1804 rows)
+10:23:44        DONE  MEAN=0.6834s  STD=0.0609s  MIN=0.5012s  MAX=0.7130s
+
+10:23:44    [12/15] Q22_subquery [subquery] — Q22
+10:23:44        Warm-up...
+10:23:44        Warm-up done.
+10:23:45        Run 01/10: 0.3011s  (7 rows)
+10:23:50        Run 02/10: 0.3071s  (7 rows)
+10:23:55        Run 03/10: 0.3120s  (7 rows)
+10:24:00        Run 04/10: 0.3125s  (7 rows)
+10:24:06        Run 05/10: 0.3013s  (7 rows)
+10:24:11        Run 06/10: 0.3256s  (7 rows)
+10:24:16        Run 07/10: 0.3136s  (7 rows)
+10:24:22        Run 08/10: 0.3159s  (7 rows)
+10:24:27        Run 09/10: 0.3068s  (7 rows)
+10:24:32        Run 10/10: 0.3057s  (7 rows)
+10:24:32        DONE  MEAN=0.3102s  STD=0.0070s  MIN=0.3011s  MAX=0.3256s
+
+10:24:32    [13/15] Q10_window [window_function] — Q10-W
+10:24:32        Warm-up...
+10:24:33        Warm-up done.
+10:24:33        Run 01/10: 0.3848s  (20 rows)
+10:24:38        Run 02/10: 0.3991s  (20 rows)
+10:24:44        Run 03/10: 0.3908s  (20 rows)
+10:24:49        Run 04/10: 0.3927s  (20 rows)
+10:24:55        Run 05/10: 0.3922s  (20 rows)
+10:25:00        Run 06/10: 0.3934s  (20 rows)
+10:25:05        Run 07/10: 0.3989s  (20 rows)
+10:25:11        Run 08/10: 0.3968s  (20 rows)
+10:25:16        Run 09/10: 0.3957s  (20 rows)
+10:25:22        Run 10/10: 0.3967s  (20 rows)
+10:25:22        DONE  MEAN=0.3941s  STD=0.0041s  MIN=0.3848s  MAX=0.3991s
+
+10:25:22    [14/15] Q1_window [window_function] — Q1-W
+10:25:22        Warm-up...
+10:25:22        Warm-up done.
+10:25:22        Run 01/10: 0.3163s  (4 rows)
+10:25:28        Run 02/10: 0.3099s  (4 rows)
+10:25:33        Run 03/10: 0.3119s  (4 rows)
+10:25:38        Run 04/10: 0.3086s  (4 rows)
+10:25:44        Run 05/10: 0.3125s  (4 rows)
+10:25:49        Run 06/10: 0.2972s  (4 rows)
+10:25:54        Run 07/10: 0.2972s  (4 rows)
+10:25:59        Run 08/10: 0.2973s  (4 rows)
+10:26:05        Run 09/10: 0.3015s  (4 rows)
+10:26:10        Run 10/10: 0.2980s  (4 rows)
+10:26:10        DONE  MEAN=0.3050s  STD=0.0071s  MIN=0.2972s  MAX=0.3163s
+
+10:26:10    [15/15] Q18_window [window_function] — Q18-W
+10:26:10        Warm-up...
+10:26:11        Warm-up done.
+10:26:12        Run 01/10: 0.9619s  (100 rows)
+10:26:18        Run 02/10: 1.0174s  (100 rows)
+10:26:24        Run 03/10: 1.0105s  (100 rows)
+10:26:30        Run 04/10: 1.0142s  (100 rows)
+10:26:36        Run 05/10: 1.0138s  (100 rows)
+10:26:42        Run 06/10: 1.0147s  (100 rows)
+10:26:48        Run 07/10: 1.0071s  (100 rows)
+10:26:54        Run 08/10: 1.0154s  (100 rows)
+10:27:00        Run 09/10: 1.0278s  (100 rows)
+10:27:06        Run 10/10: 1.0119s  (100 rows)
+10:27:06        DONE  MEAN=1.0095s  STD=0.0167s  MIN=0.9619s  MAX=1.0278s
+
+10:27:06  
+10:27:06    SF10: All 15 queries complete (10 runs each).
+10:27:06    Dropping database 'tpch_sf10' from MotherDuck (post-benchmark cleanup)...
+10:27:07    'tpch_sf10' dropped successfully.
+10:27:07  
+  ──────────────────────────────────────────────────────────
+10:27:07    PROGRESS
+10:27:07    ──────────────────────────────────────────────────────────
+10:27:07    SF 1  [████████████████████████]  DONE
+10:27:07    SF 5  [████████████████████████]  DONE
+10:27:07    SF10  [████████████████████████]  DONE
+10:27:07    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+10:27:07    ──────────────────────────────────────────────────────────
+10:27:07    Total: 45/60 queries complete
+
+10:27:07    Waiting 10 seconds before SF20...
+10:27:17  
+10:27:17  --------------------------------------------------------------
+10:27:17    SCALE FACTOR 20  (~9 GB)
+10:27:17  --------------------------------------------------------------
+10:27:17    Network RTT to MotherDuck: 79.3 ms
+10:27:17    Phase 1: Check & upload data for SF20...
+10:27:17    Database 'tpch_sf20' ready.
+10:27:17    Estimated size SF20: ~10000 MB — uploading missing tables...
+10:27:17  
+10:27:18      [UP]   lineitem       4271.5 MB  uploading...
+10:32:02      [OK]   lineitem      done in 283.5s  (119,994,608 rows)
+10:32:02      [UP]   orders         1137.2 MB  uploading...
+10:33:13      [OK]   orders        done in 71.2s  (30,000,000 rows)
+10:33:14      [UP]   customer        236.1 MB  uploading...
+10:33:30      [OK]   customer      done in 16.2s  (3,000,000 rows)
+10:33:31      [UP]   supplier         15.1 MB  uploading...
+10:33:33      [OK]   supplier      done in 2.4s  (200,000 rows)
+10:33:33      [UP]   part            121.5 MB  uploading...
+10:33:45      [OK]   part          done in 11.2s  (4,000,000 rows)
+10:33:45      [UP]   partsupp        839.0 MB  uploading...
+10:34:27      [OK]   partsupp      done in 41.7s  (16,000,000 rows)
+10:34:28      [UP]   nation            0.0 MB  uploading...
+10:34:28      [OK]   nation        done in 0.6s  (25 rows)
+10:34:29      [UP]   region            0.0 MB  uploading...
+10:34:29      [OK]   region        done in 0.6s  (5 rows)
+10:34:29  
+10:34:29    Phase 2: Verifying SF20 data...
+10:34:29    Verifying tables for SF20...
+10:34:30        [OK] lineitem       119,994,608 rows
+10:34:30        [OK] orders          30,000,000 rows
+10:34:30        [OK] customer         3,000,000 rows
+10:34:30        [OK] supplier           200,000 rows
+10:34:30        [OK] part             4,000,000 rows
+10:34:31        [OK] partsupp        16,000,000 rows
+10:34:31        [OK] nation                  25 rows
+10:34:31        [OK] region                   5 rows
+10:34:31  
+10:34:31    Phase 3: Benchmarking SF20...
+10:34:31    Setting up views for SF20...
+10:34:35    Views ready. Starting benchmark: 15 queries x 10 runs...
+
+10:34:35    [01/15] Q6_simple [simple_select] — Q6
+10:34:35        Warm-up...
+10:34:35        Warm-up done.
+10:34:35        Run 01/10: 0.2619s  (1 rows)
+10:34:41        Run 02/10: 0.2651s  (1 rows)
+10:34:46        Run 03/10: 0.2551s  (1 rows)
+10:34:51        Run 04/10: 0.2567s  (1 rows)
+10:34:56        Run 05/10: 0.2653s  (1 rows)
+10:35:02        Run 06/10: 0.2546s  (1 rows)
+10:35:07        Run 07/10: 0.2590s  (1 rows)
+10:35:12        Run 08/10: 0.2590s  (1 rows)
+10:35:18        Run 09/10: 0.2624s  (1 rows)
+10:35:23        Run 10/10: 0.2620s  (1 rows)
+10:35:23        DONE  MEAN=0.2601s  STD=0.0037s  MIN=0.2546s  MAX=0.2653s
+
+10:35:23    [02/15] Q14_simple [simple_select] — Q14
+10:35:23        Warm-up...
+10:35:23        Warm-up done.
+10:35:23        Run 01/10: 0.3227s  (1 rows)
+10:35:29        Run 02/10: 0.3248s  (1 rows)
+10:35:34        Run 03/10: 0.3209s  (1 rows)
+10:35:39        Run 04/10: 0.3228s  (1 rows)
+10:35:45        Run 05/10: 0.3237s  (1 rows)
+10:35:50        Run 06/10: 0.3134s  (1 rows)
+10:35:55        Run 07/10: 0.3242s  (1 rows)
+10:36:01        Run 08/10: 0.3127s  (1 rows)
+10:36:06        Run 09/10: 0.3288s  (1 rows)
+10:36:11        Run 10/10: 0.3198s  (1 rows)
+10:36:11        DONE  MEAN=0.3214s  STD=0.0047s  MIN=0.3127s  MAX=0.3288s
+
+10:36:11    [03/15] Q19_simple [simple_select] — Q19
+10:36:11        Warm-up...
+10:36:12        Warm-up done.
+10:36:12        Run 01/10: 0.4178s  (1 rows)
+10:36:18        Run 02/10: 0.4197s  (1 rows)
+10:36:23        Run 03/10: 0.4121s  (1 rows)
+10:36:28        Run 04/10: 0.4205s  (1 rows)
+10:36:34        Run 05/10: 0.4338s  (1 rows)
+10:36:39        Run 06/10: 0.4227s  (1 rows)
+10:36:45        Run 07/10: 0.4299s  (1 rows)
+10:36:50        Run 08/10: 0.4172s  (1 rows)
+10:36:56        Run 09/10: 0.4168s  (1 rows)
+10:37:01        Run 10/10: 0.4192s  (1 rows)
+10:37:01        DONE  MEAN=0.4210s  STD=0.0061s  MIN=0.4121s  MAX=0.4338s
+
+10:37:01    [04/15] Q3_join [join] — Q3
+10:37:01        Warm-up...
+10:37:01        Warm-up done.
+10:37:02        Run 01/10: 0.3788s  (10 rows)
+10:37:07        Run 02/10: 0.3974s  (10 rows)
+10:37:13        Run 03/10: 0.4014s  (10 rows)
+10:37:18        Run 04/10: 0.3784s  (10 rows)
+10:37:23        Run 05/10: 0.3892s  (10 rows)
+10:37:29        Run 06/10: 0.3940s  (10 rows)
+10:37:34        Run 07/10: 0.4029s  (10 rows)
+10:37:40        Run 08/10: 0.3944s  (10 rows)
+10:37:45        Run 09/10: 0.3882s  (10 rows)
+10:37:50        Run 10/10: 0.3867s  (10 rows)
+10:37:50        DONE  MEAN=0.3911s  STD=0.0081s  MIN=0.3784s  MAX=0.4029s
+
+10:37:50    [05/15] Q5_join [join] — Q5
+10:37:50        Warm-up...
+10:37:51        Warm-up done.
+10:37:51        Run 01/10: 0.4238s  (5 rows)
+10:37:57        Run 02/10: 0.4366s  (5 rows)
+10:38:02        Run 03/10: 0.4351s  (5 rows)
+10:38:07        Run 04/10: 0.4337s  (5 rows)
+10:38:13        Run 05/10: 0.4317s  (5 rows)
+10:38:18        Run 06/10: 0.4309s  (5 rows)
+10:38:24        Run 07/10: 0.4314s  (5 rows)
+10:38:29        Run 08/10: 0.4429s  (5 rows)
+10:38:35        Run 09/10: 0.4481s  (5 rows)
+10:38:40        Run 10/10: 0.4529s  (5 rows)
+10:38:40        DONE  MEAN=0.4367s  STD=0.0083s  MIN=0.4238s  MAX=0.4529s
+
+10:38:40    [06/15] Q10_join [join] — Q10
+10:38:40        Warm-up...
+10:38:41        Warm-up done.
+10:38:41        Run 01/10: 0.5354s  (20 rows)
+10:38:47        Run 02/10: 0.5334s  (20 rows)
+10:38:52        Run 03/10: 0.5502s  (20 rows)
+10:38:58        Run 04/10: 0.5504s  (20 rows)
+10:39:03        Run 05/10: 0.5367s  (20 rows)
+10:39:09        Run 06/10: 0.5273s  (20 rows)
+10:39:14        Run 07/10: 0.5493s  (20 rows)
+10:39:20        Run 08/10: 0.5305s  (20 rows)
+10:39:26        Run 09/10: 0.5255s  (20 rows)
+10:39:31        Run 10/10: 0.5337s  (20 rows)
+10:39:31        DONE  MEAN=0.5372s  STD=0.0089s  MIN=0.5255s  MAX=0.5504s
+
+10:39:31    [07/15] Q1_agg [aggregation] — Q1
+10:39:31        Warm-up...
+10:39:32        Warm-up done.
+10:39:32        Run 01/10: 0.5034s  (4 rows)
+10:39:38        Run 02/10: 0.5043s  (4 rows)
+10:39:43        Run 03/10: 0.5067s  (4 rows)
+10:39:49        Run 04/10: 0.5091s  (4 rows)
+10:39:54        Run 05/10: 0.5067s  (4 rows)
+10:40:00        Run 06/10: 0.5073s  (4 rows)
+10:40:05        Run 07/10: 0.5101s  (4 rows)
+10:40:11        Run 08/10: 0.5135s  (4 rows)
+10:40:16        Run 09/10: 0.5165s  (4 rows)
+10:40:22        Run 10/10: 0.5168s  (4 rows)
+10:40:22        DONE  MEAN=0.5094s  STD=0.0045s  MIN=0.5034s  MAX=0.5168s
+
+10:40:22    [08/15] Q4_agg [aggregation] — Q4
+10:40:22        Warm-up...
+10:40:22        Warm-up done.
+10:40:22        Run 01/10: 0.3441s  (5 rows)
+10:40:28        Run 02/10: 0.3483s  (5 rows)
+10:40:33        Run 03/10: 0.3484s  (5 rows)
+10:40:38        Run 04/10: 0.3575s  (5 rows)
+10:40:44        Run 05/10: 0.3571s  (5 rows)
+10:40:49        Run 06/10: 0.3779s  (5 rows)
+10:40:55        Run 07/10: 0.3615s  (5 rows)
+10:41:00        Run 08/10: 0.3561s  (5 rows)
+10:41:05        Run 09/10: 0.3628s  (5 rows)
+10:41:11        Run 10/10: 0.3649s  (5 rows)
+10:41:11        DONE  MEAN=0.3579s  STD=0.0093s  MIN=0.3441s  MAX=0.3779s
+
+10:41:11    [09/15] Q7_agg [aggregation] — Q7
+10:41:11        Warm-up...
+10:41:11        Warm-up done.
+10:41:11        Run 01/10: 0.3701s  (4 rows)
+10:41:17        Run 02/10: 0.3771s  (4 rows)
+10:41:22        Run 03/10: 0.3820s  (4 rows)
+10:41:27        Run 04/10: 0.3682s  (4 rows)
+10:41:33        Run 05/10: 0.3697s  (4 rows)
+10:41:38        Run 06/10: 0.3808s  (4 rows)
+10:41:44        Run 07/10: 0.3817s  (4 rows)
+10:41:49        Run 08/10: 0.3703s  (4 rows)
+10:41:54        Run 09/10: 0.3714s  (4 rows)
+10:42:00        Run 10/10: 0.3688s  (4 rows)
+10:42:00        DONE  MEAN=0.3740s  STD=0.0054s  MIN=0.3682s  MAX=0.3820s
+
+10:42:00    [10/15] Q17_subquery [subquery] — Q17
+10:42:00        Warm-up...
+10:42:00        Warm-up done.
+10:42:01        Run 01/10: 0.3860s  (1 rows)
+10:42:06        Run 02/10: 0.3802s  (1 rows)
+10:42:11        Run 03/10: 0.3854s  (1 rows)
+10:42:17        Run 04/10: 0.4012s  (1 rows)
+10:42:22        Run 05/10: 0.3857s  (1 rows)
+10:42:27        Run 06/10: 0.3785s  (1 rows)
+10:42:33        Run 07/10: 0.3804s  (1 rows)
+10:42:38        Run 08/10: 0.3975s  (1 rows)
+10:42:44        Run 09/10: 0.3991s  (1 rows)
+10:42:49        Run 10/10: 0.3983s  (1 rows)
+10:42:49        DONE  MEAN=0.3892s  STD=0.0084s  MIN=0.3785s  MAX=0.4012s
+
+10:42:49    [11/15] Q20_subquery [subquery] — Q20
+10:42:49        Warm-up...
+10:42:50        Warm-up done.
+10:42:51        Run 01/10: 0.5592s  (3543 rows)
+10:42:57        Run 02/10: 0.9550s  (3543 rows)
+10:43:02        Run 03/10: 0.9567s  (3543 rows)
+10:43:08        Run 04/10: 0.9553s  (3543 rows)
+10:43:14        Run 05/10: 0.9567s  (3543 rows)
+10:43:20        Run 06/10: 0.9673s  (3543 rows)
+10:43:26        Run 07/10: 0.9659s  (3543 rows)
+10:43:32        Run 08/10: 0.9639s  (3543 rows)
+10:43:38        Run 09/10: 0.9893s  (3543 rows)
+10:43:44        Run 10/10: 0.9764s  (3543 rows)
+10:43:44        DONE  MEAN=0.9246s  STD=0.1222s  MIN=0.5592s  MAX=0.9893s
+
+10:43:44    [12/15] Q22_subquery [subquery] — Q22
+10:43:44        Warm-up...
+10:43:45        Warm-up done.
+10:43:45        Run 01/10: 0.3603s  (7 rows)
+10:43:50        Run 02/10: 0.3666s  (7 rows)
+10:43:56        Run 03/10: 0.3700s  (7 rows)
+10:44:01        Run 04/10: 0.3745s  (7 rows)
+10:44:06        Run 05/10: 0.3664s  (7 rows)
+10:44:12        Run 06/10: 0.3659s  (7 rows)
+10:44:17        Run 07/10: 0.3686s  (7 rows)
+10:44:23        Run 08/10: 0.3691s  (7 rows)
+10:44:28        Run 09/10: 0.3778s  (7 rows)
+10:44:33        Run 10/10: 0.3646s  (7 rows)
+10:44:33        DONE  MEAN=0.3684s  STD=0.0047s  MIN=0.3603s  MAX=0.3778s
+
+10:44:33    [13/15] Q10_window [window_function] — Q10-W
+10:44:33        Warm-up...
+10:44:34        Warm-up done.
+10:44:34        Run 01/10: 0.4896s  (20 rows)
+10:44:40        Run 02/10: 0.4892s  (20 rows)
+10:44:45        Run 03/10: 0.4979s  (20 rows)
+10:44:51        Run 04/10: 0.4925s  (20 rows)
+10:44:56        Run 05/10: 0.4986s  (20 rows)
+10:45:02        Run 06/10: 0.5122s  (20 rows)
+10:45:07        Run 07/10: 0.4973s  (20 rows)
+10:45:13        Run 08/10: 0.5112s  (20 rows)
+10:45:18        Run 09/10: 0.5023s  (20 rows)
+10:45:24        Run 10/10: 0.4959s  (20 rows)
+10:45:24        DONE  MEAN=0.4987s  STD=0.0076s  MIN=0.4892s  MAX=0.5122s
+
+10:45:24    [14/15] Q1_window [window_function] — Q1-W
+10:45:24        Warm-up...
+10:45:24        Warm-up done.
+10:45:25        Run 01/10: 0.3940s  (4 rows)
+10:45:30        Run 02/10: 0.3865s  (4 rows)
+10:45:35        Run 03/10: 0.3875s  (4 rows)
+10:45:41        Run 04/10: 0.3897s  (4 rows)
+10:45:46        Run 05/10: 0.3933s  (4 rows)
+10:45:52        Run 06/10: 0.3765s  (4 rows)
+10:45:57        Run 07/10: 0.3702s  (4 rows)
+10:46:02        Run 08/10: 0.3837s  (4 rows)
+10:46:08        Run 09/10: 0.3831s  (4 rows)
+10:46:13        Run 10/10: 0.3756s  (4 rows)
+10:46:13        DONE  MEAN=0.3840s  STD=0.0074s  MIN=0.3702s  MAX=0.3940s
+
+10:46:13    [15/15] Q18_window [window_function] — Q18-W
+10:46:13        Warm-up...
+10:46:15        Warm-up done.
+10:46:17        Run 01/10: 2.1642s  (100 rows)
+10:46:24        Run 02/10: 1.9895s  (100 rows)
+10:46:31        Run 03/10: 2.0557s  (100 rows)
+10:46:38        Run 04/10: 1.9543s  (100 rows)
+10:46:45        Run 05/10: 1.8368s  (100 rows)
+10:46:52        Run 06/10: 1.8431s  (100 rows)
+10:46:59        Run 07/10: 1.8481s  (100 rows)
+10:47:05        Run 08/10: 1.8414s  (100 rows)
+10:47:12        Run 09/10: 1.8520s  (100 rows)
+10:47:19        Run 10/10: 1.8285s  (100 rows)
+10:47:19        DONE  MEAN=1.9214s  STD=0.1101s  MIN=1.8285s  MAX=2.1642s
+
+10:47:19  
+10:47:19    SF20: All 15 queries complete (10 runs each).
+10:47:19    Dropping database 'tpch_sf20' from MotherDuck (post-benchmark cleanup)...
+10:47:20    'tpch_sf20' dropped successfully.
+10:47:20  
+  ──────────────────────────────────────────────────────────
+10:47:20    PROGRESS
+10:47:20    ──────────────────────────────────────────────────────────
+10:47:20    SF 1  [████████████████████████]  DONE
+10:47:20    SF 5  [████████████████████████]  DONE
+10:47:20    SF10  [████████████████████████]  DONE
+10:47:20    SF20  [████████████████████████]  DONE
+10:47:20    ──────────────────────────────────────────────────────────
+10:47:20    Total: 60/60 queries complete
+
+10:47:20  
+10:47:20  ==============================================================
+10:47:20    BENCHMARK COMPLETE!
+10:47:20  ==============================================================
+10:47:20    Queries completed this session : 60
+10:47:20    Total elapsed time             : 1.07 hours (64.1 minutes)
+10:47:20    Output CSV                     : C:\benchmark_stephen\results\motherduck_results.csv
+10:47:20    Log file                       : C:\benchmark_stephen\results\logs\benchmark_sf1_5_10_20_20260425_094310.log
+10:47:20    Finished at                    : 2026-04-25 10:47:20
+10:47:20  
+10:47:20    Output files ready for analysis:
+10:47:20      duckdb_results.csv        <- local edge data
+10:47:20      motherduck_results.csv    <- cloud data (this file)
+10:47:20  
+10:47:20    Next step: merge both CSVs in your analysis notebook.
+10:47:20  ==============================================================
+
+06:35:46  
+06:35:46  ==============================================================
+06:35:46    MotherDuck Benchmark v5 — Stephen Edlin (PRADITA University)
+06:35:46  ==============================================================
+06:35:46    Token      : ***...(not set)
+06:35:46    Data dir   : C:\benchmark_stephen\data
+06:35:46    Output CSV : C:\benchmark_stephen\results\motherduck_results.csv
+06:35:46    Log file   : C:\benchmark_stephen\results\logs\log_MotherDuck.log (APPEND)
+06:35:46    Scale factors    : [1, 5, 10, 20]
+06:35:46    Runs per query   : 20 (target total per query per SF)
+06:35:46    Cooling interval : 5s between runs
+06:35:46    Drop DB after SF : YES
+06:35:46    Resume mode      : script will count existing runs and continue from N+1
+06:35:46  
+  [ERROR] MOTHERDUCK_TOKEN is not set.
+06:35:46    Set it before running:
+06:35:46      Windows:   set MOTHERDUCK_TOKEN=your_token_here
+06:35:46      Mac/Linux: export MOTHERDUCK_TOKEN=your_token_here
+06:37:14  
+06:37:14  ==============================================================
+06:37:14    MotherDuck Benchmark v5 — Stephen Edlin (PRADITA University)
+06:37:14  ==============================================================
+06:37:14    Token      : ***...JouE3E
+06:37:14    Data dir   : C:\benchmark_stephen\data
+06:37:14    Output CSV : C:\benchmark_stephen\results\motherduck_results.csv
+06:37:14    Log file   : C:\benchmark_stephen\results\logs\log_MotherDuck.log (APPEND)
+06:37:14    Scale factors    : [1, 5, 10, 20]
+06:37:14    Runs per query   : 20 (target total per query per SF)
+06:37:14    Cooling interval : 5s between runs
+06:37:14    Drop DB after SF : YES
+06:37:14    Resume mode      : script will count existing runs and continue from N+1
+06:37:14  
+06:37:14    Testing connection to MotherDuck...
+06:37:18    Connection OK.
+06:37:18  
+06:37:18  
+  ──────────────────────────────────────────────────────────
+06:37:18    PROGRESS
+06:37:18    ──────────────────────────────────────────────────────────
+06:37:18    SF 1  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+06:37:18    SF 5  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+06:37:18    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+06:37:18    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+06:37:18    ──────────────────────────────────────────────────────────
+06:37:18    Total: 0/60 queries complete
+
+06:37:18  
+06:37:18  --------------------------------------------------------------
+06:37:18    SCALE FACTOR 1  (~0 GB)
+06:37:18  --------------------------------------------------------------
+06:37:18    Network RTT to MotherDuck: 145.4 ms
+06:37:18    Phase 1: Check & upload data for SF1...
+06:37:19    Database 'tpch_sf1' ready.
+06:37:19    Estimated size SF1: ~500 MB — uploading missing tables...
+06:37:19  
+06:37:19      [UP]   lineitem        197.5 MB  uploading...
+06:37:42      [OK]   lineitem      done in 21.9s  (6,001,215 rows)
+06:37:42      [UP]   orders           53.8 MB  uploading...
+06:37:48      [OK]   orders        done in 5.9s  (1,500,000 rows)
+06:37:48      [UP]   customer         11.8 MB  uploading...
+06:37:51      [OK]   customer      done in 2.1s  (150,000 rows)
+06:37:51      [UP]   supplier          0.8 MB  uploading...
+06:37:52      [OK]   supplier      done in 0.7s  (10,000 rows)
+06:37:52      [UP]   part              6.1 MB  uploading...
+06:37:54      [OK]   part          done in 1.8s  (200,000 rows)
+06:37:55      [UP]   partsupp         40.7 MB  uploading...
+06:37:59      [OK]   partsupp      done in 4.1s  (800,000 rows)
+06:37:59      [UP]   nation            0.0 MB  uploading...
+06:38:00      [OK]   nation        done in 0.6s  (25 rows)
+06:38:01      [UP]   region            0.0 MB  uploading...
+06:38:01      [OK]   region        done in 0.6s  (5 rows)
+06:38:01  
+06:38:01    Phase 2: Verifying SF1 data...
+06:38:01    Verifying tables for SF1...
+06:38:02        [OK] lineitem         6,001,215 rows
+06:38:02        [OK] orders           1,500,000 rows
+06:38:02        [OK] customer           150,000 rows
+06:38:02        [OK] supplier            10,000 rows
+06:38:02        [OK] part               200,000 rows
+06:38:03        [OK] partsupp           800,000 rows
+06:38:03        [OK] nation                  25 rows
+06:38:03        [OK] region                   5 rows
+06:38:03  
+06:38:03    Phase 3: Benchmarking SF1...
+06:38:03    Setting up views for SF1...
+06:38:06    Views ready. Starting benchmark: 15 queries x 20 runs...
+
+06:38:06    [01/15] Q6_simple SF1 — RESUME from run 11 (have 10/20)
+06:38:06        Warm-up skipped (resume mode)
+06:38:06        Run 01/10: 0.2388s  (1 rows)
+06:38:11        Run 02/10: 0.2134s  (1 rows)
+06:38:17        Run 03/10: 0.2028s  (1 rows)
+06:38:22        Run 04/10: 0.1959s  (1 rows)
+06:38:27        Run 05/10: 0.2018s  (1 rows)
+06:38:32        Run 06/10: 0.2034s  (1 rows)
+06:38:37        Run 07/10: 0.2044s  (1 rows)
+06:38:43        Run 08/10: 0.2058s  (1 rows)
+06:38:48        Run 09/10: 0.1916s  (1 rows)
+06:38:53        Run 10/10: 0.1980s  (1 rows)
+06:38:53        DONE  MEAN=0.2056s  STD=0.0124s  MIN=0.1916s  MAX=0.2388s
+
+06:38:53    [02/15] Q14_simple SF1 — RESUME from run 11 (have 10/20)
+06:38:53        Warm-up skipped (resume mode)
+06:38:53        Run 01/10: 0.2262s  (1 rows)
+06:38:58        Run 02/10: 0.2285s  (1 rows)
+06:39:04        Run 03/10: 0.2198s  (1 rows)
+06:39:09        Run 04/10: 0.2248s  (1 rows)
+06:39:14        Run 05/10: 0.2281s  (1 rows)
+06:39:19        Run 06/10: 0.2115s  (1 rows)
+06:39:25        Run 07/10: 0.2224s  (1 rows)
+06:39:30        Run 08/10: 0.2246s  (1 rows)
+06:39:35        Run 09/10: 0.2206s  (1 rows)
+06:39:40        Run 10/10: 0.2247s  (1 rows)
+06:39:40        DONE  MEAN=0.2231s  STD=0.0047s  MIN=0.2115s  MAX=0.2285s
+
+06:39:40    [03/15] Q19_simple SF1 — RESUME from run 11 (have 10/20)
+06:39:40        Warm-up skipped (resume mode)
+06:39:40        Run 01/10: 0.2272s  (1 rows)
+06:39:46        Run 02/10: 0.2295s  (1 rows)
+06:39:51        Run 03/10: 0.2274s  (1 rows)
+06:39:56        Run 04/10: 0.2376s  (1 rows)
+06:40:01        Run 05/10: 0.2314s  (1 rows)
+06:40:07        Run 06/10: 0.2309s  (1 rows)
+06:40:12        Run 07/10: 0.2353s  (1 rows)
+06:40:17        Run 08/10: 0.2415s  (1 rows)
+06:40:22        Run 09/10: 0.2274s  (1 rows)
+06:40:28        Run 10/10: 0.2296s  (1 rows)
+06:40:28        DONE  MEAN=0.2318s  STD=0.0046s  MIN=0.2272s  MAX=0.2415s
+
+06:40:28    [04/15] Q3_join SF1 — RESUME from run 11 (have 10/20)
+06:40:28        Warm-up skipped (resume mode)
+06:40:28        Run 01/10: 0.2201s  (10 rows)
+06:40:33        Run 02/10: 0.2312s  (10 rows)
+06:40:38        Run 03/10: 0.2369s  (10 rows)
+06:40:44        Run 04/10: 0.2337s  (10 rows)
+06:40:49        Run 05/10: 0.2306s  (10 rows)
+06:40:54        Run 06/10: 0.2327s  (10 rows)
+06:40:59        Run 07/10: 0.2329s  (10 rows)
+06:41:04        Run 08/10: 0.2363s  (10 rows)
+06:41:10        Run 09/10: 0.2218s  (10 rows)
+06:41:15        Run 10/10: 0.2261s  (10 rows)
+06:41:15        DONE  MEAN=0.2302s  STD=0.0055s  MIN=0.2201s  MAX=0.2369s
+
+06:41:15    [05/15] Q5_join SF1 — RESUME from run 11 (have 10/20)
+06:41:15        Warm-up skipped (resume mode)
+06:41:15        Run 01/10: 0.2287s  (5 rows)
+06:41:20        Run 02/10: 0.2411s  (5 rows)
+06:41:26        Run 03/10: 0.2350s  (5 rows)
+06:41:31        Run 04/10: 0.2388s  (5 rows)
+06:41:36        Run 05/10: 0.2429s  (5 rows)
+06:41:41        Run 06/10: 0.2380s  (5 rows)
+06:41:47        Run 07/10: 0.2342s  (5 rows)
+06:41:52        Run 08/10: 0.2367s  (5 rows)
+06:41:57        Run 09/10: 0.2376s  (5 rows)
+06:42:02        Run 10/10: 0.2428s  (5 rows)
+06:42:02        DONE  MEAN=0.2376s  STD=0.0041s  MIN=0.2287s  MAX=0.2429s
+
+06:42:02    [06/15] Q10_join SF1 — RESUME from run 11 (have 10/20)
+06:42:02        Warm-up skipped (resume mode)
+06:42:03        Run 01/10: 0.2819s  (20 rows)
+06:42:08        Run 02/10: 0.2880s  (20 rows)
+06:42:13        Run 03/10: 0.2934s  (20 rows)
+06:42:18        Run 04/10: 0.2904s  (20 rows)
+06:42:24        Run 05/10: 0.2931s  (20 rows)
+06:42:29        Run 06/10: 0.2842s  (20 rows)
+06:42:34        Run 07/10: 0.2984s  (20 rows)
+06:42:40        Run 08/10: 0.2908s  (20 rows)
+06:42:45        Run 09/10: 0.2867s  (20 rows)
+06:42:50        Run 10/10: 0.2906s  (20 rows)
+06:42:50        DONE  MEAN=0.2897s  STD=0.0045s  MIN=0.2819s  MAX=0.2984s
+
+06:42:50    [07/15] Q1_agg SF1 — RESUME from run 11 (have 10/20)
+06:42:50        Warm-up skipped (resume mode)
+06:42:50        Run 01/10: 0.2364s  (4 rows)
+06:42:56        Run 02/10: 0.2181s  (4 rows)
+06:43:01        Run 03/10: 0.2195s  (4 rows)
+06:43:06        Run 04/10: 0.2214s  (4 rows)
+06:43:11        Run 05/10: 0.2211s  (4 rows)
+06:43:17        Run 06/10: 0.2344s  (4 rows)
+06:43:22        Run 07/10: 0.2343s  (4 rows)
+06:43:27        Run 08/10: 0.2310s  (4 rows)
+06:43:32        Run 09/10: 0.2353s  (4 rows)
+06:43:38        Run 10/10: 0.2337s  (4 rows)
+06:43:38        DONE  MEAN=0.2285s  STD=0.0071s  MIN=0.2181s  MAX=0.2364s
+
+06:43:38    [08/15] Q4_agg SF1 — RESUME from run 11 (have 10/20)
+06:43:38        Warm-up skipped (resume mode)
+06:43:38        Run 01/10: 0.2218s  (5 rows)
+06:43:43        Run 02/10: 0.2319s  (5 rows)
+06:43:48        Run 03/10: 0.2316s  (5 rows)
+06:43:53        Run 04/10: 0.2357s  (5 rows)
+06:43:59        Run 05/10: 0.2286s  (5 rows)
+06:44:04        Run 06/10: 0.2248s  (5 rows)
+06:44:09        Run 07/10: 0.2300s  (5 rows)
+06:44:14        Run 08/10: 0.2349s  (5 rows)
+06:44:20        Run 09/10: 0.2274s  (5 rows)
+06:44:25        Run 10/10: 0.2344s  (5 rows)
+06:44:25        DONE  MEAN=0.2301s  STD=0.0043s  MIN=0.2218s  MAX=0.2357s
+
+06:44:25    [09/15] Q7_agg SF1 — RESUME from run 11 (have 10/20)
+06:44:25        Warm-up skipped (resume mode)
+06:44:25        Run 01/10: 0.2433s  (4 rows)
+06:44:30        Run 02/10: 0.2353s  (4 rows)
+06:44:36        Run 03/10: 0.2406s  (4 rows)
+06:44:41        Run 04/10: 0.2411s  (4 rows)
+06:44:46        Run 05/10: 0.2368s  (4 rows)
+06:44:51        Run 06/10: 0.2349s  (4 rows)
+06:44:57        Run 07/10: 0.2395s  (4 rows)
+06:45:02        Run 08/10: 0.2349s  (4 rows)
+06:45:07        Run 09/10: 0.2340s  (4 rows)
+06:45:12        Run 10/10: 0.2175s  (4 rows)
+06:45:12        DONE  MEAN=0.2358s  STD=0.0068s  MIN=0.2175s  MAX=0.2433s
+
+06:45:12    [10/15] Q17_subquery SF1 — RESUME from run 11 (have 10/20)
+06:45:12        Warm-up skipped (resume mode)
+06:45:12        Run 01/10: 0.2120s  (1 rows)
+06:45:18        Run 02/10: 0.2162s  (1 rows)
+06:45:23        Run 03/10: 0.2199s  (1 rows)
+06:45:28        Run 04/10: 0.2148s  (1 rows)
+06:45:33        Run 05/10: 0.2088s  (1 rows)
+06:45:39        Run 06/10: 0.2128s  (1 rows)
+06:45:44        Run 07/10: 0.2212s  (1 rows)
+06:45:49        Run 08/10: 0.2230s  (1 rows)
+06:45:54        Run 09/10: 0.2195s  (1 rows)
+06:45:59        Run 10/10: 0.2203s  (1 rows)
+06:45:59        DONE  MEAN=0.2169s  STD=0.0044s  MIN=0.2088s  MAX=0.2230s
+
+06:45:59    [11/15] Q20_subquery SF1 — RESUME from run 11 (have 10/20)
+06:45:59        Warm-up skipped (resume mode)
+06:46:00        Run 01/10: 0.2231s  (186 rows)
+06:46:05        Run 02/10: 0.2184s  (186 rows)
+06:46:10        Run 03/10: 0.2302s  (186 rows)
+06:46:15        Run 04/10: 0.2315s  (186 rows)
+06:46:21        Run 05/10: 0.2335s  (186 rows)
+06:46:26        Run 06/10: 0.2316s  (186 rows)
+06:46:31        Run 07/10: 0.2285s  (186 rows)
+06:46:36        Run 08/10: 0.2161s  (186 rows)
+06:46:41        Run 09/10: 0.2275s  (186 rows)
+06:46:47        Run 10/10: 0.2285s  (186 rows)
+06:46:47        DONE  MEAN=0.2269s  STD=0.0055s  MIN=0.2161s  MAX=0.2335s
+
+06:46:47    [12/15] Q22_subquery SF1 — RESUME from run 11 (have 10/20)
+06:46:47        Warm-up skipped (resume mode)
+06:46:47        Run 01/10: 0.2338s  (7 rows)
+06:46:52        Run 02/10: 0.2421s  (7 rows)
+06:46:57        Run 03/10: 0.2408s  (7 rows)
+06:47:03        Run 04/10: 0.2379s  (7 rows)
+06:47:08        Run 05/10: 0.2288s  (7 rows)
+06:47:13        Run 06/10: 0.2373s  (7 rows)
+06:47:18        Run 07/10: 0.2405s  (7 rows)
+06:47:24        Run 08/10: 0.2419s  (7 rows)
+06:47:29        Run 09/10: 0.2350s  (7 rows)
+06:47:34        Run 10/10: 0.2407s  (7 rows)
+06:47:34        DONE  MEAN=0.2379s  STD=0.0041s  MIN=0.2288s  MAX=0.2421s
+
+06:47:34    [13/15] Q10_window SF1 — RESUME from run 11 (have 10/20)
+06:47:34        Warm-up skipped (resume mode)
+06:47:34        Run 01/10: 0.2457s  (20 rows)
+06:47:40        Run 02/10: 0.2504s  (20 rows)
+06:47:45        Run 03/10: 0.2514s  (20 rows)
+06:47:50        Run 04/10: 0.2556s  (20 rows)
+06:47:55        Run 05/10: 0.2552s  (20 rows)
+06:48:01        Run 06/10: 0.2529s  (20 rows)
+06:48:06        Run 07/10: 0.2519s  (20 rows)
+06:48:11        Run 08/10: 0.2537s  (20 rows)
+06:48:16        Run 09/10: 0.2542s  (20 rows)
+06:48:22        Run 10/10: 0.2577s  (20 rows)
+06:48:22        DONE  MEAN=0.2529s  STD=0.0031s  MIN=0.2457s  MAX=0.2577s
+
+06:48:22    [14/15] Q1_window SF1 — RESUME from run 11 (have 10/20)
+06:48:22        Warm-up skipped (resume mode)
+06:48:22        Run 01/10: 0.2073s  (4 rows)
+06:48:27        Run 02/10: 0.2093s  (4 rows)
+06:48:32        Run 03/10: 0.2146s  (4 rows)
+06:48:38        Run 04/10: 0.2166s  (4 rows)
+06:48:43        Run 05/10: 0.2148s  (4 rows)
+06:48:48        Run 06/10: 0.2127s  (4 rows)
+06:48:53        Run 07/10: 0.2163s  (4 rows)
+06:48:58        Run 08/10: 0.2164s  (4 rows)
+06:49:04        Run 09/10: 0.2184s  (4 rows)
+06:49:09        Run 10/10: 0.2096s  (4 rows)
+06:49:09        DONE  MEAN=0.2136s  STD=0.0035s  MIN=0.2073s  MAX=0.2184s
+
+06:49:09    [15/15] Q18_window SF1 — RESUME from run 11 (have 10/20)
+06:49:09        Warm-up skipped (resume mode)
+06:49:09        Run 01/10: 0.3184s  (57 rows)
+06:49:15        Run 02/10: 0.3267s  (57 rows)
+06:49:20        Run 03/10: 0.3279s  (57 rows)
+06:49:25        Run 04/10: 0.3294s  (57 rows)
+06:49:30        Run 05/10: 0.3274s  (57 rows)
+06:49:36        Run 06/10: 0.3330s  (57 rows)
+06:49:41        Run 07/10: 0.3308s  (57 rows)
+06:49:46        Run 08/10: 0.3277s  (57 rows)
+06:49:52        Run 09/10: 0.3215s  (57 rows)
+06:49:57        Run 10/10: 0.3267s  (57 rows)
+06:49:57        DONE  MEAN=0.3269s  STD=0.0040s  MIN=0.3184s  MAX=0.3330s
+
+06:49:57  
+06:49:57    SF1: All 15 queries complete (20 runs each).
+06:49:57    Dropping database 'tpch_sf1' from MotherDuck (post-benchmark cleanup)...
+06:49:58    'tpch_sf1' dropped successfully.
+06:49:58  
+  ──────────────────────────────────────────────────────────
+06:49:58    PROGRESS
+06:49:58    ──────────────────────────────────────────────────────────
+06:49:58    SF 1  [████████████████████████]  DONE
+06:49:58    SF 5  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+06:49:58    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+06:49:58    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+06:49:58    ──────────────────────────────────────────────────────────
+06:49:58    Total: 15/60 queries complete
+
+06:49:58    Waiting 10 seconds before SF5...
+06:50:08  
+06:50:08  --------------------------------------------------------------
+06:50:08    SCALE FACTOR 5  (~2 GB)
+06:50:08  --------------------------------------------------------------
+06:50:08    Network RTT to MotherDuck: 39.8 ms
+06:50:08    Phase 1: Check & upload data for SF5...
+06:50:08    Database 'tpch_sf5' ready.
+06:50:08    Estimated size SF5: ~2500 MB — uploading missing tables...
+06:50:08  
+06:50:09      [UP]   lineitem       1051.5 MB  uploading...
+06:51:18      [OK]   lineitem      done in 68.9s  (29,999,795 rows)
+06:51:18      [UP]   orders          275.2 MB  uploading...
+06:51:41      [OK]   orders        done in 22.4s  (7,500,000 rows)
+06:51:41      [UP]   customer         59.0 MB  uploading...
+06:51:47      [OK]   customer      done in 5.3s  (750,000 rows)
+06:51:47      [UP]   supplier          3.8 MB  uploading...
+06:51:48      [OK]   supplier      done in 1.2s  (50,000 rows)
+06:51:49      [UP]   part             30.4 MB  uploading...
+06:51:53      [OK]   part          done in 3.9s  (1,000,000 rows)
+06:51:53      [UP]   partsupp        209.8 MB  uploading...
+06:52:07      [OK]   partsupp      done in 13.8s  (4,000,000 rows)
+06:52:08      [UP]   nation            0.0 MB  uploading...
+06:52:08      [OK]   nation        done in 0.6s  (25 rows)
+06:52:09      [UP]   region            0.0 MB  uploading...
+06:52:10      [OK]   region        done in 0.6s  (5 rows)
+06:52:10  
+06:52:10    Phase 2: Verifying SF5 data...
+06:52:10    Verifying tables for SF5...
+06:52:10        [OK] lineitem        29,999,795 rows
+06:52:10        [OK] orders           7,500,000 rows
+06:52:10        [OK] customer           750,000 rows
+06:52:10        [OK] supplier            50,000 rows
+06:52:10        [OK] part             1,000,000 rows
+06:52:11        [OK] partsupp         4,000,000 rows
+06:52:11        [OK] nation                  25 rows
+06:52:11        [OK] region                   5 rows
+06:52:11  
+06:52:11    Phase 3: Benchmarking SF5...
+06:52:11    Setting up views for SF5...
+06:52:14    Views ready. Starting benchmark: 15 queries x 20 runs...
+
+06:52:14    [01/15] Q6_simple SF5 — RESUME from run 11 (have 10/20)
+06:52:14        Warm-up skipped (resume mode)
+06:52:14        Run 01/10: 0.2086s  (1 rows)
+06:52:19        Run 02/10: 0.2019s  (1 rows)
+06:52:25        Run 03/10: 0.2094s  (1 rows)
+06:52:30        Run 04/10: 0.2087s  (1 rows)
+06:52:35        Run 05/10: 0.2137s  (1 rows)
+06:52:40        Run 06/10: 0.2170s  (1 rows)
+06:52:46        Run 07/10: 0.2148s  (1 rows)
+06:52:51        Run 08/10: 0.2206s  (1 rows)
+06:52:56        Run 09/10: 0.2115s  (1 rows)
+06:53:01        Run 10/10: 0.2190s  (1 rows)
+06:53:01        DONE  MEAN=0.2125s  STD=0.0054s  MIN=0.2019s  MAX=0.2206s
+
+06:53:01    [02/15] Q14_simple SF5 — RESUME from run 11 (have 10/20)
+06:53:01        Warm-up skipped (resume mode)
+06:53:01        Run 01/10: 0.2707s  (1 rows)
+06:53:07        Run 02/10: 0.2669s  (1 rows)
+06:53:12        Run 03/10: 0.2674s  (1 rows)
+06:53:17        Run 04/10: 0.2784s  (1 rows)
+06:53:23        Run 05/10: 0.2710s  (1 rows)
+06:53:28        Run 06/10: 0.2782s  (1 rows)
+06:53:33        Run 07/10: 0.2885s  (1 rows)
+06:53:38        Run 08/10: 0.2678s  (1 rows)
+06:53:44        Run 09/10: 0.2765s  (1 rows)
+06:53:49        Run 10/10: 0.2838s  (1 rows)
+06:53:49        DONE  MEAN=0.2749s  STD=0.0070s  MIN=0.2669s  MAX=0.2885s
+
+06:53:49    [03/15] Q19_simple SF5 — RESUME from run 11 (have 10/20)
+06:53:49        Warm-up skipped (resume mode)
+06:53:49        Run 01/10: 0.3065s  (1 rows)
+06:53:55        Run 02/10: 0.3121s  (1 rows)
+06:54:00        Run 03/10: 0.3184s  (1 rows)
+06:54:05        Run 04/10: 0.3110s  (1 rows)
+06:54:11        Run 05/10: 0.2985s  (1 rows)
+06:54:16        Run 06/10: 0.3290s  (1 rows)
+06:54:21        Run 07/10: 0.3194s  (1 rows)
+06:54:27        Run 08/10: 0.3193s  (1 rows)
+06:54:32        Run 09/10: 0.3104s  (1 rows)
+06:54:37        Run 10/10: 0.3079s  (1 rows)
+06:54:37        DONE  MEAN=0.3133s  STD=0.0081s  MIN=0.2985s  MAX=0.3290s
+
+06:54:37    [04/15] Q3_join SF5 — RESUME from run 11 (have 10/20)
+06:54:37        Warm-up skipped (resume mode)
+06:54:37        Run 01/10: 0.2852s  (10 rows)
+06:54:43        Run 02/10: 0.3064s  (10 rows)
+06:54:48        Run 03/10: 0.3016s  (10 rows)
+06:54:53        Run 04/10: 0.2938s  (10 rows)
+06:54:59        Run 05/10: 0.2915s  (10 rows)
+06:55:04        Run 06/10: 0.3066s  (10 rows)
+06:55:09        Run 07/10: 0.3112s  (10 rows)
+06:55:15        Run 08/10: 0.3049s  (10 rows)
+06:55:20        Run 09/10: 0.2977s  (10 rows)
+06:55:25        Run 10/10: 0.3125s  (10 rows)
+06:55:25        DONE  MEAN=0.3011s  STD=0.0085s  MIN=0.2852s  MAX=0.3125s
+
+06:55:25    [05/15] Q5_join SF5 — RESUME from run 11 (have 10/20)
+06:55:25        Warm-up skipped (resume mode)
+06:55:26        Run 01/10: 0.2805s  (5 rows)
+06:55:31        Run 02/10: 0.2910s  (5 rows)
+06:55:36        Run 03/10: 0.2901s  (5 rows)
+06:55:41        Run 04/10: 0.2784s  (5 rows)
+06:55:47        Run 05/10: 0.2872s  (5 rows)
+06:55:52        Run 06/10: 0.3074s  (5 rows)
+06:55:57        Run 07/10: 0.2805s  (5 rows)
+06:56:03        Run 08/10: 0.2992s  (5 rows)
+06:56:08        Run 09/10: 0.2743s  (5 rows)
+06:56:13        Run 10/10: 0.3010s  (5 rows)
+06:56:13        DONE  MEAN=0.2890s  STD=0.0103s  MIN=0.2743s  MAX=0.3074s
+
+06:56:13    [06/15] Q10_join SF5 — RESUME from run 11 (have 10/20)
+06:56:13        Warm-up skipped (resume mode)
+06:56:14        Run 01/10: 0.3562s  (20 rows)
+06:56:19        Run 02/10: 0.3686s  (20 rows)
+06:56:24        Run 03/10: 0.3599s  (20 rows)
+06:56:30        Run 04/10: 0.3656s  (20 rows)
+06:56:35        Run 05/10: 0.3582s  (20 rows)
+06:56:40        Run 06/10: 0.3514s  (20 rows)
+06:56:46        Run 07/10: 0.3646s  (20 rows)
+06:56:51        Run 08/10: 0.3682s  (20 rows)
+06:56:56        Run 09/10: 0.3559s  (20 rows)
+06:57:02        Run 10/10: 0.3658s  (20 rows)
+06:57:02        DONE  MEAN=0.3614s  STD=0.0056s  MIN=0.3514s  MAX=0.3686s
+
+06:57:02    [07/15] Q1_agg SF5 — RESUME from run 11 (have 10/20)
+06:57:02        Warm-up skipped (resume mode)
+06:57:02        Run 01/10: 0.2894s  (4 rows)
+06:57:07        Run 02/10: 0.3014s  (4 rows)
+06:57:13        Run 03/10: 0.3012s  (4 rows)
+06:57:18        Run 04/10: 0.3037s  (4 rows)
+06:57:23        Run 05/10: 0.2953s  (4 rows)
+06:57:29        Run 06/10: 0.2936s  (4 rows)
+06:57:34        Run 07/10: 0.3076s  (4 rows)
+06:57:39        Run 08/10: 0.3017s  (4 rows)
+06:57:45        Run 09/10: 0.2965s  (4 rows)
+06:57:50        Run 10/10: 0.3061s  (4 rows)
+06:57:50        DONE  MEAN=0.2996s  STD=0.0055s  MIN=0.2894s  MAX=0.3076s
+
+06:57:50    [08/15] Q4_agg SF5 — RESUME from run 11 (have 10/20)
+06:57:50        Warm-up skipped (resume mode)
+06:57:50        Run 01/10: 0.2885s  (5 rows)
+06:57:55        Run 02/10: 0.2971s  (5 rows)
+06:58:01        Run 03/10: 0.2828s  (5 rows)
+06:58:06        Run 04/10: 0.2890s  (5 rows)
+06:58:11        Run 05/10: 0.2970s  (5 rows)
+06:58:17        Run 06/10: 0.2814s  (5 rows)
+06:58:22        Run 07/10: 0.3056s  (5 rows)
+06:58:27        Run 08/10: 0.2845s  (5 rows)
+06:58:32        Run 09/10: 0.2967s  (5 rows)
+06:58:38        Run 10/10: 0.2982s  (5 rows)
+06:58:38        DONE  MEAN=0.2921s  STD=0.0076s  MIN=0.2814s  MAX=0.3056s
+
+06:58:38    [09/15] Q7_agg SF5 — RESUME from run 11 (have 10/20)
+06:58:38        Warm-up skipped (resume mode)
+06:58:38        Run 01/10: 0.3033s  (4 rows)
+06:58:43        Run 02/10: 0.3359s  (4 rows)
+06:58:49        Run 03/10: 0.3005s  (4 rows)
+06:58:54        Run 04/10: 0.3247s  (4 rows)
+06:58:59        Run 05/10: 0.3138s  (4 rows)
+06:59:05        Run 06/10: 0.3100s  (4 rows)
+06:59:10        Run 07/10: 0.3207s  (4 rows)
+06:59:15        Run 08/10: 0.3156s  (4 rows)
+06:59:21        Run 09/10: 0.2989s  (4 rows)
+06:59:26        Run 10/10: 0.3223s  (4 rows)
+06:59:26        DONE  MEAN=0.3146s  STD=0.0112s  MIN=0.2989s  MAX=0.3359s
+
+06:59:26    [10/15] Q17_subquery SF5 — RESUME from run 11 (have 10/20)
+06:59:26        Warm-up skipped (resume mode)
+06:59:26        Run 01/10: 0.2493s  (1 rows)
+06:59:31        Run 02/10: 0.2622s  (1 rows)
+06:59:37        Run 03/10: 0.2545s  (1 rows)
+06:59:42        Run 04/10: 0.2552s  (1 rows)
+06:59:47        Run 05/10: 0.2546s  (1 rows)
+06:59:52        Run 06/10: 0.2477s  (1 rows)
+06:59:58        Run 07/10: 0.2464s  (1 rows)
+07:00:03        Run 08/10: 0.2504s  (1 rows)
+07:00:08        Run 09/10: 0.2474s  (1 rows)
+07:00:13        Run 10/10: 0.2627s  (1 rows)
+07:00:13        DONE  MEAN=0.2530s  STD=0.0056s  MIN=0.2464s  MAX=0.2627s
+
+07:00:14    [11/15] Q20_subquery SF5 — RESUME from run 11 (have 10/20)
+07:00:14        Warm-up skipped (resume mode)
+07:00:14        Run 01/10: 0.4553s  (901 rows)
+07:00:19        Run 02/10: 0.4631s  (901 rows)
+07:00:25        Run 03/10: 0.4716s  (901 rows)
+07:00:30        Run 04/10: 0.4608s  (901 rows)
+07:00:36        Run 05/10: 0.4541s  (901 rows)
+07:00:41        Run 06/10: 0.4695s  (901 rows)
+07:00:47        Run 07/10: 0.4649s  (901 rows)
+07:00:52        Run 08/10: 0.4619s  (901 rows)
+07:00:58        Run 09/10: 0.4597s  (901 rows)
+07:01:03        Run 10/10: 0.4615s  (901 rows)
+07:01:03        DONE  MEAN=0.4622s  STD=0.0052s  MIN=0.4541s  MAX=0.4716s
+
+07:01:03    [12/15] Q22_subquery SF5 — RESUME from run 11 (have 10/20)
+07:01:03        Warm-up skipped (resume mode)
+07:01:03        Run 01/10: 0.2626s  (7 rows)
+07:01:09        Run 02/10: 0.2634s  (7 rows)
+07:01:14        Run 03/10: 0.2640s  (7 rows)
+07:01:19        Run 04/10: 0.2681s  (7 rows)
+07:01:24        Run 05/10: 0.2668s  (7 rows)
+07:01:30        Run 06/10: 0.2689s  (7 rows)
+07:01:35        Run 07/10: 0.2575s  (7 rows)
+07:01:40        Run 08/10: 0.2571s  (7 rows)
+07:01:46        Run 09/10: 0.2692s  (7 rows)
+07:01:51        Run 10/10: 0.2795s  (7 rows)
+07:01:51        DONE  MEAN=0.2657s  STD=0.0061s  MIN=0.2571s  MAX=0.2795s
+
+07:01:51    [13/15] Q10_window SF5 — RESUME from run 11 (have 10/20)
+07:01:51        Warm-up skipped (resume mode)
+07:01:51        Run 01/10: 0.3416s  (20 rows)
+07:01:57        Run 02/10: 0.3568s  (20 rows)
+07:02:02        Run 03/10: 0.3396s  (20 rows)
+07:02:07        Run 04/10: 0.3507s  (20 rows)
+07:02:13        Run 05/10: 0.3569s  (20 rows)
+07:02:18        Run 06/10: 0.3377s  (20 rows)
+07:02:23        Run 07/10: 0.3375s  (20 rows)
+07:02:29        Run 08/10: 0.3442s  (20 rows)
+07:02:34        Run 09/10: 0.3489s  (20 rows)
+07:02:39        Run 10/10: 0.3404s  (20 rows)
+07:02:39        DONE  MEAN=0.3454s  STD=0.0071s  MIN=0.3375s  MAX=0.3569s
+
+07:02:39    [14/15] Q1_window SF5 — RESUME from run 11 (have 10/20)
+07:02:39        Warm-up skipped (resume mode)
+07:02:40        Run 01/10: 0.2534s  (4 rows)
+07:02:45        Run 02/10: 0.2642s  (4 rows)
+07:02:50        Run 03/10: 0.2557s  (4 rows)
+07:02:55        Run 04/10: 0.2575s  (4 rows)
+07:03:01        Run 05/10: 0.2535s  (4 rows)
+07:03:06        Run 06/10: 0.2548s  (4 rows)
+07:03:11        Run 07/10: 0.2660s  (4 rows)
+07:03:16        Run 08/10: 0.2726s  (4 rows)
+07:03:22        Run 09/10: 0.2613s  (4 rows)
+07:03:27        Run 10/10: 0.2600s  (4 rows)
+07:03:27        DONE  MEAN=0.2599s  STD=0.0059s  MIN=0.2534s  MAX=0.2726s
+
+07:03:27    [15/15] Q18_window SF5 — RESUME from run 11 (have 10/20)
+07:03:27        Warm-up skipped (resume mode)
+07:03:28        Run 01/10: 0.6600s  (100 rows)
+07:03:33        Run 02/10: 0.6592s  (100 rows)
+07:03:39        Run 03/10: 0.6488s  (100 rows)
+07:03:45        Run 04/10: 0.6711s  (100 rows)
+07:03:50        Run 05/10: 0.6564s  (100 rows)
+07:03:56        Run 06/10: 0.6808s  (100 rows)
+07:04:02        Run 07/10: 0.6526s  (100 rows)
+07:04:07        Run 08/10: 0.6427s  (100 rows)
+07:04:13        Run 09/10: 0.6645s  (100 rows)
+07:04:19        Run 10/10: 0.6675s  (100 rows)
+07:04:19        DONE  MEAN=0.6604s  STD=0.0106s  MIN=0.6427s  MAX=0.6808s
+
+07:04:19  
+07:04:19    SF5: All 15 queries complete (20 runs each).
+07:04:19    Dropping database 'tpch_sf5' from MotherDuck (post-benchmark cleanup)...
+07:04:19    'tpch_sf5' dropped successfully.
+07:04:19  
+  ──────────────────────────────────────────────────────────
+07:04:19    PROGRESS
+07:04:19    ──────────────────────────────────────────────────────────
+07:04:19    SF 1  [████████████████████████]  DONE
+07:04:19    SF 5  [████████████████████████]  DONE
+07:04:19    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+07:04:19    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+07:04:19    ──────────────────────────────────────────────────────────
+07:04:19    Total: 30/60 queries complete
+
+07:04:19    Waiting 10 seconds before SF10...
+07:04:29  
+07:04:29  --------------------------------------------------------------
+07:04:29    SCALE FACTOR 10  (~4 GB)
+07:04:29  --------------------------------------------------------------
+07:04:29    Network RTT to MotherDuck: 36.2 ms
+07:04:29    Phase 1: Check & upload data for SF10...
+07:04:30    Database 'tpch_sf10' ready.
+07:04:30    Estimated size SF10: ~5000 MB — uploading missing tables...
+07:04:30  
+07:04:30      [UP]   lineitem       2120.3 MB  uploading...
+07:07:09      [OK]   lineitem      done in 158.5s  (59,986,052 rows)
+07:07:09      [UP]   orders          557.1 MB  uploading...
+07:07:47      [OK]   orders        done in 37.8s  (15,000,000 rows)
+07:07:48      [UP]   customer        118.0 MB  uploading...
+07:07:57      [OK]   customer      done in 9.4s  (1,500,000 rows)
+07:07:58      [UP]   supplier          7.5 MB  uploading...
+07:08:00      [OK]   supplier      done in 1.6s  (100,000 rows)
+07:08:00      [UP]   part             60.8 MB  uploading...
+07:08:09      [OK]   part          done in 8.4s  (2,000,000 rows)
+07:08:09      [UP]   partsupp        419.5 MB  uploading...
+07:08:34      [OK]   partsupp      done in 24.8s  (8,000,000 rows)
+07:08:34      [UP]   nation            0.0 MB  uploading...
+07:08:35      [OK]   nation        done in 0.6s  (25 rows)
+07:08:36      [UP]   region            0.0 MB  uploading...
+07:08:36      [OK]   region        done in 0.6s  (5 rows)
+07:08:36  
+07:08:36    Phase 2: Verifying SF10 data...
+07:08:36    Verifying tables for SF10...
+07:08:37        [OK] lineitem        59,986,052 rows
+07:08:37        [OK] orders          15,000,000 rows
+07:08:37        [OK] customer         1,500,000 rows
+07:08:37        [OK] supplier           100,000 rows
+07:08:37        [OK] part             2,000,000 rows
+07:08:38        [OK] partsupp         8,000,000 rows
+07:08:38        [OK] nation                  25 rows
+07:08:38        [OK] region                   5 rows
+07:08:38  
+07:08:38    Phase 3: Benchmarking SF10...
+07:08:38    Setting up views for SF10...
+07:08:41    Views ready. Starting benchmark: 15 queries x 20 runs...
+
+07:08:41    [01/15] Q6_simple SF10 — RESUME from run 11 (have 10/20)
+07:08:41        Warm-up skipped (resume mode)
+07:08:42        Run 01/10: 0.2314s  (1 rows)
+07:08:47        Run 02/10: 0.2457s  (1 rows)
+07:08:52        Run 03/10: 0.2428s  (1 rows)
+07:08:57        Run 04/10: 0.2390s  (1 rows)
+07:09:02        Run 05/10: 0.2324s  (1 rows)
+07:09:08        Run 06/10: 0.2503s  (1 rows)
+07:09:13        Run 07/10: 0.2468s  (1 rows)
+07:09:18        Run 08/10: 0.2486s  (1 rows)
+07:09:23        Run 09/10: 0.2444s  (1 rows)
+07:09:29        Run 10/10: 0.2492s  (1 rows)
+07:09:29        DONE  MEAN=0.2431s  STD=0.0064s  MIN=0.2314s  MAX=0.2503s
+
+07:09:29    [02/15] Q14_simple SF10 — RESUME from run 11 (have 10/20)
+07:09:29        Warm-up skipped (resume mode)
+07:09:29        Run 01/10: 0.2742s  (1 rows)
+07:09:34        Run 02/10: 0.2919s  (1 rows)
+07:09:40        Run 03/10: 0.2824s  (1 rows)
+07:09:45        Run 04/10: 0.2757s  (1 rows)
+07:09:50        Run 05/10: 0.2811s  (1 rows)
+07:09:55        Run 06/10: 0.2681s  (1 rows)
+07:10:01        Run 07/10: 0.2793s  (1 rows)
+07:10:06        Run 08/10: 0.2744s  (1 rows)
+07:10:11        Run 09/10: 0.2817s  (1 rows)
+07:10:17        Run 10/10: 0.2696s  (1 rows)
+07:10:17        DONE  MEAN=0.2778s  STD=0.0066s  MIN=0.2681s  MAX=0.2919s
+
+07:10:17    [03/15] Q19_simple SF10 — RESUME from run 11 (have 10/20)
+07:10:17        Warm-up skipped (resume mode)
+07:10:17        Run 01/10: 0.3133s  (1 rows)
+07:10:22        Run 02/10: 0.3252s  (1 rows)
+07:10:28        Run 03/10: 0.3243s  (1 rows)
+07:10:33        Run 04/10: 0.3278s  (1 rows)
+07:10:38        Run 05/10: 0.3363s  (1 rows)
+07:10:44        Run 06/10: 0.3247s  (1 rows)
+07:10:49        Run 07/10: 0.3273s  (1 rows)
+07:10:54        Run 08/10: 0.3317s  (1 rows)
+07:11:00        Run 09/10: 0.3217s  (1 rows)
+07:11:05        Run 10/10: 0.3249s  (1 rows)
+07:11:05        DONE  MEAN=0.3257s  STD=0.0057s  MIN=0.3133s  MAX=0.3363s
+
+07:11:05    [04/15] Q3_join SF10 — RESUME from run 11 (have 10/20)
+07:11:05        Warm-up skipped (resume mode)
+07:11:05        Run 01/10: 0.3070s  (10 rows)
+07:11:10        Run 02/10: 0.3100s  (10 rows)
+07:11:16        Run 03/10: 0.3118s  (10 rows)
+07:11:21        Run 04/10: 0.3120s  (10 rows)
+07:11:26        Run 05/10: 0.3146s  (10 rows)
+07:11:32        Run 06/10: 0.3184s  (10 rows)
+07:11:37        Run 07/10: 0.3140s  (10 rows)
+07:11:42        Run 08/10: 0.3181s  (10 rows)
+07:11:48        Run 09/10: 0.3241s  (10 rows)
+07:11:53        Run 10/10: 0.3128s  (10 rows)
+07:11:53        DONE  MEAN=0.3143s  STD=0.0046s  MIN=0.3070s  MAX=0.3241s
+
+07:11:53    [05/15] Q5_join SF10 — RESUME from run 11 (have 10/20)
+07:11:53        Warm-up skipped (resume mode)
+07:11:53        Run 01/10: 0.3356s  (5 rows)
+07:11:59        Run 02/10: 0.3417s  (5 rows)
+07:12:04        Run 03/10: 0.3409s  (5 rows)
+07:12:09        Run 04/10: 0.3430s  (5 rows)
+07:12:15        Run 05/10: 0.3408s  (5 rows)
+07:12:20        Run 06/10: 0.3396s  (5 rows)
+07:12:25        Run 07/10: 0.3469s  (5 rows)
+07:12:31        Run 08/10: 0.3423s  (5 rows)
+07:12:36        Run 09/10: 0.3463s  (5 rows)
+07:12:41        Run 10/10: 0.3488s  (5 rows)
+07:12:41        DONE  MEAN=0.3426s  STD=0.0037s  MIN=0.3356s  MAX=0.3488s
+
+07:12:42    [06/15] Q10_join SF10 — RESUME from run 11 (have 10/20)
+07:12:42        Warm-up skipped (resume mode)
+07:12:42        Run 01/10: 0.4622s  (20 rows)
+07:12:47        Run 02/10: 0.4945s  (20 rows)
+07:12:53        Run 03/10: 0.4595s  (20 rows)
+07:12:58        Run 04/10: 0.4598s  (20 rows)
+07:13:04        Run 05/10: 0.4996s  (20 rows)
+07:13:09        Run 06/10: 0.4452s  (20 rows)
+07:13:15        Run 07/10: 0.4326s  (20 rows)
+07:13:20        Run 08/10: 0.4509s  (20 rows)
+07:13:26        Run 09/10: 0.4460s  (20 rows)
+07:13:31        Run 10/10: 0.4570s  (20 rows)
+07:13:31        DONE  MEAN=0.4607s  STD=0.0200s  MIN=0.4326s  MAX=0.4996s
+
+07:13:31    [07/15] Q1_agg SF10 — RESUME from run 11 (have 10/20)
+07:13:31        Warm-up skipped (resume mode)
+07:13:32        Run 01/10: 0.3671s  (4 rows)
+07:13:37        Run 02/10: 0.3596s  (4 rows)
+07:13:42        Run 03/10: 0.3737s  (4 rows)
+07:13:48        Run 04/10: 0.3761s  (4 rows)
+07:13:53        Run 05/10: 0.3708s  (4 rows)
+07:13:58        Run 06/10: 0.3670s  (4 rows)
+07:14:04        Run 07/10: 0.3707s  (4 rows)
+07:14:09        Run 08/10: 0.3515s  (4 rows)
+07:14:14        Run 09/10: 0.3644s  (4 rows)
+07:14:20        Run 10/10: 0.3649s  (4 rows)
+07:14:20        DONE  MEAN=0.3666s  STD=0.0068s  MIN=0.3515s  MAX=0.3761s
+
+07:14:20    [08/15] Q4_agg SF10 — RESUME from run 11 (have 10/20)
+07:14:20        Warm-up skipped (resume mode)
+07:14:20        Run 01/10: 0.3197s  (5 rows)
+07:14:25        Run 02/10: 0.3177s  (5 rows)
+07:14:31        Run 03/10: 0.3121s  (5 rows)
+07:14:36        Run 04/10: 0.3089s  (5 rows)
+07:14:41        Run 05/10: 0.3273s  (5 rows)
+07:14:47        Run 06/10: 0.3176s  (5 rows)
+07:14:52        Run 07/10: 0.3186s  (5 rows)
+07:14:57        Run 08/10: 0.3193s  (5 rows)
+07:15:03        Run 09/10: 0.3004s  (5 rows)
+07:15:08        Run 10/10: 0.3126s  (5 rows)
+07:15:08        DONE  MEAN=0.3154s  STD=0.0069s  MIN=0.3004s  MAX=0.3273s
+
+07:15:08    [09/15] Q7_agg SF10 — RESUME from run 11 (have 10/20)
+07:15:08        Warm-up skipped (resume mode)
+07:15:08        Run 01/10: 0.2875s  (4 rows)
+07:15:14        Run 02/10: 0.2889s  (4 rows)
+07:15:19        Run 03/10: 0.2934s  (4 rows)
+07:15:24        Run 04/10: 0.2881s  (4 rows)
+07:15:29        Run 05/10: 0.3042s  (4 rows)
+07:15:35        Run 06/10: 0.2873s  (4 rows)
+07:15:40        Run 07/10: 0.3002s  (4 rows)
+07:15:45        Run 08/10: 0.3004s  (4 rows)
+07:15:51        Run 09/10: 0.2924s  (4 rows)
+07:15:56        Run 10/10: 0.2962s  (4 rows)
+07:15:56        DONE  MEAN=0.2939s  STD=0.0058s  MIN=0.2873s  MAX=0.3042s
+
+07:15:56    [10/15] Q17_subquery SF10 — RESUME from run 11 (have 10/20)
+07:15:56        Warm-up skipped (resume mode)
+07:15:56        Run 01/10: 0.2880s  (1 rows)
+07:16:02        Run 02/10: 0.2967s  (1 rows)
+07:16:07        Run 03/10: 0.2985s  (1 rows)
+07:16:12        Run 04/10: 0.2900s  (1 rows)
+07:16:17        Run 05/10: 0.3040s  (1 rows)
+07:16:23        Run 06/10: 0.3009s  (1 rows)
+07:16:28        Run 07/10: 0.3014s  (1 rows)
+07:16:33        Run 08/10: 0.3021s  (1 rows)
+07:16:39        Run 09/10: 0.3000s  (1 rows)
+07:16:44        Run 10/10: 0.3017s  (1 rows)
+07:16:44        DONE  MEAN=0.2983s  STD=0.0050s  MIN=0.2880s  MAX=0.3040s
+
+07:16:44    [11/15] Q20_subquery SF10 — RESUME from run 11 (have 10/20)
+07:16:44        Warm-up skipped (resume mode)
+07:16:45        Run 01/10: 0.6558s  (1804 rows)
+07:16:50        Run 02/10: 0.6709s  (1804 rows)
+07:16:56        Run 03/10: 0.6741s  (1804 rows)
+07:17:02        Run 04/10: 0.6633s  (1804 rows)
+07:17:07        Run 05/10: 0.6757s  (1804 rows)
+07:17:13        Run 06/10: 0.6576s  (1804 rows)
+07:17:19        Run 07/10: 0.6653s  (1804 rows)
+07:17:24        Run 08/10: 0.6628s  (1804 rows)
+07:17:30        Run 09/10: 0.6732s  (1804 rows)
+07:17:36        Run 10/10: 0.6646s  (1804 rows)
+07:17:36        DONE  MEAN=0.6663s  STD=0.0066s  MIN=0.6558s  MAX=0.6757s
+
+07:17:36    [12/15] Q22_subquery SF10 — RESUME from run 11 (have 10/20)
+07:17:36        Warm-up skipped (resume mode)
+07:17:36        Run 01/10: 0.2855s  (7 rows)
+07:17:41        Run 02/10: 0.2875s  (7 rows)
+07:17:47        Run 03/10: 0.2956s  (7 rows)
+07:17:52        Run 04/10: 0.3004s  (7 rows)
+07:17:57        Run 05/10: 0.2969s  (7 rows)
+07:18:02        Run 06/10: 0.2926s  (7 rows)
+07:18:08        Run 07/10: 0.2922s  (7 rows)
+07:18:13        Run 08/10: 0.2999s  (7 rows)
+07:18:18        Run 09/10: 0.2910s  (7 rows)
+07:18:24        Run 10/10: 0.2971s  (7 rows)
+07:18:24        DONE  MEAN=0.2939s  STD=0.0047s  MIN=0.2855s  MAX=0.3004s
+
+07:18:24    [13/15] Q10_window SF10 — RESUME from run 11 (have 10/20)
+07:18:24        Warm-up skipped (resume mode)
+07:18:24        Run 01/10: 0.3804s  (20 rows)
+07:18:29        Run 02/10: 0.3951s  (20 rows)
+07:18:35        Run 03/10: 0.3993s  (20 rows)
+07:18:40        Run 04/10: 0.3921s  (20 rows)
+07:18:46        Run 05/10: 0.3892s  (20 rows)
+07:18:51        Run 06/10: 0.3943s  (20 rows)
+07:18:56        Run 07/10: 0.3853s  (20 rows)
+07:19:02        Run 08/10: 0.3935s  (20 rows)
+07:19:07        Run 09/10: 0.3908s  (20 rows)
+07:19:13        Run 10/10: 0.3945s  (20 rows)
+07:19:13        DONE  MEAN=0.3915s  STD=0.0051s  MIN=0.3804s  MAX=0.3993s
+
+07:19:13    [14/15] Q1_window SF10 — RESUME from run 11 (have 10/20)
+07:19:13        Warm-up skipped (resume mode)
+07:19:13        Run 01/10: 0.2945s  (4 rows)
+07:19:18        Run 02/10: 0.3055s  (4 rows)
+07:19:23        Run 03/10: 0.3025s  (4 rows)
+07:19:29        Run 04/10: 0.3061s  (4 rows)
+07:19:34        Run 05/10: 0.3009s  (4 rows)
+07:19:39        Run 06/10: 0.3090s  (4 rows)
+07:19:45        Run 07/10: 0.3011s  (4 rows)
+07:19:50        Run 08/10: 0.3068s  (4 rows)
+07:19:55        Run 09/10: 0.3058s  (4 rows)
+07:20:01        Run 10/10: 0.3021s  (4 rows)
+07:20:01        DONE  MEAN=0.3034s  STD=0.0039s  MIN=0.2945s  MAX=0.3090s
+
+07:20:01    [15/15] Q18_window SF10 — RESUME from run 11 (have 10/20)
+07:20:01        Warm-up skipped (resume mode)
+07:20:02        Run 01/10: 1.0244s  (100 rows)
+07:20:08        Run 02/10: 1.0264s  (100 rows)
+07:20:14        Run 03/10: 1.0338s  (100 rows)
+07:20:20        Run 04/10: 1.0327s  (100 rows)
+07:20:26        Run 05/10: 1.0284s  (100 rows)
+07:20:32        Run 06/10: 1.0500s  (100 rows)
+07:20:38        Run 07/10: 1.0448s  (100 rows)
+07:20:44        Run 08/10: 1.0332s  (100 rows)
+07:20:50        Run 09/10: 1.0356s  (100 rows)
+07:20:56        Run 10/10: 1.0378s  (100 rows)
+07:20:56        DONE  MEAN=1.0347s  STD=0.0075s  MIN=1.0244s  MAX=1.0500s
+
+07:20:56  
+07:20:56    SF10: All 15 queries complete (20 runs each).
+07:20:56    Dropping database 'tpch_sf10' from MotherDuck (post-benchmark cleanup)...
+07:20:56    'tpch_sf10' dropped successfully.
+07:20:56  
+  ──────────────────────────────────────────────────────────
+07:20:56    PROGRESS
+07:20:56    ──────────────────────────────────────────────────────────
+07:20:56    SF 1  [████████████████████████]  DONE
+07:20:57    SF 5  [████████████████████████]  DONE
+07:20:57    SF10  [████████████████████████]  DONE
+07:20:57    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+07:20:57    ──────────────────────────────────────────────────────────
+07:20:57    Total: 45/60 queries complete
+
+07:20:57    Waiting 10 seconds before SF20...
+07:21:07  
+07:21:07  --------------------------------------------------------------
+07:21:07    SCALE FACTOR 20  (~9 GB)
+07:21:07  --------------------------------------------------------------
+07:21:07    Network RTT to MotherDuck: 62.3 ms
+07:21:07    Phase 1: Check & upload data for SF20...
+07:21:07    Database 'tpch_sf20' ready.
+07:21:07    Estimated size SF20: ~10000 MB — uploading missing tables...
+07:21:07  
+07:21:08      [UP]   lineitem       4271.5 MB  uploading...
+07:26:00      [OK]   lineitem      done in 292.2s  (119,994,608 rows)
+07:26:00      [UP]   orders         1137.2 MB  uploading...
+07:27:03      [OK]   orders        done in 62.4s  (30,000,000 rows)
+07:27:03      [UP]   customer        236.1 MB  uploading...
+07:27:20      [OK]   customer      done in 16.5s  (3,000,000 rows)
+07:27:21      [UP]   supplier         15.1 MB  uploading...
+07:27:23      [OK]   supplier      done in 2.4s  (200,000 rows)
+07:27:24      [UP]   part            121.5 MB  uploading...
+07:27:35      [OK]   part          done in 10.8s  (4,000,000 rows)
+07:27:35      [UP]   partsupp        839.0 MB  uploading...
+07:28:21      [OK]   partsupp      done in 45.5s  (16,000,000 rows)
+07:28:21      [UP]   nation            0.0 MB  uploading...
+07:28:22      [OK]   nation        done in 0.6s  (25 rows)
+07:28:22      [UP]   region            0.0 MB  uploading...
+07:28:23      [OK]   region        done in 0.6s  (5 rows)
+07:28:23  
+07:28:23    Phase 2: Verifying SF20 data...
+07:28:23    Verifying tables for SF20...
+07:28:23        [OK] lineitem       119,994,608 rows
+07:28:23        [OK] orders          30,000,000 rows
+07:28:24        [OK] customer         3,000,000 rows
+07:28:24        [OK] supplier           200,000 rows
+07:28:24        [OK] part             4,000,000 rows
+07:28:24        [OK] partsupp        16,000,000 rows
+07:28:24        [OK] nation                  25 rows
+07:28:24        [OK] region                   5 rows
+07:28:24  
+07:28:24    Phase 3: Benchmarking SF20...
+07:28:24    Setting up views for SF20...
+07:28:28    Views ready. Starting benchmark: 15 queries x 20 runs...
+
+07:28:28    [01/15] Q6_simple SF20 — RESUME from run 11 (have 10/20)
+07:28:28        Warm-up skipped (resume mode)
+07:28:28        Run 01/10: 0.2435s  (1 rows)
+07:28:33        Run 02/10: 0.2481s  (1 rows)
+07:28:38        Run 03/10: 0.2508s  (1 rows)
+07:28:44        Run 04/10: 0.2583s  (1 rows)
+07:28:49        Run 05/10: 0.2570s  (1 rows)
+07:28:54        Run 06/10: 0.2523s  (1 rows)
+07:28:59        Run 07/10: 0.2564s  (1 rows)
+07:29:05        Run 08/10: 0.2565s  (1 rows)
+07:29:10        Run 09/10: 0.2588s  (1 rows)
+07:29:15        Run 10/10: 0.2604s  (1 rows)
+07:29:15        DONE  MEAN=0.2542s  STD=0.0051s  MIN=0.2435s  MAX=0.2604s
+
+07:29:15    [02/15] Q14_simple SF20 — RESUME from run 11 (have 10/20)
+07:29:15        Warm-up skipped (resume mode)
+07:29:15        Run 01/10: 0.3192s  (1 rows)
+07:29:21        Run 02/10: 0.3289s  (1 rows)
+07:29:26        Run 03/10: 0.3208s  (1 rows)
+07:29:31        Run 04/10: 0.3265s  (1 rows)
+07:29:37        Run 05/10: 0.3081s  (1 rows)
+07:29:42        Run 06/10: 0.3276s  (1 rows)
+07:29:47        Run 07/10: 0.3217s  (1 rows)
+07:29:53        Run 08/10: 0.3196s  (1 rows)
+07:29:58        Run 09/10: 0.3217s  (1 rows)
+07:30:03        Run 10/10: 0.3280s  (1 rows)
+07:30:03        DONE  MEAN=0.3222s  STD=0.0059s  MIN=0.3081s  MAX=0.3289s
+
+07:30:03    [03/15] Q19_simple SF20 — RESUME from run 11 (have 10/20)
+07:30:03        Warm-up skipped (resume mode)
+07:30:04        Run 01/10: 0.4170s  (1 rows)
+07:30:09        Run 02/10: 0.4275s  (1 rows)
+07:30:15        Run 03/10: 0.4254s  (1 rows)
+07:30:20        Run 04/10: 0.4294s  (1 rows)
+07:30:25        Run 05/10: 0.4095s  (1 rows)
+07:30:31        Run 06/10: 0.4249s  (1 rows)
+07:30:36        Run 07/10: 0.4232s  (1 rows)
+07:30:42        Run 08/10: 0.4260s  (1 rows)
+07:30:47        Run 09/10: 0.4283s  (1 rows)
+07:30:53        Run 10/10: 0.4265s  (1 rows)
+07:30:53        DONE  MEAN=0.4238s  STD=0.0058s  MIN=0.4095s  MAX=0.4294s
+
+07:30:53    [04/15] Q3_join SF20 — RESUME from run 11 (have 10/20)
+07:30:53        Warm-up skipped (resume mode)
+07:30:53        Run 01/10: 0.4344s  (10 rows)
+07:30:58        Run 02/10: 0.4408s  (10 rows)
+07:31:04        Run 03/10: 0.4010s  (10 rows)
+07:31:09        Run 04/10: 0.4193s  (10 rows)
+07:31:15        Run 05/10: 0.3868s  (10 rows)
+07:31:20        Run 06/10: 0.4352s  (10 rows)
+07:31:26        Run 07/10: 0.3916s  (10 rows)
+07:31:31        Run 08/10: 0.4092s  (10 rows)
+07:31:36        Run 09/10: 0.3999s  (10 rows)
+07:31:42        Run 10/10: 0.4186s  (10 rows)
+07:31:42        DONE  MEAN=0.4137s  STD=0.0181s  MIN=0.3868s  MAX=0.4408s
+
+07:31:42    [05/15] Q5_join SF20 — RESUME from run 11 (have 10/20)
+07:31:42        Warm-up skipped (resume mode)
+07:31:42        Run 01/10: 0.4290s  (5 rows)
+07:31:48        Run 02/10: 0.4586s  (5 rows)
+07:31:53        Run 03/10: 0.4402s  (5 rows)
+07:31:59        Run 04/10: 0.5108s  (5 rows)
+07:32:04        Run 05/10: 0.5025s  (5 rows)
+07:32:10        Run 06/10: 0.4572s  (5 rows)
+07:32:15        Run 07/10: 0.5246s  (5 rows)
+07:32:21        Run 08/10: 0.4753s  (5 rows)
+07:32:26        Run 09/10: 0.4686s  (5 rows)
+07:32:32        Run 10/10: 0.4817s  (5 rows)
+07:32:32        DONE  MEAN=0.4749s  STD=0.0291s  MIN=0.4290s  MAX=0.5246s
+
+07:32:32    [06/15] Q10_join SF20 — RESUME from run 11 (have 10/20)
+07:32:32        Warm-up skipped (resume mode)
+07:32:32        Run 01/10: 0.5419s  (20 rows)
+07:32:38        Run 02/10: 0.5583s  (20 rows)
+07:32:43        Run 03/10: 0.5466s  (20 rows)
+07:32:49        Run 04/10: 0.5396s  (20 rows)
+07:32:54        Run 05/10: 0.5281s  (20 rows)
+07:33:00        Run 06/10: 0.6047s  (20 rows)
+07:33:05        Run 07/10: 0.5328s  (20 rows)
+07:33:11        Run 08/10: 0.5358s  (20 rows)
+07:33:16        Run 09/10: 0.5347s  (20 rows)
+07:33:22        Run 10/10: 0.5469s  (20 rows)
+07:33:22        DONE  MEAN=0.5470s  STD=0.0209s  MIN=0.5281s  MAX=0.6047s
+
+07:33:22    [07/15] Q1_agg SF20 — RESUME from run 11 (have 10/20)
+07:33:22        Warm-up skipped (resume mode)
+07:33:23        Run 01/10: 0.5050s  (4 rows)
+07:33:28        Run 02/10: 0.5036s  (4 rows)
+07:33:34        Run 03/10: 0.5138s  (4 rows)
+07:33:39        Run 04/10: 0.5054s  (4 rows)
+07:33:45        Run 05/10: 0.4988s  (4 rows)
+07:33:50        Run 06/10: 0.5149s  (4 rows)
+07:33:56        Run 07/10: 0.5151s  (4 rows)
+07:34:01        Run 08/10: 0.5156s  (4 rows)
+07:34:07        Run 09/10: 0.5087s  (4 rows)
+07:34:12        Run 10/10: 0.5133s  (4 rows)
+07:34:12        DONE  MEAN=0.5094s  STD=0.0056s  MIN=0.4988s  MAX=0.5156s
+
+07:34:12    [08/15] Q4_agg SF20 — RESUME from run 11 (have 10/20)
+07:34:12        Warm-up skipped (resume mode)
+07:34:13        Run 01/10: 0.3592s  (5 rows)
+07:34:18        Run 02/10: 0.3719s  (5 rows)
+07:34:23        Run 03/10: 0.3607s  (5 rows)
+07:34:29        Run 04/10: 0.3619s  (5 rows)
+07:34:34        Run 05/10: 0.3583s  (5 rows)
+07:34:39        Run 06/10: 0.3611s  (5 rows)
+07:34:45        Run 07/10: 0.3618s  (5 rows)
+07:34:50        Run 08/10: 0.3634s  (5 rows)
+07:34:55        Run 09/10: 0.3737s  (5 rows)
+07:35:01        Run 10/10: 0.3508s  (5 rows)
+07:35:01        DONE  MEAN=0.3623s  STD=0.0062s  MIN=0.3508s  MAX=0.3737s
+
+07:35:01    [09/15] Q7_agg SF20 — RESUME from run 11 (have 10/20)
+07:35:01        Warm-up skipped (resume mode)
+07:35:01        Run 01/10: 0.3588s  (4 rows)
+07:35:07        Run 02/10: 0.3719s  (4 rows)
+07:35:12        Run 03/10: 0.3646s  (4 rows)
+07:35:17        Run 04/10: 0.3725s  (4 rows)
+07:35:23        Run 05/10: 0.3727s  (4 rows)
+07:35:28        Run 06/10: 0.3694s  (4 rows)
+07:35:33        Run 07/10: 0.3638s  (4 rows)
+07:35:39        Run 08/10: 0.3527s  (4 rows)
+07:35:44        Run 09/10: 0.3864s  (4 rows)
+07:35:49        Run 10/10: 0.3655s  (4 rows)
+07:35:49        DONE  MEAN=0.3678s  STD=0.0087s  MIN=0.3527s  MAX=0.3864s
+
+07:35:50    [10/15] Q17_subquery SF20 — RESUME from run 11 (have 10/20)
+07:35:50        Warm-up skipped (resume mode)
+07:35:50        Run 01/10: 0.3739s  (1 rows)
+07:35:55        Run 02/10: 0.3826s  (1 rows)
+07:36:01        Run 03/10: 0.3834s  (1 rows)
+07:36:06        Run 04/10: 0.3816s  (1 rows)
+07:36:11        Run 05/10: 0.3778s  (1 rows)
+07:36:17        Run 06/10: 0.3695s  (1 rows)
+07:36:22        Run 07/10: 0.3720s  (1 rows)
+07:36:28        Run 08/10: 0.3831s  (1 rows)
+07:36:33        Run 09/10: 0.3814s  (1 rows)
+07:36:38        Run 10/10: 0.3649s  (1 rows)
+07:36:38        DONE  MEAN=0.3770s  STD=0.0062s  MIN=0.3649s  MAX=0.3834s
+
+07:36:38    [11/15] Q20_subquery SF20 — RESUME from run 11 (have 10/20)
+07:36:38        Warm-up skipped (resume mode)
+07:36:39        Run 01/10: 0.8845s  (3543 rows)
+07:36:45        Run 02/10: 0.8785s  (3543 rows)
+07:36:51        Run 03/10: 0.8992s  (3543 rows)
+07:36:57        Run 04/10: 0.8830s  (3543 rows)
+07:37:03        Run 05/10: 0.8848s  (3543 rows)
+07:37:09        Run 06/10: 0.8804s  (3543 rows)
+07:37:14        Run 07/10: 0.8742s  (3543 rows)
+07:37:20        Run 08/10: 0.8839s  (3543 rows)
+07:37:26        Run 09/10: 0.8905s  (3543 rows)
+07:37:32        Run 10/10: 0.8843s  (3543 rows)
+07:37:32        DONE  MEAN=0.8843s  STD=0.0064s  MIN=0.8742s  MAX=0.8992s
+
+07:37:32    [12/15] Q22_subquery SF20 — RESUME from run 11 (have 10/20)
+07:37:32        Warm-up skipped (resume mode)
+07:37:33        Run 01/10: 0.3500s  (7 rows)
+07:37:38        Run 02/10: 0.3462s  (7 rows)
+07:37:43        Run 03/10: 0.3425s  (7 rows)
+07:37:49        Run 04/10: 0.3572s  (7 rows)
+07:37:54        Run 05/10: 0.3508s  (7 rows)
+07:37:59        Run 06/10: 0.3593s  (7 rows)
+07:38:05        Run 07/10: 0.3451s  (7 rows)
+07:38:10        Run 08/10: 0.3471s  (7 rows)
+07:38:15        Run 09/10: 0.3521s  (7 rows)
+07:38:21        Run 10/10: 0.3526s  (7 rows)
+07:38:21        DONE  MEAN=0.3503s  STD=0.0050s  MIN=0.3425s  MAX=0.3593s
+
+07:38:21    [13/15] Q10_window SF20 — RESUME from run 11 (have 10/20)
+07:38:21        Warm-up skipped (resume mode)
+07:38:21        Run 01/10: 0.4589s  (20 rows)
+07:38:27        Run 02/10: 0.4710s  (20 rows)
+07:38:32        Run 03/10: 0.4683s  (20 rows)
+07:38:38        Run 04/10: 0.4599s  (20 rows)
+07:38:43        Run 05/10: 0.4597s  (20 rows)
+07:38:48        Run 06/10: 0.4651s  (20 rows)
+07:38:54        Run 07/10: 0.4809s  (20 rows)
+07:38:59        Run 08/10: 0.4673s  (20 rows)
+07:39:05        Run 09/10: 0.4635s  (20 rows)
+07:39:10        Run 10/10: 0.4765s  (20 rows)
+07:39:10        DONE  MEAN=0.4671s  STD=0.0070s  MIN=0.4589s  MAX=0.4809s
+
+07:39:10    [14/15] Q1_window SF20 — RESUME from run 11 (have 10/20)
+07:39:10        Warm-up skipped (resume mode)
+07:39:11        Run 01/10: 0.3724s  (4 rows)
+07:39:16        Run 02/10: 0.3751s  (4 rows)
+07:39:22        Run 03/10: 0.3750s  (4 rows)
+07:39:27        Run 04/10: 0.3733s  (4 rows)
+07:39:32        Run 05/10: 0.3827s  (4 rows)
+07:39:38        Run 06/10: 0.3764s  (4 rows)
+07:39:43        Run 07/10: 0.3706s  (4 rows)
+07:39:48        Run 08/10: 0.3735s  (4 rows)
+07:39:54        Run 09/10: 0.3773s  (4 rows)
+07:39:59        Run 10/10: 0.3715s  (4 rows)
+07:39:59        DONE  MEAN=0.3748s  STD=0.0033s  MIN=0.3706s  MAX=0.3827s
+
+07:39:59    [15/15] Q18_window SF20 — RESUME from run 11 (have 10/20)
+07:39:59        Warm-up skipped (resume mode)
+07:40:01        Run 01/10: 1.7936s  (100 rows)
+07:40:08        Run 02/10: 1.9046s  (100 rows)
+07:40:15        Run 03/10: 1.8955s  (100 rows)
+07:40:22        Run 04/10: 1.8887s  (100 rows)
+07:40:29        Run 05/10: 1.9010s  (100 rows)
+07:40:35        Run 06/10: 1.9063s  (100 rows)
+07:40:42        Run 07/10: 1.8765s  (100 rows)
+07:40:49        Run 08/10: 1.8959s  (100 rows)
+07:40:56        Run 09/10: 1.9005s  (100 rows)
+07:41:03        Run 10/10: 1.8812s  (100 rows)
+07:41:03        DONE  MEAN=1.8844s  STD=0.0316s  MIN=1.7936s  MAX=1.9063s
+
+07:41:03  
+07:41:03    SF20: All 15 queries complete (20 runs each).
+07:41:03    Dropping database 'tpch_sf20' from MotherDuck (post-benchmark cleanup)...
+07:41:04    'tpch_sf20' dropped successfully.
+07:41:04  
+  ──────────────────────────────────────────────────────────
+07:41:04    PROGRESS
+07:41:04    ──────────────────────────────────────────────────────────
+07:41:04    SF 1  [████████████████████████]  DONE
+07:41:04    SF 5  [████████████████████████]  DONE
+07:41:04    SF10  [████████████████████████]  DONE
+07:41:04    SF20  [████████████████████████]  DONE
+07:41:04    ──────────────────────────────────────────────────────────
+07:41:04    Total: 60/60 queries complete
+
+07:41:04  
+07:41:04  ==============================================================
+07:41:04    BENCHMARK COMPLETE!
+07:41:04  ==============================================================
+07:41:04    Queries completed this session : 60
+07:41:04    Total elapsed time             : 1.06 hours (63.8 minutes)
+07:41:04    Output CSV                     : C:\benchmark_stephen\results\motherduck_results.csv
+07:41:04    Log file                       : C:\benchmark_stephen\results\logs\log_MotherDuck.log
+07:41:04    Finished at                    : 2026-04-27 07:41:04
+07:41:04  
+07:41:04    Output files ready for analysis:
+07:41:04      duckdb_results.csv        <- local edge data
+07:41:04      motherduck_results.csv    <- cloud data (this file)
+07:41:04  
+07:41:04    Next step: merge both CSVs in your analysis notebook.
+07:41:04  ==============================================================
+
+08:05:05  
+08:05:05  ==============================================================
+08:05:05    MotherDuck Benchmark v5 — Stephen Edlin (PRADITA University)
+08:05:05  ==============================================================
+08:05:05    Token      : ***...JouE3E
+08:05:05    Data dir   : C:\benchmark_stephen\data
+08:05:05    Output CSV : C:\benchmark_stephen\results\motherduck_results.csv
+08:05:05    Log file   : C:\benchmark_stephen\results\logs\log_MotherDuck.log (APPEND)
+08:05:05    Scale factors    : [1, 5, 10, 20]
+08:05:05    Runs per query   : 30 (target total per query per SF)
+08:05:05    Cooling interval : 5s between runs
+08:05:05    Drop DB after SF : YES
+08:05:05    Resume mode      : script will count existing runs and continue from N+1
+08:05:05  
+08:05:05    Testing connection to MotherDuck...
+08:05:09    Connection OK.
+08:05:09  
+08:05:09  
+  ──────────────────────────────────────────────────────────
+08:05:09    PROGRESS
+08:05:09    ──────────────────────────────────────────────────────────
+08:05:09    SF 1  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:05:09    SF 5  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:05:09    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:05:09    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:05:09    ──────────────────────────────────────────────────────────
+08:05:09    Total: 0/60 queries complete
+
+08:05:09  
+08:05:09  --------------------------------------------------------------
+08:05:09    SCALE FACTOR 1  (~0 GB)
+08:05:09  --------------------------------------------------------------
+08:05:09    Network RTT to MotherDuck: 129.3 ms
+08:05:09    Phase 1: Check & upload data for SF1...
+08:05:10    Database 'tpch_sf1' ready.
+08:05:10    Estimated size SF1: ~500 MB — uploading missing tables...
+08:05:10  
+08:05:10      [UP]   lineitem        197.5 MB  uploading...
+08:05:29      [OK]   lineitem      done in 18.4s  (6,001,215 rows)
+08:05:29      [UP]   orders           53.8 MB  uploading...
+08:05:35      [OK]   orders        done in 6.0s  (1,500,000 rows)
+08:05:36      [UP]   customer         11.8 MB  uploading...
+08:05:38      [OK]   customer      done in 2.1s  (150,000 rows)
+08:05:38      [UP]   supplier          0.8 MB  uploading...
+08:05:39      [OK]   supplier      done in 0.6s  (10,000 rows)
+08:05:39      [UP]   part              6.1 MB  uploading...
+08:05:43      [OK]   part          done in 3.6s  (200,000 rows)
+08:05:44      [UP]   partsupp         40.7 MB  uploading...
+08:05:48      [OK]   partsupp      done in 4.2s  (800,000 rows)
+08:05:48      [UP]   nation            0.0 MB  uploading...
+08:05:49      [OK]   nation        done in 0.6s  (25 rows)
+08:05:49      [UP]   region            0.0 MB  uploading...
+08:05:50      [OK]   region        done in 0.6s  (5 rows)
+08:05:50  
+08:05:50    Phase 2: Verifying SF1 data...
+08:05:50    Verifying tables for SF1...
+08:05:50        [OK] lineitem         6,001,215 rows
+08:05:51        [OK] orders           1,500,000 rows
+08:05:51        [OK] customer           150,000 rows
+08:05:51        [OK] supplier            10,000 rows
+08:05:51        [OK] part               200,000 rows
+08:05:51        [OK] partsupp           800,000 rows
+08:05:52        [OK] nation                  25 rows
+08:05:52        [OK] region                   5 rows
+08:05:52  
+08:05:52    Phase 3: Benchmarking SF1...
+08:05:52    Setting up views for SF1...
+08:05:55    Views ready. Starting benchmark: 15 queries x 30 runs...
+
+08:05:55    [01/15] Q6_simple SF1 — RESUME from run 21 (have 20/30)
+08:05:55        Warm-up skipped (resume mode)
+08:05:55        Run 01/10: 0.2277s  (1 rows)
+08:06:00        Run 02/10: 0.1988s  (1 rows)
+08:06:05        Run 03/10: 0.2010s  (1 rows)
+08:06:11        Run 04/10: 0.1966s  (1 rows)
+08:06:16        Run 05/10: 0.1996s  (1 rows)
+08:06:21        Run 06/10: 0.2013s  (1 rows)
+08:06:26        Run 07/10: 0.2053s  (1 rows)
+08:06:31        Run 08/10: 0.1993s  (1 rows)
+08:06:37        Run 09/10: 0.2041s  (1 rows)
+08:06:42        Run 10/10: 0.1981s  (1 rows)
+08:06:42        DONE  MEAN=0.2032s  STD=0.0085s  MIN=0.1966s  MAX=0.2277s
+
+08:06:42    [02/15] Q14_simple SF1 — RESUME from run 21 (have 20/30)
+08:06:42        Warm-up skipped (resume mode)
+08:06:42        Run 01/10: 0.2159s  (1 rows)
+08:06:47        Run 02/10: 0.2243s  (1 rows)
+08:06:52        Run 03/10: 0.2259s  (1 rows)
+08:06:58        Run 04/10: 0.2247s  (1 rows)
+08:07:03        Run 05/10: 0.2263s  (1 rows)
+08:07:08        Run 06/10: 0.2238s  (1 rows)
+08:07:13        Run 07/10: 0.2255s  (1 rows)
+08:07:19        Run 08/10: 0.2204s  (1 rows)
+08:07:24        Run 09/10: 0.2252s  (1 rows)
+08:07:29        Run 10/10: 0.2192s  (1 rows)
+08:07:29        DONE  MEAN=0.2231s  STD=0.0033s  MIN=0.2159s  MAX=0.2263s
+
+08:07:29    [03/15] Q19_simple SF1 — RESUME from run 21 (have 20/30)
+08:07:29        Warm-up skipped (resume mode)
+08:07:29        Run 01/10: 0.2290s  (1 rows)
+08:07:35        Run 02/10: 0.2347s  (1 rows)
+08:07:40        Run 03/10: 0.2342s  (1 rows)
+08:07:45        Run 04/10: 0.2396s  (1 rows)
+08:07:50        Run 05/10: 0.2339s  (1 rows)
+08:07:55        Run 06/10: 0.2338s  (1 rows)
+08:08:01        Run 07/10: 0.2315s  (1 rows)
+08:08:06        Run 08/10: 0.2385s  (1 rows)
+08:08:11        Run 09/10: 0.2392s  (1 rows)
+08:08:16        Run 10/10: 0.2330s  (1 rows)
+08:08:16        DONE  MEAN=0.2347s  STD=0.0032s  MIN=0.2290s  MAX=0.2396s
+
+08:08:16    [04/15] Q3_join SF1 — RESUME from run 21 (have 20/30)
+08:08:16        Warm-up skipped (resume mode)
+08:08:17        Run 01/10: 0.2200s  (10 rows)
+08:08:22        Run 02/10: 0.2303s  (10 rows)
+08:08:27        Run 03/10: 0.2272s  (10 rows)
+08:08:32        Run 04/10: 0.2277s  (10 rows)
+08:08:38        Run 05/10: 0.2276s  (10 rows)
+08:08:43        Run 06/10: 0.2256s  (10 rows)
+08:08:48        Run 07/10: 0.2193s  (10 rows)
+08:08:53        Run 08/10: 0.2222s  (10 rows)
+08:08:58        Run 09/10: 0.2281s  (10 rows)
+08:09:04        Run 10/10: 0.2284s  (10 rows)
+08:09:04        DONE  MEAN=0.2257s  STD=0.0036s  MIN=0.2193s  MAX=0.2303s
+
+08:09:04    [05/15] Q5_join SF1 — RESUME from run 21 (have 20/30)
+08:09:04        Warm-up skipped (resume mode)
+08:09:04        Run 01/10: 0.2248s  (5 rows)
+08:09:09        Run 02/10: 0.2332s  (5 rows)
+08:09:14        Run 03/10: 0.2205s  (5 rows)
+08:09:20        Run 04/10: 0.2250s  (5 rows)
+08:09:25        Run 05/10: 0.2319s  (5 rows)
+08:09:30        Run 06/10: 0.2343s  (5 rows)
+08:09:35        Run 07/10: 0.2319s  (5 rows)
+08:09:41        Run 08/10: 0.2313s  (5 rows)
+08:09:46        Run 09/10: 0.2349s  (5 rows)
+08:09:51        Run 10/10: 0.2325s  (5 rows)
+08:09:51        DONE  MEAN=0.2300s  STD=0.0046s  MIN=0.2205s  MAX=0.2349s
+
+08:09:51    [06/15] Q10_join SF1 — RESUME from run 21 (have 20/30)
+08:09:51        Warm-up skipped (resume mode)
+08:09:51        Run 01/10: 0.2781s  (20 rows)
+08:09:57        Run 02/10: 0.2857s  (20 rows)
+08:10:02        Run 03/10: 0.2799s  (20 rows)
+08:10:07        Run 04/10: 0.2838s  (20 rows)
+08:10:12        Run 05/10: 0.2782s  (20 rows)
+08:10:18        Run 06/10: 0.2832s  (20 rows)
+08:10:23        Run 07/10: 0.2848s  (20 rows)
+08:10:28        Run 08/10: 0.2858s  (20 rows)
+08:10:34        Run 09/10: 0.2833s  (20 rows)
+08:10:39        Run 10/10: 0.2791s  (20 rows)
+08:10:39        DONE  MEAN=0.2822s  STD=0.0029s  MIN=0.2781s  MAX=0.2858s
+
+08:10:39    [07/15] Q1_agg SF1 — RESUME from run 21 (have 20/30)
+08:10:39        Warm-up skipped (resume mode)
+08:10:39        Run 01/10: 0.2220s  (4 rows)
+08:10:44        Run 02/10: 0.2273s  (4 rows)
+08:10:50        Run 03/10: 0.2252s  (4 rows)
+08:10:55        Run 04/10: 0.2295s  (4 rows)
+08:11:00        Run 05/10: 0.2265s  (4 rows)
+08:11:05        Run 06/10: 0.2252s  (4 rows)
+08:11:10        Run 07/10: 0.2285s  (4 rows)
+08:11:16        Run 08/10: 0.2175s  (4 rows)
+08:11:21        Run 09/10: 0.2170s  (4 rows)
+08:11:26        Run 10/10: 0.2109s  (4 rows)
+08:11:26        DONE  MEAN=0.2230s  STD=0.0057s  MIN=0.2109s  MAX=0.2295s
+
+08:11:26    [08/15] Q4_agg SF1 — RESUME from run 21 (have 20/30)
+08:11:26        Warm-up skipped (resume mode)
+08:11:26        Run 01/10: 0.2107s  (5 rows)
+08:11:32        Run 02/10: 0.2182s  (5 rows)
+08:11:37        Run 03/10: 0.2254s  (5 rows)
+08:11:42        Run 04/10: 0.2205s  (5 rows)
+08:11:47        Run 05/10: 0.2159s  (5 rows)
+08:11:52        Run 06/10: 0.2199s  (5 rows)
+08:11:58        Run 07/10: 0.2140s  (5 rows)
+08:12:03        Run 08/10: 0.2158s  (5 rows)
+08:12:08        Run 09/10: 0.2153s  (5 rows)
+08:12:13        Run 10/10: 0.2168s  (5 rows)
+08:12:13        DONE  MEAN=0.2173s  STD=0.0038s  MIN=0.2107s  MAX=0.2254s
+
+08:12:13    [09/15] Q7_agg SF1 — RESUME from run 21 (have 20/30)
+08:12:13        Warm-up skipped (resume mode)
+08:12:14        Run 01/10: 0.2234s  (4 rows)
+08:12:19        Run 02/10: 0.2211s  (4 rows)
+08:12:24        Run 03/10: 0.2294s  (4 rows)
+08:12:29        Run 04/10: 0.2309s  (4 rows)
+08:12:34        Run 05/10: 0.2307s  (4 rows)
+08:12:40        Run 06/10: 0.2290s  (4 rows)
+08:12:45        Run 07/10: 0.2246s  (4 rows)
+08:12:50        Run 08/10: 0.2229s  (4 rows)
+08:12:55        Run 09/10: 0.2232s  (4 rows)
+08:13:01        Run 10/10: 0.2264s  (4 rows)
+08:13:01        DONE  MEAN=0.2262s  STD=0.0034s  MIN=0.2211s  MAX=0.2309s
+
+08:13:01    [10/15] Q17_subquery SF1 — RESUME from run 21 (have 20/30)
+08:13:01        Warm-up skipped (resume mode)
+08:13:01        Run 01/10: 0.2097s  (1 rows)
+08:13:06        Run 02/10: 0.2132s  (1 rows)
+08:13:11        Run 03/10: 0.2211s  (1 rows)
+08:13:16        Run 04/10: 0.2187s  (1 rows)
+08:13:22        Run 05/10: 0.2187s  (1 rows)
+08:13:27        Run 06/10: 0.2088s  (1 rows)
+08:13:32        Run 07/10: 0.2166s  (1 rows)
+08:13:37        Run 08/10: 0.2166s  (1 rows)
+08:13:43        Run 09/10: 0.2103s  (1 rows)
+08:13:48        Run 10/10: 0.2111s  (1 rows)
+08:13:48        DONE  MEAN=0.2145s  STD=0.0042s  MIN=0.2088s  MAX=0.2211s
+
+08:13:48    [11/15] Q20_subquery SF1 — RESUME from run 21 (have 20/30)
+08:13:48        Warm-up skipped (resume mode)
+08:13:48        Run 01/10: 0.2195s  (186 rows)
+08:13:53        Run 02/10: 0.2248s  (186 rows)
+08:13:58        Run 03/10: 0.2250s  (186 rows)
+08:14:04        Run 04/10: 0.2214s  (186 rows)
+08:14:09        Run 05/10: 0.2190s  (186 rows)
+08:14:14        Run 06/10: 0.2274s  (186 rows)
+08:14:19        Run 07/10: 0.2274s  (186 rows)
+08:14:25        Run 08/10: 0.2266s  (186 rows)
+08:14:30        Run 09/10: 0.2270s  (186 rows)
+08:14:35        Run 10/10: 0.2193s  (186 rows)
+08:14:35        DONE  MEAN=0.2237s  STD=0.0034s  MIN=0.2190s  MAX=0.2274s
+
+08:14:35    [12/15] Q22_subquery SF1 — RESUME from run 21 (have 20/30)
+08:14:35        Warm-up skipped (resume mode)
+08:14:35        Run 01/10: 0.2295s  (7 rows)
+08:14:41        Run 02/10: 0.2387s  (7 rows)
+08:14:46        Run 03/10: 0.2360s  (7 rows)
+08:14:51        Run 04/10: 0.2402s  (7 rows)
+08:14:56        Run 05/10: 0.2350s  (7 rows)
+08:15:01        Run 06/10: 0.2351s  (7 rows)
+08:15:07        Run 07/10: 0.2357s  (7 rows)
+08:15:12        Run 08/10: 0.2300s  (7 rows)
+08:15:17        Run 09/10: 0.2428s  (7 rows)
+08:15:22        Run 10/10: 0.2406s  (7 rows)
+08:15:22        DONE  MEAN=0.2364s  STD=0.0041s  MIN=0.2295s  MAX=0.2428s
+
+08:15:22    [13/15] Q10_window SF1 — RESUME from run 21 (have 20/30)
+08:15:22        Warm-up skipped (resume mode)
+08:15:23        Run 01/10: 0.2480s  (20 rows)
+08:15:28        Run 02/10: 0.2477s  (20 rows)
+08:15:33        Run 03/10: 0.2469s  (20 rows)
+08:15:38        Run 04/10: 0.2526s  (20 rows)
+08:15:44        Run 05/10: 0.2516s  (20 rows)
+08:15:49        Run 06/10: 0.2492s  (20 rows)
+08:15:54        Run 07/10: 0.2558s  (20 rows)
+08:15:59        Run 08/10: 0.2536s  (20 rows)
+08:16:05        Run 09/10: 0.2605s  (20 rows)
+08:16:10        Run 10/10: 0.2639s  (20 rows)
+08:16:10        DONE  MEAN=0.2530s  STD=0.0054s  MIN=0.2469s  MAX=0.2639s
+
+08:16:10    [14/15] Q1_window SF1 — RESUME from run 21 (have 20/30)
+08:16:10        Warm-up skipped (resume mode)
+08:16:10        Run 01/10: 0.2120s  (4 rows)
+08:16:15        Run 02/10: 0.2188s  (4 rows)
+08:16:21        Run 03/10: 0.2184s  (4 rows)
+08:16:26        Run 04/10: 0.2197s  (4 rows)
+08:16:31        Run 05/10: 0.2155s  (4 rows)
+08:16:36        Run 06/10: 0.2111s  (4 rows)
+08:16:42        Run 07/10: 0.2214s  (4 rows)
+08:16:47        Run 08/10: 0.2157s  (4 rows)
+08:16:52        Run 09/10: 0.2180s  (4 rows)
+08:16:57        Run 10/10: 0.2184s  (4 rows)
+08:16:57        DONE  MEAN=0.2169s  STD=0.0031s  MIN=0.2111s  MAX=0.2214s
+
+08:16:57    [15/15] Q18_window SF1 — RESUME from run 21 (have 20/30)
+08:16:57        Warm-up skipped (resume mode)
+08:16:58        Run 01/10: 0.3317s  (57 rows)
+08:17:03        Run 02/10: 0.3326s  (57 rows)
+08:17:08        Run 03/10: 0.3354s  (57 rows)
+08:17:14        Run 04/10: 0.3332s  (57 rows)
+08:17:19        Run 05/10: 0.3360s  (57 rows)
+08:17:24        Run 06/10: 0.3424s  (57 rows)
+08:17:30        Run 07/10: 0.3242s  (57 rows)
+08:17:35        Run 08/10: 0.3203s  (57 rows)
+08:17:40        Run 09/10: 0.3325s  (57 rows)
+08:17:46        Run 10/10: 0.3466s  (57 rows)
+08:17:46        DONE  MEAN=0.3335s  STD=0.0073s  MIN=0.3203s  MAX=0.3466s
+
+08:17:46  
+08:17:46    SF1: All 15 queries complete (30 runs each).
+08:17:46    Dropping database 'tpch_sf1' from MotherDuck (post-benchmark cleanup)...
+08:17:46    'tpch_sf1' dropped successfully.
+08:17:46  
+  ──────────────────────────────────────────────────────────
+08:17:46    PROGRESS
+08:17:46    ──────────────────────────────────────────────────────────
+08:17:46    SF 1  [████████████████████████]  DONE
+08:17:46    SF 5  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:17:46    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:17:46    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:17:46    ──────────────────────────────────────────────────────────
+08:17:46    Total: 15/60 queries complete
+
+08:17:46    Waiting 10 seconds before SF5...
+08:17:56  
+08:17:56  --------------------------------------------------------------
+08:17:56    SCALE FACTOR 5  (~2 GB)
+08:17:56  --------------------------------------------------------------
+08:17:56    Network RTT to MotherDuck: 54.6 ms
+08:17:56    Phase 1: Check & upload data for SF5...
+08:17:57    Database 'tpch_sf5' ready.
+08:17:57    Estimated size SF5: ~2500 MB — uploading missing tables...
+08:17:57  
+08:17:57      [UP]   lineitem       1051.5 MB  uploading...
+08:19:19      [OK]   lineitem      done in 81.5s  (29,999,795 rows)
+08:19:19      [UP]   orders          275.2 MB  uploading...
+08:19:42      [OK]   orders        done in 22.8s  (7,500,000 rows)
+08:19:43      [UP]   customer         59.0 MB  uploading...
+08:19:49      [OK]   customer      done in 6.1s  (750,000 rows)
+08:19:49      [UP]   supplier          3.8 MB  uploading...
+08:19:51      [OK]   supplier      done in 1.3s  (50,000 rows)
+08:19:51      [UP]   part             30.4 MB  uploading...
+08:19:56      [OK]   part          done in 4.3s  (1,000,000 rows)
+08:19:56      [UP]   partsupp        209.8 MB  uploading...
+08:20:12      [OK]   partsupp      done in 16.1s  (4,000,000 rows)
+08:20:13      [UP]   nation            0.0 MB  uploading...
+08:20:14      [OK]   nation        done in 0.6s  (25 rows)
+08:20:14      [UP]   region            0.0 MB  uploading...
+08:20:15      [OK]   region        done in 0.6s  (5 rows)
+08:20:15  
+08:20:15    Phase 2: Verifying SF5 data...
+08:20:15    Verifying tables for SF5...
+08:20:15        [OK] lineitem        29,999,795 rows
+08:20:15        [OK] orders           7,500,000 rows
+08:20:16        [OK] customer           750,000 rows
+08:20:16        [OK] supplier            50,000 rows
+08:20:16        [OK] part             1,000,000 rows
+08:20:16        [OK] partsupp         4,000,000 rows
+08:20:16        [OK] nation                  25 rows
+08:20:17        [OK] region                   5 rows
+08:20:17  
+08:20:17    Phase 3: Benchmarking SF5...
+08:20:17    Setting up views for SF5...
+08:20:20    Views ready. Starting benchmark: 15 queries x 30 runs...
+
+08:20:20    [01/15] Q6_simple SF5 — RESUME from run 21 (have 20/30)
+08:20:20        Warm-up skipped (resume mode)
+08:20:20        Run 01/10: 0.2243s  (1 rows)
+08:20:25        Run 02/10: 0.2277s  (1 rows)
+08:20:31        Run 03/10: 0.2271s  (1 rows)
+08:20:36        Run 04/10: 0.2334s  (1 rows)
+08:20:41        Run 05/10: 0.2272s  (1 rows)
+08:20:46        Run 06/10: 0.2282s  (1 rows)
+08:20:51        Run 07/10: 0.2290s  (1 rows)
+08:20:57        Run 08/10: 0.2292s  (1 rows)
+08:21:02        Run 09/10: 0.2279s  (1 rows)
+08:21:07        Run 10/10: 0.2205s  (1 rows)
+08:21:07        DONE  MEAN=0.2275s  STD=0.0032s  MIN=0.2205s  MAX=0.2334s
+
+08:21:07    [02/15] Q14_simple SF5 — RESUME from run 21 (have 20/30)
+08:21:07        Warm-up skipped (resume mode)
+08:21:07        Run 01/10: 0.2670s  (1 rows)
+08:21:13        Run 02/10: 0.2757s  (1 rows)
+08:21:18        Run 03/10: 0.2768s  (1 rows)
+08:21:23        Run 04/10: 0.2771s  (1 rows)
+08:21:29        Run 05/10: 0.2670s  (1 rows)
+08:21:34        Run 06/10: 0.2789s  (1 rows)
+08:21:39        Run 07/10: 0.2740s  (1 rows)
+08:21:44        Run 08/10: 0.2746s  (1 rows)
+08:21:50        Run 09/10: 0.2727s  (1 rows)
+08:21:55        Run 10/10: 0.2767s  (1 rows)
+08:21:55        DONE  MEAN=0.2741s  STD=0.0039s  MIN=0.2670s  MAX=0.2789s
+
+08:21:55    [03/15] Q19_simple SF5 — RESUME from run 21 (have 20/30)
+08:21:55        Warm-up skipped (resume mode)
+08:21:55        Run 01/10: 0.3007s  (1 rows)
+08:22:01        Run 02/10: 0.3059s  (1 rows)
+08:22:06        Run 03/10: 0.3025s  (1 rows)
+08:22:11        Run 04/10: 0.3131s  (1 rows)
+08:22:16        Run 05/10: 0.3077s  (1 rows)
+08:22:22        Run 06/10: 0.3021s  (1 rows)
+08:22:27        Run 07/10: 0.3036s  (1 rows)
+08:22:32        Run 08/10: 0.3124s  (1 rows)
+08:22:38        Run 09/10: 0.3043s  (1 rows)
+08:22:43        Run 10/10: 0.3038s  (1 rows)
+08:22:43        DONE  MEAN=0.3056s  STD=0.0040s  MIN=0.3007s  MAX=0.3131s
+
+08:22:43    [04/15] Q3_join SF5 — RESUME from run 21 (have 20/30)
+08:22:43        Warm-up skipped (resume mode)
+08:22:43        Run 01/10: 0.2870s  (10 rows)
+08:22:49        Run 02/10: 0.2964s  (10 rows)
+08:22:54        Run 03/10: 0.2975s  (10 rows)
+08:22:59        Run 04/10: 0.3018s  (10 rows)
+08:23:05        Run 05/10: 0.3044s  (10 rows)
+08:23:10        Run 06/10: 0.2993s  (10 rows)
+08:23:15        Run 07/10: 0.2923s  (10 rows)
+08:23:20        Run 08/10: 0.2948s  (10 rows)
+08:23:26        Run 09/10: 0.2979s  (10 rows)
+08:23:31        Run 10/10: 0.3033s  (10 rows)
+08:23:31        DONE  MEAN=0.2975s  STD=0.0050s  MIN=0.2870s  MAX=0.3044s
+
+08:23:31    [05/15] Q5_join SF5 — RESUME from run 21 (have 20/30)
+08:23:31        Warm-up skipped (resume mode)
+08:23:31        Run 01/10: 0.2671s  (5 rows)
+08:23:37        Run 02/10: 0.2831s  (5 rows)
+08:23:42        Run 03/10: 0.2849s  (5 rows)
+08:23:47        Run 04/10: 0.2772s  (5 rows)
+08:23:52        Run 05/10: 0.2808s  (5 rows)
+08:23:58        Run 06/10: 0.2753s  (5 rows)
+08:24:03        Run 07/10: 0.2877s  (5 rows)
+08:24:08        Run 08/10: 0.2790s  (5 rows)
+08:24:14        Run 09/10: 0.2855s  (5 rows)
+08:24:19        Run 10/10: 0.2779s  (5 rows)
+08:24:19        DONE  MEAN=0.2799s  STD=0.0057s  MIN=0.2671s  MAX=0.2877s
+
+08:24:19    [06/15] Q10_join SF5 — RESUME from run 21 (have 20/30)
+08:24:19        Warm-up skipped (resume mode)
+08:24:19        Run 01/10: 0.3586s  (20 rows)
+08:24:25        Run 02/10: 0.3580s  (20 rows)
+08:24:30        Run 03/10: 0.3572s  (20 rows)
+08:24:35        Run 04/10: 0.3621s  (20 rows)
+08:24:41        Run 05/10: 0.3489s  (20 rows)
+08:24:46        Run 06/10: 0.3623s  (20 rows)
+08:24:51        Run 07/10: 0.3535s  (20 rows)
+08:24:57        Run 08/10: 0.3574s  (20 rows)
+08:25:02        Run 09/10: 0.3569s  (20 rows)
+08:25:07        Run 10/10: 0.3575s  (20 rows)
+08:25:07        DONE  MEAN=0.3572s  STD=0.0037s  MIN=0.3489s  MAX=0.3623s
+
+08:25:07    [07/15] Q1_agg SF5 — RESUME from run 21 (have 20/30)
+08:25:07        Warm-up skipped (resume mode)
+08:25:08        Run 01/10: 0.2949s  (4 rows)
+08:25:13        Run 02/10: 0.2963s  (4 rows)
+08:25:18        Run 03/10: 0.2952s  (4 rows)
+08:25:24        Run 04/10: 0.2979s  (4 rows)
+08:25:29        Run 05/10: 0.2993s  (4 rows)
+08:25:34        Run 06/10: 0.2995s  (4 rows)
+08:25:40        Run 07/10: 0.2971s  (4 rows)
+08:25:45        Run 08/10: 0.2966s  (4 rows)
+08:25:50        Run 09/10: 0.2967s  (4 rows)
+08:25:55        Run 10/10: 0.2947s  (4 rows)
+08:25:55        DONE  MEAN=0.2968s  STD=0.0016s  MIN=0.2947s  MAX=0.2995s
+
+08:25:55    [08/15] Q4_agg SF5 — RESUME from run 21 (have 20/30)
+08:25:55        Warm-up skipped (resume mode)
+08:25:56        Run 01/10: 0.2824s  (5 rows)
+08:26:01        Run 02/10: 0.2820s  (5 rows)
+08:26:06        Run 03/10: 0.2778s  (5 rows)
+08:26:12        Run 04/10: 0.2897s  (5 rows)
+08:26:17        Run 05/10: 0.2911s  (5 rows)
+08:26:22        Run 06/10: 0.2944s  (5 rows)
+08:26:27        Run 07/10: 0.2890s  (5 rows)
+08:26:33        Run 08/10: 0.2885s  (5 rows)
+08:26:38        Run 09/10: 0.2851s  (5 rows)
+08:26:43        Run 10/10: 0.2966s  (5 rows)
+08:26:43        DONE  MEAN=0.2877s  STD=0.0055s  MIN=0.2778s  MAX=0.2966s
+
+08:26:43    [09/15] Q7_agg SF5 — RESUME from run 21 (have 20/30)
+08:26:43        Warm-up skipped (resume mode)
+08:26:44        Run 01/10: 0.3125s  (4 rows)
+08:26:49        Run 02/10: 0.3071s  (4 rows)
+08:26:54        Run 03/10: 0.3143s  (4 rows)
+08:27:00        Run 04/10: 0.3185s  (4 rows)
+08:27:05        Run 05/10: 0.3032s  (4 rows)
+08:27:10        Run 06/10: 0.3076s  (4 rows)
+08:27:15        Run 07/10: 0.3013s  (4 rows)
+08:27:21        Run 08/10: 0.3162s  (4 rows)
+08:27:26        Run 09/10: 0.3046s  (4 rows)
+08:27:31        Run 10/10: 0.3158s  (4 rows)
+08:27:31        DONE  MEAN=0.3101s  STD=0.0058s  MIN=0.3013s  MAX=0.3185s
+
+08:27:31    [10/15] Q17_subquery SF5 — RESUME from run 21 (have 20/30)
+08:27:31        Warm-up skipped (resume mode)
+08:27:32        Run 01/10: 0.2499s  (1 rows)
+08:27:37        Run 02/10: 0.2534s  (1 rows)
+08:27:42        Run 03/10: 0.2542s  (1 rows)
+08:27:47        Run 04/10: 0.2587s  (1 rows)
+08:27:53        Run 05/10: 0.2589s  (1 rows)
+08:27:58        Run 06/10: 0.2573s  (1 rows)
+08:28:03        Run 07/10: 0.2601s  (1 rows)
+08:28:08        Run 08/10: 0.2487s  (1 rows)
+08:28:14        Run 09/10: 0.2508s  (1 rows)
+08:28:19        Run 10/10: 0.2572s  (1 rows)
+08:28:19        DONE  MEAN=0.2549s  STD=0.0039s  MIN=0.2487s  MAX=0.2601s
+
+08:28:19    [11/15] Q20_subquery SF5 — RESUME from run 21 (have 20/30)
+08:28:19        Warm-up skipped (resume mode)
+08:28:19        Run 01/10: 0.4588s  (901 rows)
+08:28:25        Run 02/10: 0.4654s  (901 rows)
+08:28:30        Run 03/10: 0.4733s  (901 rows)
+08:28:36        Run 04/10: 0.4709s  (901 rows)
+08:28:41        Run 05/10: 0.4693s  (901 rows)
+08:28:47        Run 06/10: 0.4678s  (901 rows)
+08:28:52        Run 07/10: 0.4695s  (901 rows)
+08:28:58        Run 08/10: 0.4715s  (901 rows)
+08:29:03        Run 09/10: 0.4721s  (901 rows)
+08:29:09        Run 10/10: 0.4693s  (901 rows)
+08:29:09        DONE  MEAN=0.4688s  STD=0.0040s  MIN=0.4588s  MAX=0.4733s
+
+08:29:09    [12/15] Q22_subquery SF5 — RESUME from run 21 (have 20/30)
+08:29:09        Warm-up skipped (resume mode)
+08:29:09        Run 01/10: 0.2665s  (7 rows)
+08:29:14        Run 02/10: 0.2712s  (7 rows)
+08:29:20        Run 03/10: 0.2680s  (7 rows)
+08:29:25        Run 04/10: 0.2712s  (7 rows)
+08:29:30        Run 05/10: 0.2697s  (7 rows)
+08:29:35        Run 06/10: 0.2649s  (7 rows)
+08:29:41        Run 07/10: 0.2614s  (7 rows)
+08:29:46        Run 08/10: 0.2660s  (7 rows)
+08:29:51        Run 09/10: 0.2674s  (7 rows)
+08:29:56        Run 10/10: 0.2696s  (7 rows)
+08:29:56        DONE  MEAN=0.2676s  STD=0.0029s  MIN=0.2614s  MAX=0.2712s
+
+08:29:56    [13/15] Q10_window SF5 — RESUME from run 21 (have 20/30)
+08:29:56        Warm-up skipped (resume mode)
+08:29:57        Run 01/10: 0.3460s  (20 rows)
+08:30:02        Run 02/10: 0.3485s  (20 rows)
+08:30:07        Run 03/10: 0.3435s  (20 rows)
+08:30:13        Run 04/10: 0.3601s  (20 rows)
+08:30:18        Run 05/10: 0.3531s  (20 rows)
+08:30:24        Run 06/10: 0.3525s  (20 rows)
+08:30:29        Run 07/10: 0.3520s  (20 rows)
+08:30:34        Run 08/10: 0.3556s  (20 rows)
+08:30:40        Run 09/10: 0.3526s  (20 rows)
+08:30:45        Run 10/10: 0.3543s  (20 rows)
+08:30:45        DONE  MEAN=0.3518s  STD=0.0045s  MIN=0.3435s  MAX=0.3601s
+
+08:30:45    [14/15] Q1_window SF5 — RESUME from run 21 (have 20/30)
+08:30:45        Warm-up skipped (resume mode)
+08:30:45        Run 01/10: 0.2599s  (4 rows)
+08:30:51        Run 02/10: 0.2638s  (4 rows)
+08:30:56        Run 03/10: 0.2596s  (4 rows)
+08:31:01        Run 04/10: 0.2655s  (4 rows)
+08:31:06        Run 05/10: 0.2639s  (4 rows)
+08:31:12        Run 06/10: 0.2609s  (4 rows)
+08:31:17        Run 07/10: 0.2634s  (4 rows)
+08:31:22        Run 08/10: 0.2703s  (4 rows)
+08:31:27        Run 09/10: 0.2572s  (4 rows)
+08:31:33        Run 10/10: 0.2650s  (4 rows)
+08:31:33        DONE  MEAN=0.2630s  STD=0.0035s  MIN=0.2572s  MAX=0.2703s
+
+08:31:33    [15/15] Q18_window SF5 — RESUME from run 21 (have 20/30)
+08:31:33        Warm-up skipped (resume mode)
+08:31:33        Run 01/10: 0.6599s  (100 rows)
+08:31:39        Run 02/10: 0.6636s  (100 rows)
+08:31:45        Run 03/10: 0.6582s  (100 rows)
+08:31:50        Run 04/10: 0.6625s  (100 rows)
+08:31:56        Run 05/10: 0.6606s  (100 rows)
+08:32:02        Run 06/10: 0.6502s  (100 rows)
+08:32:07        Run 07/10: 0.6613s  (100 rows)
+08:32:13        Run 08/10: 0.6775s  (100 rows)
+08:32:19        Run 09/10: 0.6686s  (100 rows)
+08:32:24        Run 10/10: 0.6624s  (100 rows)
+08:32:24        DONE  MEAN=0.6625s  STD=0.0067s  MIN=0.6502s  MAX=0.6775s
+
+08:32:24  
+08:32:24    SF5: All 15 queries complete (30 runs each).
+08:32:24    Dropping database 'tpch_sf5' from MotherDuck (post-benchmark cleanup)...
+08:32:25    'tpch_sf5' dropped successfully.
+08:32:25  
+  ──────────────────────────────────────────────────────────
+08:32:25    PROGRESS
+08:32:25    ──────────────────────────────────────────────────────────
+08:32:25    SF 1  [████████████████████████]  DONE
+08:32:25    SF 5  [████████████████████████]  DONE
+08:32:25    SF10  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:32:25    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:32:25    ──────────────────────────────────────────────────────────
+08:32:25    Total: 30/60 queries complete
+
+08:32:25    Waiting 10 seconds before SF10...
+08:32:35  
+08:32:35  --------------------------------------------------------------
+08:32:35    SCALE FACTOR 10  (~4 GB)
+08:32:35  --------------------------------------------------------------
+08:32:35    Network RTT to MotherDuck: 81.4 ms
+08:32:35    Phase 1: Check & upload data for SF10...
+08:32:36    Database 'tpch_sf10' ready.
+08:32:36    Estimated size SF10: ~5000 MB — uploading missing tables...
+08:32:36  
+08:32:36      [UP]   lineitem       2120.3 MB  uploading...
+08:35:03      [OK]   lineitem      done in 147.0s  (59,986,052 rows)
+08:35:04      [UP]   orders          557.1 MB  uploading...
+08:35:45      [OK]   orders        done in 41.3s  (15,000,000 rows)
+08:35:46      [UP]   customer        118.0 MB  uploading...
+08:35:56      [OK]   customer      done in 10.4s  (1,500,000 rows)
+08:35:57      [UP]   supplier          7.5 MB  uploading...
+08:35:58      [OK]   supplier      done in 1.6s  (100,000 rows)
+08:35:59      [UP]   part             60.8 MB  uploading...
+08:36:07      [OK]   part          done in 8.1s  (2,000,000 rows)
+08:36:08      [UP]   partsupp        419.5 MB  uploading...
+08:36:36      [OK]   partsupp      done in 28.6s  (8,000,000 rows)
+08:36:37      [UP]   nation            0.0 MB  uploading...
+08:36:38      [OK]   nation        done in 0.6s  (25 rows)
+08:36:38      [UP]   region            0.0 MB  uploading...
+08:36:39      [OK]   region        done in 0.6s  (5 rows)
+08:36:39  
+08:36:39    Phase 2: Verifying SF10 data...
+08:36:39    Verifying tables for SF10...
+08:36:39        [OK] lineitem        59,986,052 rows
+08:36:39        [OK] orders          15,000,000 rows
+08:36:39        [OK] customer         1,500,000 rows
+08:36:40        [OK] supplier           100,000 rows
+08:36:40        [OK] part             2,000,000 rows
+08:36:40        [OK] partsupp         8,000,000 rows
+08:36:40        [OK] nation                  25 rows
+08:36:40        [OK] region                   5 rows
+08:36:40  
+08:36:40    Phase 3: Benchmarking SF10...
+08:36:40    Setting up views for SF10...
+08:36:44    Views ready. Starting benchmark: 15 queries x 30 runs...
+
+08:36:44    [01/15] Q6_simple SF10 — RESUME from run 21 (have 20/30)
+08:36:44        Warm-up skipped (resume mode)
+08:36:44        Run 01/10: 0.2410s  (1 rows)
+08:36:49        Run 02/10: 0.2440s  (1 rows)
+08:36:54        Run 03/10: 0.2469s  (1 rows)
+08:37:00        Run 04/10: 0.2406s  (1 rows)
+08:37:05        Run 05/10: 0.2444s  (1 rows)
+08:37:10        Run 06/10: 0.2431s  (1 rows)
+08:37:15        Run 07/10: 0.2470s  (1 rows)
+08:37:21        Run 08/10: 0.2376s  (1 rows)
+08:37:26        Run 09/10: 0.2392s  (1 rows)
+08:37:31        Run 10/10: 0.2445s  (1 rows)
+08:37:31        DONE  MEAN=0.2428s  STD=0.0030s  MIN=0.2376s  MAX=0.2470s
+
+08:37:31    [02/15] Q14_simple SF10 — RESUME from run 21 (have 20/30)
+08:37:31        Warm-up skipped (resume mode)
+08:37:31        Run 01/10: 0.2687s  (1 rows)
+08:37:37        Run 02/10: 0.2758s  (1 rows)
+08:37:42        Run 03/10: 0.2707s  (1 rows)
+08:37:47        Run 04/10: 0.2779s  (1 rows)
+08:37:53        Run 05/10: 0.2767s  (1 rows)
+08:37:58        Run 06/10: 0.2829s  (1 rows)
+08:38:03        Run 07/10: 0.2807s  (1 rows)
+08:38:08        Run 08/10: 0.2705s  (1 rows)
+08:38:14        Run 09/10: 0.2765s  (1 rows)
+08:38:19        Run 10/10: 0.2722s  (1 rows)
+08:38:19        DONE  MEAN=0.2753s  STD=0.0044s  MIN=0.2687s  MAX=0.2829s
+
+08:38:19    [03/15] Q19_simple SF10 — RESUME from run 21 (have 20/30)
+08:38:19        Warm-up skipped (resume mode)
+08:38:19        Run 01/10: 0.3218s  (1 rows)
+08:38:25        Run 02/10: 0.3316s  (1 rows)
+08:38:30        Run 03/10: 0.3376s  (1 rows)
+08:38:35        Run 04/10: 0.3416s  (1 rows)
+08:38:41        Run 05/10: 0.3282s  (1 rows)
+08:38:46        Run 06/10: 0.3305s  (1 rows)
+08:38:51        Run 07/10: 0.3319s  (1 rows)
+08:38:57        Run 08/10: 0.3405s  (1 rows)
+08:39:02        Run 09/10: 0.3272s  (1 rows)
+08:39:07        Run 10/10: 0.3389s  (1 rows)
+08:39:07        DONE  MEAN=0.3330s  STD=0.0061s  MIN=0.3218s  MAX=0.3416s
+
+08:39:07    [04/15] Q3_join SF10 — RESUME from run 21 (have 20/30)
+08:39:07        Warm-up skipped (resume mode)
+08:39:08        Run 01/10: 0.3108s  (10 rows)
+08:39:13        Run 02/10: 0.3164s  (10 rows)
+08:39:18        Run 03/10: 0.3125s  (10 rows)
+08:39:24        Run 04/10: 0.3238s  (10 rows)
+08:39:29        Run 05/10: 0.3178s  (10 rows)
+08:39:34        Run 06/10: 0.3274s  (10 rows)
+08:39:40        Run 07/10: 0.3246s  (10 rows)
+08:39:45        Run 08/10: 0.3176s  (10 rows)
+08:39:50        Run 09/10: 0.3241s  (10 rows)
+08:39:56        Run 10/10: 0.3232s  (10 rows)
+08:39:56        DONE  MEAN=0.3198s  STD=0.0053s  MIN=0.3108s  MAX=0.3274s
+
+08:39:56    [05/15] Q5_join SF10 — RESUME from run 21 (have 20/30)
+08:39:56        Warm-up skipped (resume mode)
+08:39:56        Run 01/10: 0.3402s  (5 rows)
+08:40:01        Run 02/10: 0.3439s  (5 rows)
+08:40:07        Run 03/10: 0.3359s  (5 rows)
+08:40:12        Run 04/10: 0.3381s  (5 rows)
+08:40:17        Run 05/10: 0.3429s  (5 rows)
+08:40:23        Run 06/10: 0.3390s  (5 rows)
+08:40:28        Run 07/10: 0.3398s  (5 rows)
+08:40:33        Run 08/10: 0.3443s  (5 rows)
+08:40:39        Run 09/10: 0.3419s  (5 rows)
+08:40:44        Run 10/10: 0.3395s  (5 rows)
+08:40:44        DONE  MEAN=0.3406s  STD=0.0025s  MIN=0.3359s  MAX=0.3443s
+
+08:40:44    [06/15] Q10_join SF10 — RESUME from run 21 (have 20/30)
+08:40:44        Warm-up skipped (resume mode)
+08:40:44        Run 01/10: 0.4573s  (20 rows)
+08:40:50        Run 02/10: 0.4704s  (20 rows)
+08:40:55        Run 03/10: 0.4582s  (20 rows)
+08:41:01        Run 04/10: 0.4649s  (20 rows)
+08:41:06        Run 05/10: 0.4598s  (20 rows)
+08:41:12        Run 06/10: 0.4609s  (20 rows)
+08:41:17        Run 07/10: 0.4679s  (20 rows)
+08:41:23        Run 08/10: 0.4670s  (20 rows)
+08:41:28        Run 09/10: 0.4616s  (20 rows)
+08:41:34        Run 10/10: 0.4653s  (20 rows)
+08:41:34        DONE  MEAN=0.4633s  STD=0.0042s  MIN=0.4573s  MAX=0.4704s
+
+08:41:34    [07/15] Q1_agg SF10 — RESUME from run 21 (have 20/30)
+08:41:34        Warm-up skipped (resume mode)
+08:41:34        Run 01/10: 0.3832s  (4 rows)
+08:41:39        Run 02/10: 0.3826s  (4 rows)
+08:41:45        Run 03/10: 0.3667s  (4 rows)
+08:41:50        Run 04/10: 0.3805s  (4 rows)
+08:41:56        Run 05/10: 0.3791s  (4 rows)
+08:42:01        Run 06/10: 0.3749s  (4 rows)
+08:42:06        Run 07/10: 0.3780s  (4 rows)
+08:42:12        Run 08/10: 0.3764s  (4 rows)
+08:42:17        Run 09/10: 0.3765s  (4 rows)
+08:42:22        Run 10/10: 0.3707s  (4 rows)
+08:42:22        DONE  MEAN=0.3769s  STD=0.0049s  MIN=0.3667s  MAX=0.3832s
+
+08:42:22    [08/15] Q4_agg SF10 — RESUME from run 21 (have 20/30)
+08:42:22        Warm-up skipped (resume mode)
+08:42:23        Run 01/10: 0.3227s  (5 rows)
+08:42:28        Run 02/10: 0.3281s  (5 rows)
+08:42:33        Run 03/10: 0.3199s  (5 rows)
+08:42:39        Run 04/10: 0.3299s  (5 rows)
+08:42:44        Run 05/10: 0.3142s  (5 rows)
+08:42:49        Run 06/10: 0.3219s  (5 rows)
+08:42:55        Run 07/10: 0.3100s  (5 rows)
+08:43:00        Run 08/10: 0.3114s  (5 rows)
+08:43:05        Run 09/10: 0.3137s  (5 rows)
+08:43:11        Run 10/10: 0.3140s  (5 rows)
+08:43:11        DONE  MEAN=0.3186s  STD=0.0066s  MIN=0.3100s  MAX=0.3299s
+
+08:43:11    [09/15] Q7_agg SF10 — RESUME from run 21 (have 20/30)
+08:43:11        Warm-up skipped (resume mode)
+08:43:11        Run 01/10: 0.2942s  (4 rows)
+08:43:16        Run 02/10: 0.2938s  (4 rows)
+08:43:22        Run 03/10: 0.2990s  (4 rows)
+08:43:27        Run 04/10: 0.2924s  (4 rows)
+08:43:32        Run 05/10: 0.2990s  (4 rows)
+08:43:37        Run 06/10: 0.2920s  (4 rows)
+08:43:43        Run 07/10: 0.2926s  (4 rows)
+08:43:48        Run 08/10: 0.2926s  (4 rows)
+08:43:53        Run 09/10: 0.3016s  (4 rows)
+08:43:59        Run 10/10: 0.2974s  (4 rows)
+08:43:59        DONE  MEAN=0.2955s  STD=0.0033s  MIN=0.2920s  MAX=0.3016s
+
+08:43:59    [10/15] Q17_subquery SF10 — RESUME from run 21 (have 20/30)
+08:43:59        Warm-up skipped (resume mode)
+08:43:59        Run 01/10: 0.2901s  (1 rows)
+08:44:04        Run 02/10: 0.2924s  (1 rows)
+08:44:10        Run 03/10: 0.3081s  (1 rows)
+08:44:15        Run 04/10: 0.2960s  (1 rows)
+08:44:20        Run 05/10: 0.3001s  (1 rows)
+08:44:25        Run 06/10: 0.2926s  (1 rows)
+08:44:31        Run 07/10: 0.2939s  (1 rows)
+08:44:36        Run 08/10: 0.2887s  (1 rows)
+08:44:41        Run 09/10: 0.2986s  (1 rows)
+08:44:47        Run 10/10: 0.2956s  (1 rows)
+08:44:47        DONE  MEAN=0.2956s  STD=0.0053s  MIN=0.2887s  MAX=0.3081s
+
+08:44:47    [11/15] Q20_subquery SF10 — RESUME from run 21 (have 20/30)
+08:44:47        Warm-up skipped (resume mode)
+08:44:47        Run 01/10: 0.6631s  (1804 rows)
+08:44:53        Run 02/10: 0.6726s  (1804 rows)
+08:44:59        Run 03/10: 0.6730s  (1804 rows)
+08:45:04        Run 04/10: 0.6658s  (1804 rows)
+08:45:10        Run 05/10: 0.6690s  (1804 rows)
+08:45:16        Run 06/10: 0.6666s  (1804 rows)
+08:45:21        Run 07/10: 0.6727s  (1804 rows)
+08:45:27        Run 08/10: 0.6698s  (1804 rows)
+08:45:33        Run 09/10: 0.6650s  (1804 rows)
+08:45:38        Run 10/10: 0.6718s  (1804 rows)
+08:45:38        DONE  MEAN=0.6689s  STD=0.0034s  MIN=0.6631s  MAX=0.6730s
+
+08:45:38    [12/15] Q22_subquery SF10 — RESUME from run 21 (have 20/30)
+08:45:38        Warm-up skipped (resume mode)
+08:45:39        Run 01/10: 0.2879s  (7 rows)
+08:45:44        Run 02/10: 0.2964s  (7 rows)
+08:45:49        Run 03/10: 0.3021s  (7 rows)
+08:45:55        Run 04/10: 0.2907s  (7 rows)
+08:46:00        Run 05/10: 0.2939s  (7 rows)
+08:46:05        Run 06/10: 0.2980s  (7 rows)
+08:46:10        Run 07/10: 0.2881s  (7 rows)
+08:46:16        Run 08/10: 0.2953s  (7 rows)
+08:46:21        Run 09/10: 0.2930s  (7 rows)
+08:46:26        Run 10/10: 0.2989s  (7 rows)
+08:46:26        DONE  MEAN=0.2944s  STD=0.0044s  MIN=0.2879s  MAX=0.3021s
+
+08:46:26    [13/15] Q10_window SF10 — RESUME from run 21 (have 20/30)
+08:46:26        Warm-up skipped (resume mode)
+08:46:27        Run 01/10: 0.3855s  (20 rows)
+08:46:32        Run 02/10: 0.3884s  (20 rows)
+08:46:37        Run 03/10: 0.3907s  (20 rows)
+08:46:43        Run 04/10: 0.3914s  (20 rows)
+08:46:48        Run 05/10: 0.3891s  (20 rows)
+08:46:54        Run 06/10: 0.3943s  (20 rows)
+08:46:59        Run 07/10: 0.3854s  (20 rows)
+08:47:04        Run 08/10: 0.3913s  (20 rows)
+08:47:10        Run 09/10: 0.3860s  (20 rows)
+08:47:15        Run 10/10: 0.3853s  (20 rows)
+08:47:15        DONE  MEAN=0.3887s  STD=0.0030s  MIN=0.3853s  MAX=0.3943s
+
+08:47:15    [14/15] Q1_window SF10 — RESUME from run 21 (have 20/30)
+08:47:15        Warm-up skipped (resume mode)
+08:47:16        Run 01/10: 0.2964s  (4 rows)
+08:47:21        Run 02/10: 0.3012s  (4 rows)
+08:47:26        Run 03/10: 0.3036s  (4 rows)
+08:47:31        Run 04/10: 0.3024s  (4 rows)
+08:47:37        Run 05/10: 0.2974s  (4 rows)
+08:47:42        Run 06/10: 0.2962s  (4 rows)
+08:47:47        Run 07/10: 0.2964s  (4 rows)
+08:47:53        Run 08/10: 0.3033s  (4 rows)
+08:47:58        Run 09/10: 0.3015s  (4 rows)
+08:48:03        Run 10/10: 0.2990s  (4 rows)
+08:48:03        DONE  MEAN=0.2997s  STD=0.0028s  MIN=0.2962s  MAX=0.3036s
+
+08:48:03    [15/15] Q18_window SF10 — RESUME from run 21 (have 20/30)
+08:48:03        Warm-up skipped (resume mode)
+08:48:04        Run 01/10: 1.0046s  (100 rows)
+08:48:10        Run 02/10: 1.0184s  (100 rows)
+08:48:16        Run 03/10: 1.0127s  (100 rows)
+08:48:22        Run 04/10: 1.0137s  (100 rows)
+08:48:28        Run 05/10: 1.0165s  (100 rows)
+08:48:34        Run 06/10: 1.0177s  (100 rows)
+08:48:40        Run 07/10: 1.0192s  (100 rows)
+08:48:46        Run 08/10: 1.0208s  (100 rows)
+08:48:52        Run 09/10: 1.0137s  (100 rows)
+08:48:58        Run 10/10: 1.0084s  (100 rows)
+08:48:58        DONE  MEAN=1.0146s  STD=0.0048s  MIN=1.0046s  MAX=1.0208s
+
+08:48:58  
+08:48:58    SF10: All 15 queries complete (30 runs each).
+08:48:58    Dropping database 'tpch_sf10' from MotherDuck (post-benchmark cleanup)...
+08:48:59    'tpch_sf10' dropped successfully.
+08:48:59  
+  ──────────────────────────────────────────────────────────
+08:48:59    PROGRESS
+08:48:59    ──────────────────────────────────────────────────────────
+08:48:59    SF 1  [████████████████████████]  DONE
+08:48:59    SF 5  [████████████████████████]  DONE
+08:48:59    SF10  [████████████████████████]  DONE
+08:48:59    SF20  [░░░░░░░░░░░░░░░░░░░░░░░░]  0/15
+08:48:59    ──────────────────────────────────────────────────────────
+08:48:59    Total: 45/60 queries complete
+
+08:48:59    Waiting 10 seconds before SF20...
+08:49:09  
+08:49:09  --------------------------------------------------------------
+08:49:09    SCALE FACTOR 20  (~9 GB)
+08:49:09  --------------------------------------------------------------
+08:49:09    Network RTT to MotherDuck: 49.3 ms
+08:49:09    Phase 1: Check & upload data for SF20...
+08:49:10    Database 'tpch_sf20' ready.
+08:49:10    Estimated size SF20: ~10000 MB — uploading missing tables...
+08:49:10  
+08:49:10      [UP]   lineitem       4271.5 MB  uploading...
+08:53:56      [OK]   lineitem      done in 285.5s  (119,994,608 rows)
+08:53:56      [UP]   orders         1137.2 MB  uploading...
+08:55:14      [OK]   orders        done in 78.1s  (30,000,000 rows)
+08:55:15      [UP]   customer        236.1 MB  uploading...
+08:55:31      [OK]   customer      done in 16.4s  (3,000,000 rows)
+08:55:32      [UP]   supplier         15.1 MB  uploading...
+08:55:35      [OK]   supplier      done in 2.5s  (200,000 rows)
+08:55:35      [UP]   part            121.5 MB  uploading...
+08:55:48      [OK]   part          done in 12.3s  (4,000,000 rows)
+08:55:48      [UP]   partsupp        839.0 MB  uploading...
+08:56:36      [OK]   partsupp      done in 48.3s  (16,000,000 rows)
+08:56:37      [UP]   nation            0.0 MB  uploading...
+08:56:38      [OK]   nation        done in 0.6s  (25 rows)
+08:56:38      [UP]   region            0.0 MB  uploading...
+08:56:39      [OK]   region        done in 0.6s  (5 rows)
+08:56:39  
+08:56:39    Phase 2: Verifying SF20 data...
+08:56:39    Verifying tables for SF20...
+08:56:39        [OK] lineitem       119,994,608 rows
+08:56:39        [OK] orders          30,000,000 rows
+08:56:39        [OK] customer         3,000,000 rows
+08:56:40        [OK] supplier           200,000 rows
+08:56:40        [OK] part             4,000,000 rows
+08:56:40        [OK] partsupp        16,000,000 rows
+08:56:40        [OK] nation                  25 rows
+08:56:41        [OK] region                   5 rows
+08:56:41  
+08:56:41    Phase 3: Benchmarking SF20...
+08:56:41    Setting up views for SF20...
+08:56:44    Views ready. Starting benchmark: 15 queries x 30 runs...
+
+08:56:44    [01/15] Q6_simple SF20 — RESUME from run 21 (have 20/30)
+08:56:44        Warm-up skipped (resume mode)
+08:56:44        Run 01/10: 0.2668s  (1 rows)
+08:56:49        Run 02/10: 0.2746s  (1 rows)
+08:56:55        Run 03/10: 0.2720s  (1 rows)
+08:57:00        Run 04/10: 0.2745s  (1 rows)
+08:57:05        Run 05/10: 0.2711s  (1 rows)
+08:57:10        Run 06/10: 0.2761s  (1 rows)
+08:57:16        Run 07/10: 0.2716s  (1 rows)
+08:57:21        Run 08/10: 0.2742s  (1 rows)
+08:57:26        Run 09/10: 0.2700s  (1 rows)
+08:57:32        Run 10/10: 0.2739s  (1 rows)
+08:57:32        DONE  MEAN=0.2725s  STD=0.0026s  MIN=0.2668s  MAX=0.2761s
+
+08:57:32    [02/15] Q14_simple SF20 — RESUME from run 21 (have 20/30)
+08:57:32        Warm-up skipped (resume mode)
+08:57:32        Run 01/10: 0.3339s  (1 rows)
+08:57:37        Run 02/10: 0.3410s  (1 rows)
+08:57:43        Run 03/10: 0.3321s  (1 rows)
+08:57:48        Run 04/10: 0.3283s  (1 rows)
+08:57:53        Run 05/10: 0.3362s  (1 rows)
+08:57:59        Run 06/10: 0.3267s  (1 rows)
+08:58:04        Run 07/10: 0.3403s  (1 rows)
+08:58:09        Run 08/10: 0.3384s  (1 rows)
+08:58:15        Run 09/10: 0.3392s  (1 rows)
+08:58:20        Run 10/10: 0.3358s  (1 rows)
+08:58:20        DONE  MEAN=0.3352s  STD=0.0047s  MIN=0.3267s  MAX=0.3410s
+
+08:58:20    [03/15] Q19_simple SF20 — RESUME from run 21 (have 20/30)
+08:58:20        Warm-up skipped (resume mode)
+08:58:20        Run 01/10: 0.4306s  (1 rows)
+08:58:26        Run 02/10: 0.4352s  (1 rows)
+08:58:31        Run 03/10: 0.4364s  (1 rows)
+08:58:37        Run 04/10: 0.4410s  (1 rows)
+08:58:42        Run 05/10: 0.4429s  (1 rows)
+08:58:48        Run 06/10: 0.4351s  (1 rows)
+08:58:53        Run 07/10: 0.4461s  (1 rows)
+08:58:58        Run 08/10: 0.4373s  (1 rows)
+08:59:04        Run 09/10: 0.4458s  (1 rows)
+08:59:09        Run 10/10: 0.4415s  (1 rows)
+08:59:09        DONE  MEAN=0.4392s  STD=0.0048s  MIN=0.4306s  MAX=0.4461s
+
+08:59:09    [04/15] Q3_join SF20 — RESUME from run 21 (have 20/30)
+08:59:09        Warm-up skipped (resume mode)
+08:59:10        Run 01/10: 0.4078s  (10 rows)
+08:59:15        Run 02/10: 0.4218s  (10 rows)
+08:59:21        Run 03/10: 0.4123s  (10 rows)
+08:59:26        Run 04/10: 0.4210s  (10 rows)
+08:59:31        Run 05/10: 0.3980s  (10 rows)
+08:59:37        Run 06/10: 0.4237s  (10 rows)
+08:59:42        Run 07/10: 0.4128s  (10 rows)
+08:59:48        Run 08/10: 0.4149s  (10 rows)
+08:59:53        Run 09/10: 0.4241s  (10 rows)
+08:59:59        Run 10/10: 0.4150s  (10 rows)
+08:59:59        DONE  MEAN=0.4152s  STD=0.0077s  MIN=0.3980s  MAX=0.4241s
+
+08:59:59    [05/15] Q5_join SF20 — RESUME from run 21 (have 20/30)
+08:59:59        Warm-up skipped (resume mode)
+08:59:59        Run 01/10: 0.4665s  (5 rows)
+09:00:04        Run 02/10: 0.4662s  (5 rows)
+09:00:10        Run 03/10: 0.4607s  (5 rows)
+09:00:15        Run 04/10: 0.4542s  (5 rows)
+09:00:21        Run 05/10: 0.4480s  (5 rows)
+09:00:26        Run 06/10: 0.4584s  (5 rows)
+09:00:32        Run 07/10: 0.4648s  (5 rows)
+09:00:37        Run 08/10: 0.4567s  (5 rows)
+09:00:43        Run 09/10: 0.4541s  (5 rows)
+09:00:48        Run 10/10: 0.4685s  (5 rows)
+09:00:48        DONE  MEAN=0.4598s  STD=0.0063s  MIN=0.4480s  MAX=0.4685s
+
+09:00:48    [06/15] Q10_join SF20 — RESUME from run 21 (have 20/30)
+09:00:48        Warm-up skipped (resume mode)
+09:00:49        Run 01/10: 0.5409s  (20 rows)
+09:00:54        Run 02/10: 0.5507s  (20 rows)
+09:01:00        Run 03/10: 0.5414s  (20 rows)
+09:01:05        Run 04/10: 0.5549s  (20 rows)
+09:01:11        Run 05/10: 0.5439s  (20 rows)
+09:01:16        Run 06/10: 0.5460s  (20 rows)
+09:01:22        Run 07/10: 0.5703s  (20 rows)
+09:01:28        Run 08/10: 0.5438s  (20 rows)
+09:01:33        Run 09/10: 0.5546s  (20 rows)
+09:01:39        Run 10/10: 0.5488s  (20 rows)
+09:01:39        DONE  MEAN=0.5495s  STD=0.0084s  MIN=0.5409s  MAX=0.5703s
+
+09:01:39    [07/15] Q1_agg SF20 — RESUME from run 21 (have 20/30)
+09:01:39        Warm-up skipped (resume mode)
+09:01:39        Run 01/10: 0.5178s  (4 rows)
+09:01:45        Run 02/10: 0.5204s  (4 rows)
+09:01:50        Run 03/10: 0.5277s  (4 rows)
+09:01:56        Run 04/10: 0.5205s  (4 rows)
+09:02:01        Run 05/10: 0.5221s  (4 rows)
+09:02:07        Run 06/10: 0.5239s  (4 rows)
+09:02:12        Run 07/10: 0.5284s  (4 rows)
+09:02:18        Run 08/10: 0.5121s  (4 rows)
+09:02:23        Run 09/10: 0.5187s  (4 rows)
+09:02:29        Run 10/10: 0.5111s  (4 rows)
+09:02:29        DONE  MEAN=0.5203s  STD=0.0055s  MIN=0.5111s  MAX=0.5284s
+
+09:02:29    [08/15] Q4_agg SF20 — RESUME from run 21 (have 20/30)
+09:02:29        Warm-up skipped (resume mode)
+09:02:29        Run 01/10: 0.3735s  (5 rows)
+09:02:35        Run 02/10: 0.3722s  (5 rows)
+09:02:40        Run 03/10: 0.3727s  (5 rows)
+09:02:45        Run 04/10: 0.3671s  (5 rows)
+09:02:51        Run 05/10: 0.3871s  (5 rows)
+09:02:56        Run 06/10: 0.3662s  (5 rows)
+09:03:02        Run 07/10: 0.3788s  (5 rows)
+09:03:07        Run 08/10: 0.3894s  (5 rows)
+09:03:12        Run 09/10: 0.3764s  (5 rows)
+09:03:18        Run 10/10: 0.3824s  (5 rows)
+09:03:18        DONE  MEAN=0.3766s  STD=0.0075s  MIN=0.3662s  MAX=0.3894s
+
+09:03:18    [09/15] Q7_agg SF20 — RESUME from run 21 (have 20/30)
+09:03:18        Warm-up skipped (resume mode)
+09:03:18        Run 01/10: 0.3733s  (4 rows)
+09:03:23        Run 02/10: 0.3761s  (4 rows)
+09:03:29        Run 03/10: 0.3795s  (4 rows)
+09:03:34        Run 04/10: 0.3827s  (4 rows)
+09:03:40        Run 05/10: 0.3810s  (4 rows)
+09:03:45        Run 06/10: 0.3895s  (4 rows)
+09:03:50        Run 07/10: 0.3859s  (4 rows)
+09:03:56        Run 08/10: 0.3828s  (4 rows)
+09:04:01        Run 09/10: 0.3928s  (4 rows)
+09:04:07        Run 10/10: 0.3817s  (4 rows)
+09:04:07        DONE  MEAN=0.3825s  STD=0.0055s  MIN=0.3733s  MAX=0.3928s
+
+09:04:07    [10/15] Q17_subquery SF20 — RESUME from run 21 (have 20/30)
+09:04:07        Warm-up skipped (resume mode)
+09:04:07        Run 01/10: 0.3849s  (1 rows)
+09:04:12        Run 02/10: 0.3958s  (1 rows)
+09:04:18        Run 03/10: 0.3935s  (1 rows)
+09:04:23        Run 04/10: 0.3918s  (1 rows)
+09:04:29        Run 05/10: 0.3980s  (1 rows)
+09:04:34        Run 06/10: 0.3793s  (1 rows)
+09:04:39        Run 07/10: 0.3886s  (1 rows)
+09:04:45        Run 08/10: 0.3897s  (1 rows)
+09:04:50        Run 09/10: 0.3867s  (1 rows)
+09:04:55        Run 10/10: 0.3930s  (1 rows)
+09:04:55        DONE  MEAN=0.3901s  STD=0.0052s  MIN=0.3793s  MAX=0.3980s
+
+09:04:55    [11/15] Q20_subquery SF20 — RESUME from run 21 (have 20/30)
+09:04:55        Warm-up skipped (resume mode)
+09:04:56        Run 01/10: 0.9637s  (3543 rows)
+09:05:02        Run 02/10: 0.9561s  (3543 rows)
+09:05:08        Run 03/10: 0.9628s  (3543 rows)
+09:05:14        Run 04/10: 0.9512s  (3543 rows)
+09:05:20        Run 05/10: 0.9572s  (3543 rows)
+09:05:26        Run 06/10: 0.9605s  (3543 rows)
+09:05:32        Run 07/10: 0.9595s  (3543 rows)
+09:05:38        Run 08/10: 0.9524s  (3543 rows)
+09:05:44        Run 09/10: 0.9646s  (3543 rows)
+09:05:50        Run 10/10: 0.9545s  (3543 rows)
+09:05:50        DONE  MEAN=0.9583s  STD=0.0045s  MIN=0.9512s  MAX=0.9646s
+
+09:05:50    [12/15] Q22_subquery SF20 — RESUME from run 21 (have 20/30)
+09:05:50        Warm-up skipped (resume mode)
+09:05:50        Run 01/10: 0.3578s  (7 rows)
+09:05:56        Run 02/10: 0.3686s  (7 rows)
+09:06:01        Run 03/10: 0.3650s  (7 rows)
+09:06:07        Run 04/10: 0.3538s  (7 rows)
+09:06:12        Run 05/10: 0.3649s  (7 rows)
+09:06:17        Run 06/10: 0.3538s  (7 rows)
+09:06:23        Run 07/10: 0.3600s  (7 rows)
+09:06:28        Run 08/10: 0.3581s  (7 rows)
+09:06:33        Run 09/10: 0.3615s  (7 rows)
+09:06:39        Run 10/10: 0.3603s  (7 rows)
+09:06:39        DONE  MEAN=0.3604s  STD=0.0046s  MIN=0.3538s  MAX=0.3686s
+
+09:06:39    [13/15] Q10_window SF20 — RESUME from run 21 (have 20/30)
+09:06:39        Warm-up skipped (resume mode)
+09:06:39        Run 01/10: 0.4797s  (20 rows)
+09:06:45        Run 02/10: 0.4767s  (20 rows)
+09:06:50        Run 03/10: 0.4741s  (20 rows)
+09:06:56        Run 04/10: 0.4794s  (20 rows)
+09:07:01        Run 05/10: 0.4809s  (20 rows)
+09:07:07        Run 06/10: 0.4783s  (20 rows)
+09:07:12        Run 07/10: 0.4849s  (20 rows)
+09:07:18        Run 08/10: 0.4763s  (20 rows)
+09:07:23        Run 09/10: 0.4764s  (20 rows)
+09:07:28        Run 10/10: 0.4778s  (20 rows)
+09:07:28        DONE  MEAN=0.4785s  STD=0.0028s  MIN=0.4741s  MAX=0.4849s
+
+09:07:29    [14/15] Q1_window SF20 — RESUME from run 21 (have 20/30)
+09:07:29        Warm-up skipped (resume mode)
+09:07:29        Run 01/10: 0.3865s  (4 rows)
+09:07:34        Run 02/10: 0.3906s  (4 rows)
+09:07:40        Run 03/10: 0.3884s  (4 rows)
+09:07:45        Run 04/10: 0.3861s  (4 rows)
+09:07:50        Run 05/10: 0.3902s  (4 rows)
+09:07:56        Run 06/10: 0.3833s  (4 rows)
+09:08:01        Run 07/10: 0.3853s  (4 rows)
+09:08:07        Run 08/10: 0.3802s  (4 rows)
+09:08:12        Run 09/10: 0.3765s  (4 rows)
+09:08:17        Run 10/10: 0.3793s  (4 rows)
+09:08:17        DONE  MEAN=0.3846s  STD=0.0045s  MIN=0.3765s  MAX=0.3906s
+
+09:08:17    [15/15] Q18_window SF20 — RESUME from run 21 (have 20/30)
+09:08:17        Warm-up skipped (resume mode)
+09:08:19        Run 01/10: 1.7792s  (100 rows)
+09:08:26        Run 02/10: 1.9526s  (100 rows)
+09:08:33        Run 03/10: 1.8688s  (100 rows)
+09:08:40        Run 04/10: 1.8933s  (100 rows)
+09:08:47        Run 05/10: 1.9133s  (100 rows)
+09:08:54        Run 06/10: 1.9691s  (100 rows)
+09:09:01        Run 07/10: 1.8925s  (100 rows)
+09:09:08        Run 08/10: 1.8929s  (100 rows)
+09:09:14        Run 09/10: 1.8961s  (100 rows)
+09:09:21        Run 10/10: 1.8912s  (100 rows)
+09:09:21        DONE  MEAN=1.8949s  STD=0.0482s  MIN=1.7792s  MAX=1.9691s
+
+09:09:21  
+09:09:21    SF20: All 15 queries complete (30 runs each).
+09:09:21    Dropping database 'tpch_sf20' from MotherDuck (post-benchmark cleanup)...
+09:09:22    'tpch_sf20' dropped successfully.
+09:09:22  
+  ──────────────────────────────────────────────────────────
+09:09:22    PROGRESS
+09:09:22    ──────────────────────────────────────────────────────────
+09:09:22    SF 1  [████████████████████████]  DONE
+09:09:22    SF 5  [████████████████████████]  DONE
+09:09:22    SF10  [████████████████████████]  DONE
+09:09:22    SF20  [████████████████████████]  DONE
+09:09:22    ──────────────────────────────────────────────────────────
+09:09:22    Total: 60/60 queries complete
+
+09:09:22  
+09:09:22  ==============================================================
+09:09:22    BENCHMARK COMPLETE!
+09:09:22  ==============================================================
+09:09:22    Queries completed this session : 60
+09:09:22    Total elapsed time             : 1.07 hours (64.2 minutes)
+09:09:22    Output CSV                     : C:\benchmark_stephen\results\motherduck_results.csv
+09:09:22    Log file                       : C:\benchmark_stephen\results\logs\log_MotherDuck.log
+09:09:22    Finished at                    : 2026-04-27 09:09:22
+09:09:22  
+09:09:22    Output files ready for analysis:
+09:09:22      duckdb_results.csv        <- local edge data
+09:09:22      motherduck_results.csv    <- cloud data (this file)
+09:09:22  
+09:09:22    Next step: merge both CSVs in your analysis notebook.
+09:09:22  ==============================================================
+
